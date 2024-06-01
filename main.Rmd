@@ -1,0 +1,2172 @@
+---
+title: "The Green Hydrogen Ambition and Implementation Gap"
+author: "Adrian Odenweller"
+date: "2024-05-22"
+output: pdf_document
+---
+
+# Setup and configurations
+
+```{r setup, include=FALSE}
+# Load required packages
+library(tidyverse)  # Data wrangling
+library(quitte)  # Data wrangling
+library(readxl)  # Reading Excel files
+library(cowplot)  # Plot themes and arranging plots
+library(ggnewscale)  # Separate legends
+library(ggsci)  # Colour palette
+library(ggpp)  # For function position_stacknudge
+library(ggrepel)  # Adding annotations
+library(ggforce)  # Zooming into sub-parts of plots
+library(ggsankey)  # Sankey diagrams
+library(ggbrace)  # Creating braces in plots
+library(svglite)  # Vector graphics
+library(ggpattern)  # Plot hatching
+
+# Configure plot theme
+font.size <- 6
+theme_set(theme_cowplot(font_size = font.size))
+theme_update(
+  plot.title = element_text(size = font.size, hjust = 0.5, face = "plain"),
+  axis.line = element_line(linewidth = 0.25),
+  axis.ticks = element_line(linewidth = 0.25)
+)
+
+# Source functions
+source("scripts/readIEAHydrogenProjectsDatabase.R")
+source("scripts/calcProjectTracking.R")
+source("scripts/plotProjectTracking.R")
+source("scripts/calcRates.R")
+source("scripts/plotRates.R")
+source("scripts/readScenarios.R")
+source("scripts/readTechCalcLearning.R")
+source("scripts/plotGapSubsidies.R")
+source("scripts/plotFutureImplementationGap.R")
+source("scripts/plotSubsidiesWithScenarios.R")
+
+# Don't include code when knitting
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+# Read IEA Hydrogen Projects Database
+
+## Version 2021
+
+```{r data v2021, warning=FALSE, message=FALSE}
+
+file.v2021 <-
+  "data/IEA_H2_DB_2021-10/IEA Hydrogen Projects Database 2021 (revised).xlsx"
+
+temp <- readIEAHydrogenProjectsDB(
+  file.h2projects = file.v2021,
+  h2projects.range = "A5:AF994",
+  end.year = 2021
+)
+
+data.v2021proj <- temp[[1]]
+data.v2021 <- temp[[2]] %>%
+  mutate(version = "v2021")
+
+```
+
+
+## Version 2022
+
+```{r data v2022, warning=FALSE, message=FALSE}
+
+file.v2022 <-
+  "data/IEA_H2_DB_2022-10/Hydrogen projects database public version.xlsx"
+
+temp <- readIEAHydrogenProjectsDB(
+  file.h2projects = file.v2022,
+  h2projects.range = "A5:AF1481",
+  end.year = 2022
+)
+
+data.v2022proj <- temp[[1]]
+data.v2022 <- temp[[2]] %>%
+  mutate(version = "v2022")
+
+```
+
+## Version 2023
+
+```{r data v2023, warning=FALSE, message=FALSE}
+
+file.v2023 <-
+  "data/IEA_H2_DB_2023-10/Hydrogen_production_projects_corrected.xlsx"
+
+temp <- readIEAHydrogenProjectsDB(
+  file.h2projects = file.v2023,
+  h2projects.range = "A5:AF2001",
+  end.year = 2023
+)
+
+data.v2023proj <- temp[[1]]
+data.v2023 <- temp[[2]] %>%
+  mutate(version = "v2023")
+
+```
+
+# Read electrolysis capacity requirements in 1.5°C scenarios
+
+```{r}
+
+data.scenarios <- readScenarios("data/scenario_data_electrolysis.xlsx")
+
+```
+
+
+# Overview
+
+## FIGURE 1: Overview of ambition and implementation gap
+
+```{r figure 1}
+
+range.left <- seq(2020, 2024)
+range.right <- seq(2024, 2030)
+
+# Get installed capacity from IEA v2023
+data.real <- data.v2023 %>% 
+  filter(status == "Operational",
+         year %in% seq(2020,2023)) %>% 
+  group_by(year) %>% 
+  summarise(min = sum(cumcap.sum))
+
+# For 2023 show range of uncertainty from IEA v2023
+data.real.max <- data.v2023 %>% 
+  filter(year == 2023) %>%
+  group_by(year) %>% 
+  summarise(max = sum(cumcap.sum))
+
+data.real.plot <- full_join(data.real, data.real.max) %>% 
+  mutate(max = ifelse(is.na(max), min, max))
+
+# Expectation in 2021 (IEA v2021)
+data.v2021.plot.left <- data.v2021 %>% 
+  filter(year %in% range.left) %>% 
+  group_by(year) %>% 
+  summarise(sum = sum(cumcap.sum))
+
+# Expectation in 2022 (IEA v2022)
+data.v2022.plot.left <- data.v2022 %>% 
+  filter(year %in% range.left) %>% 
+  group_by(year) %>% 
+  summarise(sum = sum(cumcap.sum))
+
+# Expectation in 2023 (IEA v2023)
+data.v2023.plot.left <- data.v2023 %>% 
+  filter(year %in% range.left) %>% 
+  group_by(year) %>% 
+  summarise(sum = sum(cumcap.sum))
+
+legend.labels <- c("v2021" = "Expectation in 2021",
+                   "v2022" = "Expectation in 2022",
+                   "v2023" = "Expectation in 2023")
+
+# Plot until 2024
+p.left <- ggplot() +
+  # Project announcements
+  geom_line(data = data.v2021.plot.left,
+            mapping = aes(x = year, y = sum, color = "v2021", alpha = "v2021")) +
+  geom_point(data = data.v2021.plot.left,
+             mapping = aes(x = year, y = sum, color = "v2021", alpha = "v2021"),
+             size = 0.5) +
+  geom_line(data = data.v2022.plot.left,
+            mapping = aes(x = year, y = sum, color = "v2022", alpha = "v2022")) +
+  geom_point(data = data.v2022.plot.left,
+             mapping = aes(x = year, y = sum, color = "v2022", alpha = "v2022"),
+             size = 0.5) +
+  geom_line(data = data.v2023.plot.left,
+            mapping = aes(x = year, y = sum, color = "v2023", alpha = "v2023")) +
+  geom_point(data = data.v2023.plot.left,
+             mapping = aes(x = year, y = sum, color = "v2023", alpha = "v2023"),
+             size = 0.5) +
+  scale_color_npg(name = "Project announcements",
+                  guide = guide_legend(order = 2),
+                  breaks = c("v2021",
+                             "v2022",
+                             "v2023"),
+                  labels = legend.labels) +
+  scale_alpha_manual(name = "Project announcements",
+                     guide = guide_legend(order = 2),
+                     breaks = c("v2021",
+                                "v2022",
+                                "v2023"),
+                     values = c("v2021" = 0.2,
+                                "v2022" = 0.6,
+                                "v2023" = 1),
+                     labels = legend.labels) +
+  new_scale_color() +
+  # Realised projects
+  geom_line(data = data.real.plot,
+            mapping = aes(x = year, y = min, color = "Realised projects")) +
+  geom_point(data = data.real.plot %>% filter(year <= 2022),
+             mapping = aes(x = year, y = min, color = "Realised projects"),
+             size = 1) +
+  geom_line(data = data.real.plot,
+            mapping = aes(x = year, y = max, color = "Realised projects")) +
+  geom_ribbon(data = data.real.plot,
+              mapping = aes(x = year, ymin = min, ymax = max,
+                            fill = "Realised projects"),
+              alpha = 0.2) +
+  scale_color_manual(name = NULL, values = c("Realised projects" = "black"),
+                     guide = guide_legend(order = 2)) +
+  scale_fill_manual(name = NULL, values = c("Realised projects" = "black"),
+                    guide = guide_legend(order = 2)) +
+  # Horizontal dashed lines (2022)
+  geom_segment(
+    mapping = aes(
+      x = 2022,
+      xend = 2023.4,
+      y = data.real.plot %>% filter(year == 2022) %>% pull(max),
+      yend = data.real.plot %>% filter(year == 2022) %>% pull(max)),
+    linetype = "dashed",
+    linewidth = 0.25
+  ) +
+  geom_segment(
+    mapping = aes(
+      x = 2022,
+      xend = 2023.4,
+      y = data.v2021.plot.left %>% filter(year == 2022) %>% pull(sum),
+      yend = data.v2021.plot.left %>% filter(year == 2022) %>% pull(sum)),
+    linetype = "dashed",
+    linewidth = 0.25
+  ) +
+  geom_segment(
+    mapping = aes(
+      x = 2023,
+      xend = 2023.9,
+      y = data.real.plot %>% filter(year == 2023) %>% pull(max),
+      yend = data.real.plot %>% filter(year == 2023) %>% pull(max)),
+    linetype = "dashed",
+    linewidth = 0.25
+  ) +
+  geom_segment(
+    mapping = aes(
+      x = 2023,
+      xend = 2023.9,
+      y = data.v2021.plot.left%>% filter(year == 2023) %>% pull(sum),
+      yend = data.v2021.plot.left %>% filter(year == 2023) %>% pull(sum)),
+    linetype = "dashed",
+    linewidth = 0.25
+  ) +
+  # Implementation gap (2022)
+  geom_segment(
+    aes(x = 2023.25,
+        xend = 2023.25,
+        y = data.real.plot %>% filter(year == 2022) %>% pull(max),
+        yend = data.v2021.plot.left %>% filter(year == 2022) %>% pull(sum)),
+    arrow = arrow(length = unit(1.5, "mm"), ends = "both"),
+    linewidth = 0.5
+  ) +
+  geom_segment(
+    aes(x = 2023.75,
+        xend = 2023.75,
+        y = data.real.plot %>% filter(year == 2023) %>% pull(max),
+        yend = data.v2021.plot.left %>% filter(year == 2023) %>% pull(sum)),
+    arrow = arrow(length = unit(1.5, "mm"), ends = "both"),
+    linewidth = 0.5
+    ) +
+  # Annotation
+  geom_text(
+    aes(x = 2023.25,
+        y = mean(c(data.real.plot %>% filter(year == 2022) %>% pull(max),
+                   data.v2021.plot.left %>% filter(year == 2022) %>% pull(sum)))),
+    label = "2022",
+    size = 5 / .pt,
+    hjust = 0,
+    vjust = 0.5,
+    nudge_x = 0.05
+  ) +
+  geom_text(
+    aes(x = 2023.75,
+        y = mean(c(data.real.plot %>% filter(year == 2023) %>% pull(max),
+                   data.v2021.plot.left %>% filter(year == 2023) %>% pull(sum)))),
+    label = "2023",
+    size = 5 / .pt,
+    hjust = 0,
+    vjust = 0.5,
+    nudge_x = 0.05
+  ) +
+  geom_text(
+    aes(x = 2024,
+        y = 1),
+    label = "\u2460 Past\nimplementation\ngap",
+    size = 6 / .pt,
+    hjust = 0,
+    lineheight = 1,
+    fontface = "bold"
+  ) +
+  # Formatting
+  xlab("Year") +
+  ylab("Capacity (GW)") +
+  ggtitle("Past green hydrogen implementation gap") +
+  theme(legend.position = "inside",
+        legend.position.inside = c(0.1,0.9),
+        legend.justification = c("left","top"),
+        plot.margin = margin(t = 1, r = 10, b = 1, l = 1, unit = "mm")) +
+  coord_cartesian(xlim = c(2020,2024), clip = "off")
+
+# Expectation in 2021 (IEA v2021)
+data.v2021.plot.right <- data.v2021 %>% 
+  filter(year %in% range.right) %>% 
+  group_by(year) %>% 
+  summarise(sum = sum(cumcap.sum))
+
+# Expectation in 2022 (IEA v2022)
+data.v2022.plot.right <- data.v2022 %>% 
+  filter(year %in% range.right) %>% 
+  group_by(year) %>% 
+  summarise(sum = sum(cumcap.sum))
+
+# Expectation in 2023 (IEA v2023)
+data.v2023.plot.right <- data.v2023 %>% 
+  filter(year %in% range.right) %>% 
+  group_by(year) %>% 
+  summarise(sum = sum(cumcap.sum))
+
+# Scenarios in 2030
+data.plot.scenarios <- data.scenarios %>%
+  filter(organisation == "IEA", year == 2030)
+
+# Upscaling backed by subsidies
+data.backed <- read_csv("data/fig1_capacity_backed_by_subsidies.csv") %>% 
+  filter(year <= 2030) %>% 
+  pivot_wider(names_from = scenario, values_from = value)
+
+# Plot from 2024 to 2030
+p.right <- ggplot() +
+  # Project announcements
+  geom_line(data = data.v2021.plot.right,
+            mapping = aes(x = year, y = sum, color = "v2021", alpha = "v2021")) +
+  geom_point(data = data.v2021.plot.right,
+             mapping = aes(x = year, y = sum, color = "v2021", alpha = "v2021"),
+             size = 0.5) +
+  geom_line(data = data.v2022.plot.right,
+            mapping = aes(x = year, y = sum, color = "v2022", alpha = "v2022")) +
+  geom_point(data = data.v2022.plot.right,
+             mapping = aes(x = year, y = sum, color = "v2022", alpha = "v2022"),
+             size = 0.5) +
+  geom_line(data = data.v2023.plot.right,
+            mapping = aes(x = year, y = sum, color = "v2023", alpha = "v2023")) +
+  geom_point(data = data.v2023.plot.right,
+             mapping = aes(x = year, y = sum, color = "v2023", alpha = "v2023"),
+             size = 0.5) +
+  scale_color_npg(name = "Project announcements",
+                  guide = guide_legend(order = 2),
+                  breaks = c("v2021",
+                             "v2022",
+                             "v2023"),
+                  labels = c("v2021" = "Expectation in 2021",
+                             "v2022" = "Expectation in 2022",
+                             "v2023" = "Expectation in 2023")) +
+  scale_alpha_manual(name = "Project announcements",
+                     guide = guide_legend(order = 2),
+                     breaks = c("v2021",
+                                "v2022",
+                                "v2023"),
+                     values = c("v2021" = 0.2,
+                                "v2022" = 0.6,
+                                "v2023" = 1),
+                     labels = legend.labels) +
+  # Range of IEA scenarios
+  geom_errorbar(aes(x = 2030,
+                    ymin = data.plot.scenarios %>% pull(value) %>% min(),
+                    ymax = data.plot.scenarios %>% pull(value) %>% max()),
+                width = 0.1,
+                linewidth = 0.25) +
+  # Upscaling backed by subsidies
+  new_scale_color() +
+  geom_ribbon(data = data.backed,
+              mapping = aes(x = year, ymin = Conservative, ymax = Progressive, fill = "Upscaling"),
+              alpha = 0.2) +
+  geom_line(data = data.backed,
+            mapping = aes(x = year, y = Default, color = "Upscaling")) +
+  scale_fill_manual(name = NULL,
+                    values = c("Upscaling" = "grey30"),
+                    labels = c("Upscaling" = "Supported by implemented and announced policies"),
+                    guide = guide_legend(order = 3)) +
+  scale_color_manual(name = NULL,
+                     values = c("Upscaling" = "grey30"),
+                     labels = c("Upscaling" = "Supported by implemented and announced policies"),
+                     guide = guide_legend(order = 3)) +
+  # Horizontal dashed line (v2023)
+  geom_segment(
+    mapping = aes(
+      x = 2030,
+      xend = 2030.4,
+      y = data.v2023.plot.right %>% filter(year == 2030) %>% pull(sum),
+      yend = data.v2023.plot.right %>% filter(year == 2030) %>% pull(sum)),
+    linetype = "dashed",
+    linewidth = 0.25
+    ) +
+  # Horizontal dashed line (backed by subsidies)
+  geom_segment(
+    mapping = aes(
+      x = 2030,
+      xend = 2030.3,
+      y = data.backed %>% filter(year == 2030) %>% pull(Default),
+      yend = data.backed %>% filter(year == 2030) %>% pull(Default)
+    ),
+    linetype = "dashed",
+    linewidth = 0.25
+  ) +
+  # Horizontal dashed line (scenarios)
+  geom_segment(
+    mapping = aes(
+      x = 2030,
+      xend = 2030.4,
+      y = data.plot.scenarios %>% filter(year.publication == 2023) %>% pull(value),
+      yend = data.plot.scenarios %>% filter(year.publication == 2023) %>% pull(value)
+    ),
+    linetype = "dashed",
+    linewidth = 0.25
+  ) +
+  # Annotations: Future implementation gap
+  geom_segment(
+    aes(x = 2030.15,
+        xend = 2030.15,
+        y = data.backed %>% filter(year == 2030) %>% pull(Default),
+        yend = data.v2023.plot.right %>% filter(year == 2030) %>% pull(sum)),
+    arrow = arrow(length = unit(1.5, "mm"), ends = "both"),
+    linewidth = 0.5
+  ) +
+  geom_text(
+    aes(x = 2030.15,
+        y = mean(c(data.backed %>% filter(year == 2030) %>% pull(Default),
+                   data.v2023.plot.right %>% filter(year == 2030) %>% pull(sum))),
+        label = "\u2462 2030\nimplementation\ngap"),
+    size = 6 / .pt,
+    hjust = 0,
+    vjust = 0.5,
+    nudge_x = 0.08,
+    lineheight = 1,
+    fontface = "bold"
+  ) +
+  # Annotations: Future ambition gap
+  geom_segment(
+    aes(x = 2030.25,
+        xend = 2030.25,
+        y = data.v2023.plot.right %>% filter(year == 2030) %>% pull(sum),
+        yend = data.plot.scenarios %>% filter(year.publication == 2023) %>% pull(value)),
+    arrow = arrow(length = unit(1.5, "mm"), ends = "both"),
+    linewidth = 0.5) +
+  geom_text(
+    aes(x = 2030.25,
+        y = mean(c(data.v2023.plot.right %>% filter(year == 2030) %>% pull(sum),
+                   data.plot.scenarios %>% filter(year.publication == 2023) %>% pull(value))),
+        label = "\u2461 2030\nambition\ngap"),
+    size = 6 / .pt,
+    hjust = 0,
+    vjust = 0.5,
+    nudge_x = 0.08,
+    lineheight = 1,
+    fontface = "bold"
+  ) +
+  # Annotations: IEA scenarios in 2030
+  geom_text(
+    aes(x = 2030.05,
+        y = mean(
+          c(
+            data.plot.scenarios %>% pull(value) %>% min(),
+            data.plot.scenarios %>% pull(value) %>% max()
+          )
+        )),
+    label = "1.5°C\nscenario\nrequirements",
+    size = 5 / .pt,
+    hjust = 0,
+    lineheight = 1
+  ) +
+  # Formatting
+  xlab("Year") +
+  scale_x_continuous(breaks = seq(2024,2030)) +
+  ylab("Capacity (GW)") +
+  ggtitle("2030 green hydrogen ambition and implementation gap") +
+  theme(legend.position = "inside",
+        legend.position.inside = c(0.1,0.9),
+        legend.justification = c("left","top"),
+        plot.margin = margin(t = 1, r = 15, b = 1, l = 1, unit = "mm")) +
+  coord_cartesian(xlim = c(2024,2030), clip = "off")
+
+p <- plot_grid(
+  p.left,
+  p.right,
+  ncol = 2,
+  labels = "auto",
+  label_size = font.size,
+  rel_widths = c(1,1.45))
+
+print(p)
+
+ggsave("figures/FIGURE01_overview.png",
+       width = 180, height = 70, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/FIGURE01_overview.svg",
+       width = 180, height = 70, units = "mm", bg = "white")
+
+```
+
+## FIGURE 2: Comparison of database versions
+
+```{r figure 2, warning=FALSE}
+
+range.left <- seq(2020,2024)
+
+# Data for left bar (v2021)
+data.v2021.plot.left <- data.v2021 %>% 
+  filter(year %in% range.left) %>% 
+  mutate(status = case_when(status == "Decommissioned" ~ "Operational",
+                            TRUE ~ status)) %>% 
+  group_by(status, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum))
+
+# Data for middle bar (v2022)
+data.v2022.plot.left <- data.v2022 %>% 
+  filter(year %in% range.left) %>% 
+  mutate(status = case_when(status == "Decommissioned" ~ "Operational",
+                            TRUE ~ status)) %>% 
+  group_by(status, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum))
+
+# Data for right bar (v2023)
+data.v2023.plot.left <- data.v2023 %>% 
+  filter(year %in% range.left) %>% 
+  mutate(status = case_when(status == "Decommissioned" ~ "Operational",
+                            TRUE ~ status)) %>% 
+  group_by(status, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum))
+
+data.plot.text <- tribble(
+  ~year, ~value, ~text,
+  2021.75, data.v2021.plot.left %>%
+    filter(year == 2022) %>%
+    pull(cumcap.sum) %>%
+    sum(), "Expectation\nin 2021",
+  2022, data.v2022.plot.left %>%
+    filter(year == 2022) %>%
+    pull(cumcap.sum) %>%
+    sum(), "Expectation\nin 2022",
+  2022.25, data.v2023.plot.left %>%
+    filter(year == 2022) %>%
+    pull(cumcap.sum) %>%
+    sum(), "Expectation\nin 2023"
+)
+
+# Add box around year 2024
+data.plot.2024boxheight <- data.v2023.plot.left %>% 
+  filter(year == 2024) %>% 
+  pull(cumcap.sum) %>% 
+  sum()
+
+p.status.left <- ggplot() + 
+  # Add data snapshots
+  geom_bar(data = data.v2021.plot.left,
+           mapping = aes(x = year, y = cumcap.sum, fill = status),
+           stat = "identity",
+           position = position_stacknudge(x = -0.25),
+           width = 0.2) +
+  geom_bar(data = data.v2022.plot.left,
+           mapping = aes(x = year, y = cumcap.sum, fill = status),
+           stat = "identity",
+           position = position_stacknudge(x = 0),
+           width = 0.2) +
+  geom_bar(data = data.v2023.plot.left,
+           mapping = aes(x = year, y = cumcap.sum, fill = status),
+           stat = "identity",
+           position = position_stacknudge(x = 0.25),
+           width = 0.2) +
+  # Add labels to bars in 2022
+  geom_label_repel(data = data.plot.text,
+                   mapping = aes(x = year, y = value, label = text),
+                   size = 6 / .pt,
+                   nudge_x = c(-0.7, -0.2, 0.4),
+                   nudge_y = c(4,8,12),
+                   direction = c("y"),
+                   segment.curvature = 0.1,
+                   segment.shape = 0.5,
+                   segment.square = FALSE,
+                   segment.inflect = TRUE,
+                   segment.ncp = 10,
+                   segment.size = 0.25) +
+  # Add box around 2024
+  geom_rect(mapping = aes(xmin = 2023.6, xmax = 2024.4,
+                          ymin = -0.2, ymax = data.plot.2024boxheight + 0.2),
+            fill = "transparent",
+            color = "grey40",
+            linewidth = 0.25) +
+  scale_fill_npg(name = "Status") +
+  scale_x_continuous(name = "Year of project launch",
+                     breaks = range.left) +
+  scale_y_continuous(name = "Capacity (GW)") +
+  ggtitle("Projects until 2024 by status") +
+  background_grid(major = c("y"),
+                  size.major = 0.25)
+
+range.right <- seq(2024,2030)
+
+data.v2021.plot.right <- data.v2021 %>% 
+  filter(year %in% range.right) %>% 
+  mutate(status = case_when(status == "Decommissioned" ~ "Operational",
+                            TRUE ~ status)) %>% 
+  group_by(status, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum))
+
+data.v2022.plot.right <- data.v2022 %>% 
+  filter(year %in% range.right) %>% 
+  mutate(status = case_when(status == "Decommissioned" ~ "Operational",
+                            TRUE ~ status)) %>% 
+  group_by(status, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum))
+
+data.v2023.plot.right <- data.v2023 %>% 
+  filter(year %in% range.right) %>% 
+  mutate(status = case_when(status == "Decommissioned" ~ "Operational",
+                            TRUE ~ status)) %>% 
+  group_by(status, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum))
+
+p.status.right <- ggplot() + 
+  geom_bar(data = data.v2021.plot.right,
+           mapping = aes(x = year, y = cumcap.sum, fill = status),
+           stat = "identity",
+           position = position_stacknudge(x = -0.25),
+           width = 0.2) +
+  geom_bar(data = data.v2022.plot.right,
+           mapping = aes(x = year, y = cumcap.sum, fill = status),
+           stat = "identity",
+           position = position_stacknudge(x = 0),
+           width = 0.2) +
+  geom_bar(data = data.v2023.plot.right,
+           mapping = aes(x = year, y = cumcap.sum, fill = status),
+           stat = "identity",
+           position = position_stacknudge(x = 0.25),
+           width = 0.2) +
+  geom_rect(mapping = aes(xmin = 2023.6, xmax = 2024.4,
+                          ymin = -0.2, ymax = data.plot.2024boxheight + 0.2),
+            fill = "transparent",
+            color = "grey40",
+            linewidth = 0.25) +
+  scale_fill_npg(name = "Status") +
+  scale_x_continuous(name = "Year of project launch",
+                     breaks = range.right) +
+  scale_y_continuous(name = "Capacity (GW)") +
+  ggtitle("Projects from 2024 by status") +
+  background_grid(major = c("y"),
+                  size.major = 0.25)
+
+# By region
+region.mapping.eu <- c(
+  "Denmark" = "EU",
+  "France" = "EU",
+  "Germany" = "EU",
+  "Netherlands" = "EU",
+  "Spain" = "EU",
+  "Rest EU" = "EU"
+)
+
+region.order <- c(
+  "EU",
+  "MENA",
+  "N. America",
+  "C. + S. America",
+  "Asia",
+  "Australia",
+  "Other"
+)
+
+data.v2021.plot.left <- data.v2021 %>% 
+  filter(year %in% range.left) %>% 
+  revalue.levels(region = region.mapping.eu) %>% 
+  group_by(region, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum)) %>% 
+  order.levels(region = region.order)
+
+data.v2022.plot.left <- data.v2022 %>% 
+  filter(year %in% range.left) %>% 
+  revalue.levels(region = region.mapping.eu) %>% 
+  group_by(region, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum)) %>% 
+  order.levels(region = region.order)
+
+data.v2023.plot.left <- data.v2023 %>% 
+  filter(year %in% range.left) %>% 
+  revalue.levels(region = region.mapping.eu) %>% 
+  group_by(region, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum)) %>% 
+  order.levels(region = region.order)
+
+p.regi.left <- ggplot() + 
+  geom_bar(data = data.v2021.plot.left,
+           mapping = aes(x = year, y = cumcap.sum, fill = region),
+           stat = "identity",
+           position = position_stacknudge(x = -0.25),
+           width = 0.2) +
+  geom_bar(data = data.v2022.plot.left,
+           mapping = aes(x = year, y = cumcap.sum, fill = region),
+           stat = "identity",
+           position = position_stacknudge(x = 0),
+           width = 0.2) +
+  geom_bar(data = data.v2023.plot.left,
+           mapping = aes(x = year, y = cumcap.sum, fill = region),
+           stat = "identity",
+           position = position_stacknudge(x = 0.25),
+           width = 0.2) +
+  geom_rect(mapping = aes(xmin = 2023.6, xmax = 2024.4,
+                          ymin = -0.2, ymax = data.plot.2024boxheight + 0.2),
+            fill = "transparent",
+            color = "grey40",
+            linewidth = 0.25) +
+  scale_fill_npg(name = "Region") +
+  scale_x_continuous(name = "Year of project launch",
+                     breaks = range.left) +
+  scale_y_continuous(name = "Capacity (GW)") +
+  ggtitle("Projects until 2024 by region") +
+  background_grid(major = c("y"),
+                  size.major = 0.25)
+
+data.v2021.plot.right <- data.v2021 %>% 
+  filter(year %in% range.right) %>% 
+  revalue.levels(region = region.mapping.eu) %>% 
+  group_by(region, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum)) %>% 
+  order.levels(region = region.order)
+
+data.v2022.plot.right <- data.v2022 %>% 
+  filter(year %in% range.right) %>% 
+  revalue.levels(region = region.mapping.eu) %>% 
+  group_by(region, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum)) %>% 
+  order.levels(region = region.order)
+
+data.v2023.plot.right <- data.v2023 %>% 
+  filter(year %in% range.right) %>% 
+  revalue.levels(region = region.mapping.eu) %>% 
+  group_by(region, year) %>% 
+  summarise(cumcap.sum = sum(cumcap.sum)) %>% 
+  order.levels(region = region.order)
+
+p.regi.right <- ggplot() + 
+  geom_bar(data = data.v2021.plot.right,
+           mapping = aes(x = year, y = cumcap.sum, fill = region),
+           stat = "identity",
+           position = position_stacknudge(x = -0.25),
+           width = 0.2) +
+  geom_bar(data = data.v2022.plot.right,
+           mapping = aes(x = year, y = cumcap.sum, fill = region),
+           stat = "identity",
+           position = position_stacknudge(x = 0),
+           width = 0.2) +
+  geom_bar(data = data.v2023.plot.right,
+           mapping = aes(x = year, y = cumcap.sum, fill = region),
+           stat = "identity",
+           position = position_stacknudge(x = 0.25),
+           width = 0.2) +
+  geom_rect(mapping = aes(xmin = 2023.6, xmax = 2024.4,
+                          ymin = -0.2, ymax = data.plot.2024boxheight + 0.2),
+            fill = "transparent",
+            color = "grey40",
+            linewidth = 0.25) +
+  scale_fill_npg(name = "Region") +
+  scale_x_continuous(name = "Year of project launch",
+                     breaks = range.right) +
+  scale_y_continuous(name = "Capacity (GW)") +
+  ggtitle("Projects from 2024 by region") +
+  background_grid(major = c("y"),
+                  size.major = 0.25)
+
+p.panels <- plot_grid(
+  p.status.left + theme(legend.position = "none"),
+  p.status.right + theme(legend.position = "none"),
+  p.regi.left + theme(legend.position = "none"),
+  p.regi.right + theme(legend.position = "none"),
+  labels = "auto",
+  rel_widths = c(5,7),
+  label_size = font.size)
+
+p.leg.top <- get_legend(p.status.left)
+
+p.leg.bottom <- get_legend(p.regi.left)
+
+p.leg <- plot_grid(p.leg.top, p.leg.bottom, ncol = 1)
+
+p.tot <- plot_grid(p.panels,
+                   NULL,
+                   p.leg,
+                   ncol = 3,
+                   rel_widths = c(1, 0.01, 0.13))
+
+print(p.tot)
+
+ggsave("figures/FIGURE02_database_comparison.png",
+       width = 180, height = 120, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/FIGURE02_database_comparison.svg",
+       width = 180, height = 120, units = "mm", bg = "white")
+
+```
+
+# Past green hydrogen implementation gap
+
+## Calculate project tracking in 2022
+
+```{r calc tracking 2022, warning = FALSE}
+
+data.track.calc2022 <-
+  calcProjectTracking(
+    data.v2021proj = data.v2021proj,
+    data.v2022proj = data.v2022proj,
+    data.v2023proj = data.v2023proj,
+    year.tracking = 2022,
+    type = "additional"
+  )
+
+```
+
+## Calculate rates of success, delay and disappearance in 2022
+
+```{r calc rates 2022}
+
+# Comparing expectations in 2021 to outcome in 2023
+data.rates.calc2022.v21v23 <-
+  calcRates(
+    data.track.calc = data.track.calc2022,
+    year.tracking = 2022,
+    compare = "v2021-v2023"
+  )
+
+# Print rates
+data.rates.calc2022.v21v23 %>%
+  group_by(outcome) %>%
+  summarise(rate.tot = round(sum(cap.share.tot),3))
+
+data.rates.calc2022.v21v23 %>%
+  group_by(status,outcome) %>%
+  summarise(rate.disagg = round(sum(cap.share.disagg),3))
+
+# Comparing expectations in 2022 to outcome in 2023
+data.rates.calc2022.v22v23 <-
+  calcRates(
+    data.track.calc = data.track.calc2022,
+    year.tracking = 2022,
+    compare = "v2022-v2023"
+  )
+
+# Print rates
+data.rates.calc2022.v22v23 %>%
+  group_by(outcome) %>%
+  summarise(rate.tot = round(sum(cap.share.tot),3))
+
+data.rates.calc2022.v22v23 %>%
+  group_by(status,outcome) %>%
+  summarise(rate.disagg = round(sum(cap.share.disagg),3))
+
+```
+
+## FIGURE 3: Project tracking and implementation gap in 2022
+
+```{r figure 3, warning = FALSE}
+
+# Plot sankey diagram
+p.track.2022.add <-
+  plotProjectTracking(
+    data.track.calc = data.track.calc2022,
+    shift.incoming = 5500,
+    shift.outgoing = 800,
+    y.upper = 4000,
+    year.tracking = 2022,
+    annotate.labels = TRUE,
+    annotate.gap = TRUE
+  )
+
+# Plot rates of success, delay and disappearance (v2021 vs v2023)
+temp <- plotRates(data.rates = data.rates.calc2022.v21v23, year.tracking = 2022)
+
+p.rates.2022.v21v23.tot <- temp[[1]]
+p.rates.2022.v21v23.disagg <- temp[[2]]
+
+# Plot rates of success, delay and disappearance (v2021 vs v2023)
+temp <- plotRates(data.rates = data.rates.calc2022.v22v23, year.tracking = 2022)
+
+p.rates.2022.v22v23.tot <- temp[[1]]
+p.rates.2022.v22v23.disagg <- temp[[2]]
+
+# Left-align panels
+plot.align <- align_plots(p.track.2022.add + theme(legend.position = "none"),
+                          p.rates.2022.v21v23.tot + theme(legend.position = "none"),
+                          align = "v",
+                          axis = "l")
+
+# Build bottom row left
+bottom_row.left.panels <- plot_grid(
+  plot.align[[2]],
+  p.rates.2022.v21v23.disagg + theme(legend.position = "none"),
+  ncol = 2,
+  align = "h")
+
+bottom_row.left.title <- ggdraw() +
+  draw_label(
+    "Expectations in 2021 compared to outcome in 2023",
+    hjust = 0.5,
+    vjust = 0,
+    size = font.size
+  )
+
+bottom_row.left <- plot_grid(
+  bottom_row.left.title,
+  bottom_row.left.panels,
+  ncol = 1,
+  rel_heights = c(0.15,2)
+)
+
+# Build bottom row right
+bottom_row.right.panels <-
+  plot_grid(
+    p.rates.2022.v22v23.tot + theme(legend.position = "none"),
+    p.rates.2022.v22v23.disagg + theme(legend.position = "none"),
+    ncol = 2,
+    align = "h"
+  )
+
+bottom_row.right.title <- ggdraw() +
+  draw_label("Expectations in 2022 compared to outcome in 2023",
+             hjust = 0.5,
+             vjust = 0,
+             size = font.size)
+
+bottom_row.right <- plot_grid(
+  bottom_row.right.title,
+  bottom_row.right.panels,
+  ncol = 1,
+  rel_heights = c(0.15,2)
+)
+
+# Complete bottom row
+bottom_row <- plot_grid(
+  bottom_row.left,
+  NULL,
+  bottom_row.right,
+  NULL,
+  get_legend(p.rates.2022.v22v23.tot),
+  ncol = 5,
+  rel_widths = c(1, 0.05, 1, 0.02, 0.25),
+  labels = c("b", "", "c", "", ""),
+  label_size = font.size
+)
+
+# Build top row
+top_row <- plot_grid(
+  plot.align[[1]],
+  NULL,
+  ncol = 2,
+  rel_widths = c(1,0.013),
+  labels = "a",
+  label_size = font.size)
+
+# Build entire plot
+p <- plot_grid(top_row,
+               NULL,
+               bottom_row,
+               ncol = 1,
+               rel_heights = c(1.3,0.2,1))
+
+print(p)
+
+ggsave("figures/FIGURE03_implementation_gap_2022.png",
+       width = 180, height = 150, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/FIGURE03_implementation_gap_2022.svg",
+       width = 180, height = 150, units = "mm", bg = "white")
+
+```
+
+# Future green hydrogen ambition gap
+
+## FIGURE 4: 1.5°C scenarios and ambition gap in 2030
+
+```{r figure 4}
+
+# Scenario data in 2030
+set.seed(1)
+data.scenarios.2030 <- data.scenarios %>% 
+  filter(year == 2030) %>% 
+  # Highlight IEA scenarios
+  mutate(highlight = ifelse(organisation == "IEA", "yes", "no")) %>% 
+  # Manually calculate jitter
+  mutate(jitter = runif(n = n(), min = 0.15, max = 0.85)) %>%
+  # Remove Deloitte as outlier
+  filter(organisation != "Deloitte")
+
+# Scenario plot
+p.scen <- ggplot(data.scenarios.2030) +
+  geom_boxplot(aes(x = 0.5, y = value.gw),
+               width = 0.9,
+               linewidth = 0.25) +
+  geom_point(aes(x = jitter, y = value.gw, color = highlight),
+             alpha = 0.5,
+             size = 1,
+             show.legend = FALSE) +
+  scale_color_manual(values = c("yes" = "darkred",
+                                "no" = "black")) +
+  scale_x_continuous(
+    name = "Year",
+    breaks = 0.5,
+    labels = c("0.5" = "2030")) +
+  scale_y_continuous(
+    name = "Required capacity in 2030 (GW)",
+    limits = c(0,1050)) +
+  ggtitle("1.5°C scenarios")
+
+# Electrolysis projects announced for 2030 (v2021)
+data.v2021proj.2030 <- data.v2021proj %>% 
+  filter(year <= 2030) %>% 
+  group_by(reference) %>% 
+  filter(!any(status == "Decommissioned")) %>% 
+  complete(status, year = 2010:2030, name, region, fill = list(capacity = 0)) %>% 
+  group_by(reference, name, status) %>% 
+  arrange(year) %>% 
+  mutate(cumcap.sum = 1E-3*cumsum(capacity)) %>%  # in GW
+  filter(year == 2030) %>% 
+  arrange(cumcap.sum) %>% 
+  ungroup() %>% 
+  order.levels(status = c("Concept", "Feasibility study", "FID/Construction", "Operational"))
+
+# Electrolysis projects announced for 2030 (v2022)
+data.v2022proj.2030 <- data.v2022proj %>% 
+  filter(year <= 2030) %>% 
+  group_by(reference) %>% 
+  filter(!any(status == "Decommissioned")) %>% 
+  complete(status, year = 2010:2030, name, region, fill = list(capacity = 0)) %>% 
+  group_by(reference, name, status) %>% 
+  arrange(year) %>% 
+  mutate(cumcap.sum = 1E-3*cumsum(capacity)) %>%  # in GW
+  filter(year == 2030) %>% 
+  arrange(cumcap.sum) %>% 
+  ungroup() %>% 
+  order.levels(status = c("Concept", "Feasibility study", "FID/Construction", "Operational"))
+
+# Electrolysis projects announced for 2030 (v2023)
+data.v2023proj.2030 <- data.v2023proj %>% 
+  filter(year <= 2030) %>% 
+  group_by(reference) %>% 
+  filter(!any(status == "Decommissioned")) %>% 
+  complete(status, year = 2010:2030, name, region, fill = list(capacity = 0)) %>% 
+  group_by(reference, name, status) %>% 
+  arrange(year) %>% 
+  mutate(cumcap.sum = 1E-3*cumsum(capacity)) %>%  # in GW
+  filter(year == 2030) %>% 
+  arrange(cumcap.sum) %>% 
+  ungroup() %>% 
+  order.levels(status = c("Concept", "Feasibility study", "FID/Construction", "Operational"))
+
+# Distance between arrow head and value
+d <- 5
+
+# IEA NZE 2030 values
+iea.2030.v2021 <- data.scenarios.2030 %>%
+  filter(scen.name == "IEA NZE 2021",
+         year == 2030) %>%
+  pull(value.gw)
+iea.2030.v2022 <- data.scenarios.2030 %>%
+  filter(scen.name == "IEA NZE 2022",
+         year == 2030) %>%
+  pull(value.gw)
+iea.2030.v2023 <- data.scenarios.2030 %>%
+  filter(scen.name == "IEA NZE 2023",
+         year == 2030) %>%
+  pull(value.gw)
+
+# Arrow data
+data.arrows <- tribble(
+  ~ iea.version, ~ from, ~ to,
+  "IEA v2021", data.v2021proj.2030 %>% pull(cumcap.sum) %>% sum() + d,
+  iea.2030.v2021 - d,
+  "IEA v2022", data.v2022proj.2030 %>% pull(cumcap.sum) %>% sum() + d,
+  iea.2030.v2022 - d,
+  "IEA v2023", data.v2023proj.2030 %>% pull(cumcap.sum) %>% sum() + d,
+  iea.2030.v2023 - d,
+)
+
+# Number of projects
+data.number <- tribble(
+  ~ iea.version, ~ cap, ~ number,
+  "IEA v2021", data.v2021proj.2030 %>% pull(cumcap.sum) %>% sum(),
+  data.v2021proj.2030 %>% pull(reference) %>% unique() %>% length(),
+  "IEA v2022", data.v2022proj.2030 %>% pull(cumcap.sum) %>% sum(),
+  data.v2022proj.2030 %>% pull(reference) %>% unique() %>% length(),
+  "IEA v2023", data.v2023proj.2030 %>% pull(cumcap.sum) %>% sum(),
+  data.v2023proj.2030 %>% pull(reference) %>% unique() %>% length()
+)
+
+# Plot closing green hydrogen ambition gap in 2030
+p.gap <- ggplot() + 
+  # Plot announcements
+  geom_bar(data = data.v2021proj.2030,
+           mapping = aes(x = "IEA v2021", y = cumcap.sum, fill = status, color = status),
+           stat = "identity",
+           alpha = 0.5,
+           linewidth = 0.15) +
+  geom_bar(data = data.v2022proj.2030,
+           mapping = aes(x = "IEA v2022", y = cumcap.sum, fill = status, color = status),
+           stat = "identity",
+           alpha = 0.5,
+           linewidth = 0.15,
+           show.legend = FALSE) +
+  geom_bar(data = data.v2023proj.2030,
+           mapping = aes(x = "IEA v2023", y = cumcap.sum, fill = status, color = status),
+           stat = "identity",
+           alpha = 0.5,
+           linewidth = 0.15,
+           show.legend = FALSE) +
+  scale_fill_npg(name = "Project status") +
+  scale_color_npg(name = "Project status") +
+  # Plot number of projects
+  geom_text(data = data.number,
+            mapping = aes(x = iea.version, y = cap, label = paste0("n=", number)),
+            size = 5 / .pt,
+            position = position_nudge(x = 0.43, y = 5),
+            vjust = 0,
+            hjust = 1) +
+  # Plot IEA NZE scenarios and dashed horizontal lines
+  geom_segment(aes(x = 0.55, xend = 1.45,
+                   y = iea.2030.v2021, yend = iea.2030.v2021),
+               linewidth = 0.25) +
+  geom_segment(aes(x = 1.45, xend = 3.45,
+                   y = iea.2030.v2021, yend = iea.2030.v2021),
+               linetype = "dashed",
+               linewidth = 0.25,
+               alpha = 0.3) +
+  geom_text(aes(x = 1, y = iea.2030.v2021, label = "NZE 2021"),
+            size = 5 / .pt,
+            nudge_y = -10,
+            vjust = -1) +
+  geom_segment(aes(x = 1.55, xend = 2.45,
+                   y = iea.2030.v2022, yend = iea.2030.v2022),
+               linewidth = 0.25) +
+  geom_segment(aes(x = 2.45, xend = 3.45,
+                   y = iea.2030.v2022, yend = iea.2030.v2022),
+               linetype = "dashed",
+               linewidth = 0.25,
+               alpha = 0.3) +
+  geom_text(aes(x = 2, y = iea.2030.v2022, label = "NZE 2022"),
+            size = 5 / .pt,
+            nudge_y = -10,
+            vjust = -1) +
+  geom_segment(aes(x = 2.55, xend = 3.45,
+                   y = iea.2030.v2023, yend = iea.2030.v2023),
+               linewidth = 0.25) +
+  geom_text(aes(x = 3, y = iea.2030.v2023, label = "NZE 2023"),
+            size = 5 / .pt,
+            nudge_y = -10,
+            vjust = -1) +
+  # Plot arrows
+  geom_segment(
+    data = data.arrows,
+    mapping = aes(
+      x = iea.version,
+      y = from,
+      xend = iea.version,
+      yend = to
+    ),
+    arrow = arrow(length = unit(0.03, "npc"), ends = "both"),
+    linewidth = 0.25) +
+  # Plot braces
+  stat_brace(aes(x = c(3.5, 3.6),
+                 y = c(3, data.v2023proj.2030 %>% pull(cumcap.sum) %>% sum() - 3)),
+             rotate = 90,
+             linewidth = 0.25,
+             outside = FALSE) +
+  stat_bracetext(aes(x = c(3.5, 3.6),
+                     y = c(3, data.v2023proj.2030 %>% pull(cumcap.sum) %>% sum() - 3)),
+                 rotate = 90,
+                 outside = FALSE,
+                 label = "Increasing\ngreen hydrogen\nproject pipeline",
+                 size = 6 / .pt) +
+  stat_brace(aes(x = c(3.5, 3.6),
+                 y = c(data.v2023proj.2030 %>% pull(cumcap.sum) %>% sum() + 3, iea.2030.v2023 - 3)),
+             rotate = 90,
+             outside = FALSE,
+             linewidth = 0.25) +
+  stat_bracetext(aes(x = c(3.5, 3.6),
+                     y = c(data.v2023proj.2030 %>% pull(cumcap.sum) %>% sum() + 3, iea.2030.v2023 - 3)),
+                 rotate = 90,
+                 outside = FALSE,
+                 label = "\u2461 Green hydrogen\nambition gap in 2030",
+                 size = 6 /.pt,
+                 fontface = "bold") +
+  stat_brace(aes(x = c(3.5, 3.6),
+                 y = c(iea.2030.v2023 + 3, iea.2030.v2021 - 3)),
+             rotate = 90,
+             outside = FALSE,
+             linewidth = 0.25) +
+  stat_bracetext(aes(x = c(3.5, 3.6),
+                     y = c(iea.2030.v2023 + 3, iea.2030.v2021 - 3)),
+                 rotate = 90,
+                 outside = FALSE,
+                 label = "Decreasing role of\ngreen hydrogen in\nIEA Net-Zero Emissions\nscenarios",
+                 size = 6 /.pt) +
+  coord_cartesian(clip = "off") +
+  scale_x_discrete(name = "Year of expectation",
+                   labels = c("IEA v2021" = "2021",
+                              "IEA v2022" = "2022",
+                              "IEA v2023" = "2023")) +
+  scale_y_continuous(name = "Capacity in 2030 (GW)",
+                     limits = c(0, 1050)) +
+  ggtitle("Green hydrogen ambition gap in 2030") +
+  theme(plot.margin = unit(c(3,50,3,3), units = "pt"),
+        axis.title.y = element_text(hjust = 0.3))
+
+# Arrange plot panels
+p.panels <- plot_grid(
+  p.scen,
+  NULL,
+  p.gap + theme(legend.position = "none"),
+  align = "h",
+  labels = c("a", "", "b"),
+  label_size = font.size,
+  ncol = 3,
+  rel_widths = c(0.25, 0.05, 1)
+)
+
+# Combine with legend to full plot
+p.all <- plot_grid(
+  p.panels,
+  NULL,
+  get_legend(p.gap),
+  ncol = 3,
+  rel_widths = c(1,0.07,0.15)
+)
+
+print(p.all)
+
+ggsave("figures/FIGURE04_ambition_gap_2030.png",
+       width = 160, height = 70, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/FIGURE04_ambition_gap_2030.svg",
+       width = 160, height = 70, units = "mm", bg = "white")
+
+```
+
+# Future green hydrogen implementation gap
+
+## Read cost data and calculate technological learning
+
+```{r read costs and calculate learning}
+
+file.costs <- "data/cost_scenarios.xlsx"
+
+data.costs <- readTechCalcLearning(file.costs = file.costs,
+                                   data.v2023 = data.v2023,
+                                   data.scenarios = data.scenarios)
+
+```
+
+## Calculate levelised cost of hydrogen (LCOH) components
+
+```{r calculate lcoh}
+
+# Calculate levelised cost of electricity
+data.costs <- data.costs %>% 
+  # Calculate annuities
+  calc_addVariable(
+    "`LCOH|Annuity|Other`" = "`Tech|ELH2|Interest` / (1 - (1 + `Tech|ELH2|Interest`)**(-`Tech|ELH2|Payback period`))",
+    "`LCOH|Annuity|Stack`" = "`Tech|ELH2|Interest` / (1 - (1 + `Tech|ELH2|Interest`)**(-`Tech|ELH2|Lifetime|Stack`))",
+    units = "1") %>% 
+  # Calculate LCOH components
+  calc_addVariable(
+    "`LCOH|CAPEX|Other`" = "( 1 / `Tech|ELH2|Efficiency` ) * `LCOH|Annuity|Other` * `Tech|ELH2|CAPEX|Other` / `Tech|ELH2|FLh`",
+    "`LCOH|CAPEX|Stack`" = "( 1 / `Tech|ELH2|Efficiency` ) * `LCOH|Annuity|Stack` * `Tech|ELH2|CAPEX|Stack` / `Tech|ELH2|FLh`",
+    "`LCOH|FOM`" = "( 1 / `Tech|ELH2|Efficiency` ) * `Tech|ELH2|FOM` * `Tech|ELH2|CAPEX` / `Tech|ELH2|FLh`",
+    "`LCOH|Electricity`" =  "( 1 / `Tech|ELH2|Efficiency` ) * `Price|Electricity|Hydrogen`",
+    "`LCOH|VOM`" = "`Tech|ELH2|VOM`",
+    "`LCOH`" = "`LCOH|CAPEX|Other` + `LCOH|CAPEX|Stack` + `LCOH|FOM` + `LCOH|Electricity` + `LCOH|VOM`",
+    units = "USD/MWh"
+  )
+
+```
+
+## Calculate natural gas cost components
+
+```{r calculate natural gas}
+
+data.costs <- data.costs %>% 
+  # Calculate gas price components
+  calc_addVariable(
+    # Cost of CO2 price
+    "`Cost|Gas|CO2`" = "`Price|CO2` * `Tech|Gas|Emi`",
+    # Total cost including CO2 price
+    "`Cost|Gas`" = "`Price|Gas` + `Cost|Gas|CO2`",
+    units = "USD/MWh"
+  )
+
+```
+
+## Read data for demand secured by implemented policies
+
+```{r read demand data}
+
+data.demand <- read_excel("data/demand_iea.xlsx") %>% 
+  pivot_longer(`2020`:`2050`, names_to = "year", values_to = "value") %>% 
+  crossing(scenario = c("Default", "Progressive", "Conservative")) %>%  
+  mutate(period = as.numeric(year)) %>% 
+  select(scenario, variable, region, unit, period, value) %>% 
+  filter(!is.na(value))
+
+# Calculate equiv. capacity that is backed by implemented demand-side policies
+data.demand.cap <- data.costs %>% 
+  filter(variable %in% c("Tech|ELH2|Efficiency", "Tech|ELH2|FLh")) %>% 
+  bind_rows(data.demand) %>%
+  ungroup() %>% 
+  # From MtH2/yr to GW electrolysis capacity
+  calc_addVariable(
+  "`Demand|Policies|Cumulative Capacity`" =
+    "1E3 * (`Demand|Policies` * 33.33) / 
+    (`Tech|ELH2|Efficiency` * `Tech|ELH2|FLh`)",
+  units = "GW",
+  only.new = TRUE)
+
+# Distribute cumulative capacity in 2030 backed by demand to 2024-2030
+# by keeping the share of project announcements backed by demand constant
+data.newcap <- data.v2023 %>%
+  filter(year %in% seq(2024,2030)) %>%
+  group_by(year) %>%
+  summarise(cap = sum(cap.sum))
+
+data.demand.addedcap <- tibble(scenario = c("Default", "Progressive", "Conservative")) %>% 
+  mutate(variable = "Demand|Policies|Added Capacity",
+         region = "World",
+         unit = "GW/yr") %>% 
+  crossing(period = seq(2024, 2030)) %>% 
+  full_join(data.newcap, by = c("period" = "year")) %>% 
+  full_join(data.demand.cap %>% select(scenario, region, value)) %>%
+  group_by(scenario) %>% 
+  mutate(value = value * cap/sum(cap)) %>% 
+  select(scenario, variable, region, unit, period, value)
+
+```
+
+## Calculate required subsidies for projects until 2030
+
+```{r calculate subsidies}
+
+# Combine with added capacity
+data.costs <- data.costs %>% 
+  # Calculate instantaneous gap between LCOH and gas price
+  # Note: Not used for the calculation of required subsidies
+  calc_addVariable(
+  "`Gap|LCOE`" = "`LCOH` - `Cost|Gas`",
+  "`Gap|LCOE|w/o CO2`" = "`LCOH` - `Price|Gas`",
+  units = "USD/MWh")
+  
+# Extract lifetime
+data.lifetime <- data.costs %>%
+  filter(variable == "Tech|ELH2|Payback period") %>%
+  select(scenario, region, period, value) %>%
+  rename(lifetime = value)
+
+# New capacity from project announcements
+data.newcap.until2030 <- data.v2023 %>%
+  filter(year %in% seq(2024, 2030),
+         # Only calculate subsidies for projects without an FID
+         status %in% c("Feasibility study", "Concept")) %>% 
+  group_by(year) %>% 
+  summarise(cap = 1E3*sum(cap.sum))  # GW into MW
+
+# After 2030, use median
+data.scenarios.median.after2030 <-data.v2023 %>%
+  filter(year == 2030) %>%
+  group_by(year) %>% 
+  summarise(cumcap = sum(cumcap.sum)) %>% 
+  bind_rows(data.scenarios %>%
+              filter(year %in% c(2040, 2050)) %>% 
+              group_by(year) %>% 
+              summarise(cumcap = median(value.gw))) %>% 
+  complete(year = seq(2030, 2050)) %>% 
+  mutate(cumcap = zoo::na.approx(cumcap)) %>% 
+  # Calculate yearly changes
+  mutate(cap = 1E3 * (cumcap - lag(cumcap))) %>%   # GW into MW
+  filter(!is.na(cap))
+
+# Combine
+data.newcap <- bind_rows(data.newcap.until2030,
+                         data.scenarios.median.after2030 %>% 
+                           select(year, cap))
+
+# Capacity backed by demand-side policies
+data.cap.backed <- data.demand.addedcap %>% 
+  mutate(cap.backed = 1E3*value) %>% 
+  select(scenario, region, period, cap.backed)
+
+# LCOH (same with/without CO2 price)
+data.lcoh <- data.costs %>% 
+  filter(variable == "LCOH") %>% 
+  select(scenario, region, period, value) %>% 
+  rename(lcoh = value)
+
+# Full load hours
+data.flh <- data.costs %>% 
+  filter(variable == "Tech|ELH2|FLh") %>% 
+  select(scenario, region, period, value) %>% 
+  rename(flh = value)
+
+# Efficiency
+data.eff <- data.costs %>% 
+  filter(variable == "Tech|ELH2|Efficiency") %>% 
+  select(scenario, region, period, value) %>% 
+  rename(eff = value)
+
+# Calculate annual subsidies (per year of project announcements)
+# Subsidies accumulate because they need to be paid in each year of the
+# lifetime of a realised project
+data.subsidies.annual <- data.costs %>% 
+  # Select gas cost variables
+  filter(variable %in% c("Cost|Gas", "Price|Gas")) %>% 
+  rename(gas = value) %>% 
+  # Create new column "projects.until" to track required subsidies over 
+  # lifetime of projects
+  group_by(scenario, variable, region, unit, period) %>% 
+  mutate(projects.until = period) %>% 
+  complete(projects.until = seq(2024, 2045)) %>%
+  filter(projects.until <= period) %>% 
+  mutate(gas = ifelse(is.na(gas), na.omit(gas), gas)) %>% 
+  # Respect lifetime of projects
+  full_join(data.lifetime,
+            by = c("scenario", "region", "period")) %>% 
+  filter(period - projects.until < lifetime) %>% 
+  select(-lifetime) %>% 
+  # Join with new capacity dataset
+  full_join(data.newcap,
+            by = c("projects.until" = "year")) %>%
+  # Join with capacities backed by demand-side policies
+  full_join(data.cap.backed,
+            by = c("projects.until" = "period",
+                   "scenario" = "scenario",
+                   "region" = "region")) %>% 
+  replace_na(list(cap.backed = 0)) %>% 
+  # Join with LCOE
+  full_join(data.lcoh,
+            by = c("scenario",
+                   "region",
+                   "projects.until" = "period")) %>% 
+  # Join with full load hours
+  full_join(data.flh,
+            by = c("scenario",
+                   "region",
+                   "projects.until" = "period")) %>% 
+  # Join with efficiency
+  full_join(data.eff,
+            by = c("scenario",
+                   "region",
+                   "projects.until" = "period")) %>% 
+  # Calculate subsidies per year
+  mutate(value = 1E-9 * (cap - cap.backed) * flh * eff * (lcoh - gas),
+         unit = "bn USD/yr") %>% 
+  # Rename variables
+  mutate(variable = case_when(
+    variable == "Cost|Gas" ~ "Subsidies|Annual",
+    variable == "Price|Gas" ~ "Subsidies|Annual|w/o CO2")) %>% 
+  select(scenario, variable, region, unit, period, projects.until, value)
+
+```
+
+## Read tracked subsidies
+
+```{r read tracked subsidies}
+
+# BNEF data, see file
+file.subsidies.tracker <- "data/subsidies_bnef.xlsx"
+
+data.subsidies.tracker <- read_excel(file.subsidies.tracker) %>% 
+  select(-c("comments", "link"))
+
+```
+
+## FIGURE 5: Future implementation gap in 2030
+
+```{r figure 5}
+
+p.implementationgap2030.default <-
+  plotFutureImplementaionGap(scenario = "Default")
+
+print(p.implementationgap2030.default)
+
+ggsave("figures/FIGURE05_future_implementation_gap.png",
+       width = 180, height = 140, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/FIGURE05_future_implementation_gap.svg",
+       width = 180, height = 140, units = "mm", bg = "white")
+
+```
+
+# EXTENDED DATA FIGURES
+
+## EXTENDED DATA FIGURE 1: Project tracking and implementation gap in 2023
+
+```{r extended data figure 1}
+
+data.track.calc2023 <-
+  calcProjectTracking(
+    data.v2021proj = data.v2021proj,
+    data.v2022proj = data.v2022proj,
+    data.v2023proj = data.v2023proj,
+    year.tracking = 2023,
+    type = "additional"
+  )
+
+# Comparing expectations in 2021 to outcome in 2023
+data.rates.calc2023.v21v23 <-
+  calcRates(
+    data.track.calc = data.track.calc2023,
+    year.tracking = 2023,
+    compare = "v2021-v2023"
+  )
+
+# Print rates
+data.rates.calc2023.v21v23 %>%
+  group_by(outcome) %>%
+  summarise(rate.tot = round(sum(cap.share.tot),2))
+
+data.rates.calc2023.v21v23 %>%
+  group_by(status,outcome) %>%
+  summarise(rate.disagg = round(sum(cap.share.disagg),2))
+
+# Comparing expectations in 2022 to outcome in 2023
+data.rates.calc2023.v22v23 <-
+  calcRates(
+    data.track.calc = data.track.calc2023,
+    year.tracking = 2023,
+    compare = "v2022-v2023"
+  )
+
+# Print rates
+data.rates.calc2023.v22v23 %>%
+  group_by(outcome) %>%
+  summarise(rate.tot = round(sum(cap.share.tot),2))
+
+data.rates.calc2023.v22v23 %>%
+  group_by(status,outcome) %>%
+  summarise(rate.disagg = round(sum(cap.share.disagg),2))
+
+# Plot sankey diagram
+p.track.2023.add <-
+  plotProjectTracking(
+    data.track.calc = data.track.calc2023,
+    shift.incoming = 10000,
+    shift.outgoing = 800,
+    y.upper = 6000,
+    year.tracking = 2023,
+    annotate.labels = TRUE,
+    annotate.gap = TRUE
+  )
+
+# Plot rates of success, delay and disappearance (v2021 vs v2023)
+temp <- plotRates(data.rates = data.rates.calc2023.v21v23, year.tracking = 2023)
+
+p.rates.2023.v21v23.tot <- temp[[1]]
+p.rates.2023.v21v23.disagg <- temp[[2]]
+
+# Plot rates of success, delay and disappearance (v2021 vs v2023)
+temp <- plotRates(data.rates = data.rates.calc2023.v22v23, year.tracking = 2023)
+
+p.rates.2023.v22v23.tot <- temp[[1]]
+p.rates.2023.v22v23.disagg <- temp[[2]]
+
+# Left-align panels
+plot.align <- align_plots(p.track.2023.add + theme(legend.position = "none"),
+                          p.rates.2023.v21v23.tot + theme(legend.position = "none"),
+                          align = "v",
+                          axis = "l")
+
+# Build bottom row left
+bottom_row.left.panels <- plot_grid(
+  plot.align[[2]],
+  p.rates.2023.v21v23.disagg + theme(legend.position = "none"),
+  ncol = 2,
+  align = "h")
+
+bottom_row.left.title <- ggdraw() +
+  draw_label(
+    "Expectations in 2021 compared to expectations in 2023",
+    hjust = 0.5,
+    vjust = 0,
+    size = font.size
+  )
+
+bottom_row.left <- plot_grid(
+  bottom_row.left.title,
+  bottom_row.left.panels,
+  ncol = 1,
+  rel_heights = c(0.15,2)
+)
+
+# Build bottom row right
+bottom_row.right.panels <-
+  plot_grid(
+    p.rates.2023.v22v23.tot + theme(legend.position = "none"),
+    p.rates.2023.v22v23.disagg + theme(legend.position = "none"),
+    ncol = 2,
+    align = "h"
+  )
+
+bottom_row.right.title <- ggdraw() +
+  draw_label("Expectations in 2022 compared to expectations in 2023",
+             hjust = 0.5,
+             vjust = 0,
+             size = font.size)
+
+bottom_row.right <- plot_grid(
+  bottom_row.right.title,
+  bottom_row.right.panels,
+  ncol = 1,
+  rel_heights = c(0.15,2)
+)
+
+# Complete bottom row
+bottom_row <- plot_grid(
+  bottom_row.left,
+  NULL,
+  bottom_row.right,
+  NULL,
+  get_legend(p.rates.2023.v22v23.tot),
+  ncol = 5,
+  rel_widths = c(1, 0.05, 1, 0.02, 0.25),
+  labels = c("b", "", "c", "", ""),
+  label_size = font.size
+)
+
+# Build top row
+top_row <- plot_grid(
+  plot.align[[1]],
+  NULL,
+  ncol = 2,
+  rel_widths = c(1,0.013),
+  labels = "a",
+  label_size = font.size)
+
+# Build entire plot
+p <- plot_grid(top_row,
+               NULL,
+               bottom_row,
+               ncol = 1,
+               rel_heights = c(1.3,0.2,1))
+
+print(p)
+
+ggsave("figures/EXT_DATA_FIGURE01_implementation_gap_2023.png",
+       width = 180, height = 150, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/EXT_DATA_FIGURE01_implementation_gap_2023.svg",
+       width = 180, height = 150, units = "mm", bg = "white")
+
+```
+
+## EXTENDED DATA FIGURE 2: Electrolysis requirements in 1.5°C scenarios
+
+```{r extended data figure 2}
+
+data.label <- data.scenarios %>% 
+  filter(year == 2050)
+
+p.1.5scen <- ggplot(data.scenarios %>% 
+                   filter(year >= 2030),
+            aes(x = year, y = value.gw, color = organisation)) +
+  geom_line(aes(group = scen.name)) +
+  geom_point() +
+  scale_color_npg(name = "Source") +
+  scale_y_continuous(limits = c(0,NA)) +
+  xlab("Year") +
+  ylab("Capacity (GW)") +
+  geom_text_repel(
+    data = data.label,
+    mapping = aes(x = 2050.3, y = value.gw, label = scen.name),
+    size = 5 /.pt,
+    nudge_x = 7,
+    direction = "y",
+    segment.size = 0.25,
+    min.segment.length = 0
+  ) +
+  ggtitle("Electrolysis requirements in 1.5°C scenarios")
+
+print(p.1.5scen)
+
+ggsave("figures/EXT_DATA_FIGURE02_electrolysis_1.5C_scenarios.png",
+       width = 120, height = 60, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/EXT_DATA_FIGURE02_electrolysis_1.5C_scenarios.svg",
+       width = 120, height = 60, units = "mm", bg = "white")
+
+```
+
+## EXTENDED DATA FIGURE 3: Green hydrogen project announcements and median 1.5°C scenario
+
+```{r extended data figure 3}
+
+# Project announcements
+data.plot.projects <- data.v2023 %>% 
+  group_by(status, year) %>% 
+  filter(year %in% seq(2020, 2045)) %>% 
+  summarise(cap.sum = sum(cap.sum),
+            cumcap.sum = sum(cumcap.sum))
+
+# 1.5C scenario median
+data.plot.scenarios <- data.scenarios.median.after2030 %>% 
+  filter(year <= 2045) %>% 
+  mutate(cap = cap/1E3)  # MW to GW
+
+# Capacity secured by demand policies
+data.plot.capdemand <- data.demand.addedcap %>% 
+  filter(scenario == "Default") %>% 
+  complete(period = seq(2024, 2045)) %>% 
+  mutate(value = ifelse(is.na(value), 0, value)) %>% 
+  mutate(cumulative = cumsum(value))
+
+p.added <- ggplot() +
+  geom_col(data = data.plot.scenarios,
+           mapping = aes(x = year, y = cap, fill = "Median"),
+           alpha = 0.5) +
+  scale_fill_manual(name = "1.5°C scenarios",
+                    values = c("Median" = "grey"),
+                    guide = guide_legend(order = 1)) +
+  new_scale_fill() +
+  geom_col(data = data.plot.projects,
+           mapping = aes(x = year, y = cap.sum, fill = status)) +
+  scale_fill_npg(name = "Project announcement status",
+                 guide = guide_legend(order = 2)) +
+  geom_col_pattern(data = data.plot.capdemand,
+                   mapping = aes(x = period, y = value, pattern = "Implemented policies"),
+                   fill = NA,
+                   pattern_fill = "black",
+                   pattern_size = 0.1,
+                   pattern_density = 0.2,
+                   pattern_spacing = 0.01) +
+  scale_pattern_manual(name = "Capacity supported by\ndemand-side regulation",
+                       values = c("Implemented policies" = "stripe"),
+                       guide = guide_legend(order = 3)) +
+  scale_x_continuous(
+    name = "Year",
+    breaks = seq(2020,2045,5)
+  ) + 
+  ylab("Added capacity (GW/yr)") +
+  ggtitle("Annual capacity additions in project announcements\n and 1.5°C scenarios") +
+  background_grid(major = c("y"),
+                  size.major = 0.25)
+
+p.cumulative <- ggplot() +
+  geom_col(data = data.plot.scenarios,
+           mapping = aes(x = year, y = cumcap, fill = "Median"),
+           alpha = 0.5) +
+  scale_fill_manual(name = "1.5°C scenarios",
+                    values = c("Median" = "grey")) +
+  new_scale_fill() +
+  geom_col(data = data.plot.projects,
+           mapping = aes(x = year, y = cumcap.sum, fill = status)) +
+  scale_fill_npg(name = "Project announcement status") +#
+  geom_col_pattern(data = data.plot.capdemand,
+                   mapping = aes(x = period, y = cumulative, pattern = "Implemented policies"),
+                   fill = NA,
+                   pattern_fill = "black",
+                   pattern_size = 0.1,
+                   pattern_density = 0.2,
+                   pattern_spacing = 0.01) +
+  scale_pattern_manual(name = "Capacity supported by\ndemand-side regulation",
+                       values = c("Implemented policies" = "stripe"),
+                       guide = guide_legend(order = 3)) +
+  scale_x_continuous(
+    name = "Year",
+    breaks = seq(2020,2045,5)
+  ) + 
+  ylab("Capacity (GW)") +
+  ggtitle("Cumulative capacity in project announcements\n and 1.5°C scenarios") +
+  background_grid(major = c("y"),
+                  size.major = 0.25)
+
+p <- plot_grid(
+  p.added + theme(legend.position = "none"),
+  p.cumulative + theme(legend.position = "none"),
+  get_legend(p.added),
+  labels = c("a", "b"),
+  label_size = font.size,
+  ncol = 3,
+  rel_widths = c(1,1,0.45)
+)
+
+print(p)
+
+ggsave("figures/EXT_DATA_FIGURE03_project_announcements_1.5C_median.png",
+       width = 160, height = 60, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/EXT_DATA_FIGURE03_project_announcements_1.5C_median.svg",
+       width = 160, height = 60, units = "mm", bg = "white")
+
+```
+
+## EXTENDED DATA FIGURE 4: Technological learning for electrolysis
+
+```{r extended data figure 4}
+
+data.plot <- data.costs %>% 
+  filter(variable %in% c("Tech|ELH2|CAPEX|Stack", "Tech|ELH2|CAPEX|Other")) %>% 
+  order.levels(variable = c("Tech|ELH2|CAPEX|Stack", "Tech|ELH2|CAPEX|Other"),
+               scenario = c("Default", "Progressive", "Conservative")) %>% 
+  filter(period <= 2045)
+
+colors.capex <- c(
+    "Tech|ELH2|CAPEX|Stack" = "#8F9F7C",
+    "Tech|ELH2|CAPEX|Other" = "#4B5C67")
+
+labels.capex <- c(
+    "Tech|ELH2|CAPEX|Stack" = "Stack",
+    "Tech|ELH2|CAPEX|Other" = "Balance of plant")
+
+p <- ggplot() +
+  geom_col(data = data.plot,
+           mapping = aes(x = period, y = value/1E3, fill = variable)) +
+  scale_fill_manual(
+    name = "Components",
+    values = colors.capex,
+    labels = labels.capex) +
+  scale_x_continuous(name = "Year", breaks = seq(2025, 2045, 5)) +
+  scale_y_continuous(name = "Specific investment costs ($/kW(el))",
+                     breaks = seq(0, 2500, 500)) +
+  ggtitle("Technological learning of electrolyser investment costs") +
+  facet_wrap(~scenario) +
+  theme(strip.background =element_rect(fill = NA),
+        axis.line = element_line(linewidth = 0),
+        panel.border = element_rect(color = "black")) + 
+  background_grid(major = c("y"), size.major = 0.25)
+
+print(p)
+
+ggsave("figures/EXT_DATA_FIGURE04_technological_learning.png",
+       width = 160, height = 60, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/EXT_DATA_FIGURE04_technological_learning.svg",
+       width = 160, height = 60, units = "mm", bg = "white")
+
+```
+
+## EXTENDED DATA FIGURE 5: LCOH in comparison to recent studies
+
+```{r extended data figure 5}
+
+data.lcoh <- read_excel("data/lcoh_studies.xlsx") %>% 
+  pivot_longer(`2023`:`2050`, names_to = "year", values_to = "value") %>% 
+  # Transform to same real 2023 USD
+  mutate(
+    value = ifelse(`Currency base year` == 2020, 1.18*value, value),
+    value = ifelse(`Currency base year` == 2022, 1.04*value, value),
+    value = ifelse(Unit == "EUR/kg", 1.09*value, value),
+    unit = "2023USD/kg")
+
+data.plot.lcoh <- data.lcoh %>% 
+  filter(year == 2030) %>% 
+  select(Organisation, `Short name`, Variable, value) %>%
+  # Transform into $/MWh
+  mutate(value = 1E3 * value / 33.33) %>% 
+  pivot_wider(names_from = Variable, values_from = value)
+  
+data.plot.lcoh.own <- data.costs %>% 
+  filter(variable == "LCOH",
+         period == 2030) %>% 
+  pivot_wider(names_from = scenario, values_from = value)
+
+p.lcoh <- ggplot() +
+  geom_rect(data = data.plot.lcoh.own,
+            mapping = aes(xmin = 0.4, xmax = 13.6, ymin = Progressive, ymax = Conservative),
+            fill = "grey",
+            alpha = 0.3) +
+  # Our own analysis
+  geom_point(data = data.plot.lcoh.own,
+             mapping = aes(x = "A", y = Default)) +
+  geom_linerange(data = data.plot.lcoh.own,
+                 mapping = aes(x = "A", ymin = Progressive, ymax = Conservative)) +
+  geom_point(data = data.plot.lcoh,
+             mapping = aes(x = `Short name`, y = `LCOH|Green|central`, color = Organisation)) +
+  geom_linerange(data = data.plot.lcoh,
+                 mapping = aes(x = `Short name`, ymin = `LCOH|Green|min`, ymax = `LCOH|Green|max`, color = Organisation)) +
+  scale_color_npg() +
+  geom_vline(xintercept = 1.5, linetype = "dashed", linewidth = 0.25) +
+  scale_x_discrete(name = NULL,
+                   labels = c("A" = "This study",
+                              "BCG Europe" = "BCG\nEurope",
+                              "Hydrogen Council Global" = "Hydrogen Council\nGlobal",
+                              "BNEF Germany" = "BNEF\nGermany",
+                              "BNEF US" = "BNEF\nUS",
+                              "Capgemini Survey Global" = "Capgemini\nSurvey\nGlobal",
+                              "DNV Dedicated Global" = "DNV\nDedicated\nGlobal",
+                              "DNV Grid Global" = "DNV\nGrid\nGlobal",
+                              "ICCT Central EU" = "ICCT\nCentral\nEU",
+                              "ICCT Central US" = "ICCT\nCentral\nUS",
+                              "IEA NZE Onshore Wind Global" = "IEA NZE\nOnshore Wind\nGlobal",
+                              "IEA NZE Solar Global" = "IEA NZE\nSolar\nGlobal",
+                              "NPC NZ2050 Delivered Costs US Gulf Coast" = "NPC NZ2050\nDelivered Costs\nUS Gulf Coast")) +
+  scale_y_continuous(name = "LCOH in 2030 ($/MWh)",
+                     sec.axis = sec_axis(~.*33.33/1E3,
+                                         name = "LCOH in 2030 ($/kgH2)"),
+                     limits = c(0, NA)) +
+  ggtitle("Levelised cost of green hydrogen in 2030") +
+  theme(legend.position = "none")
+
+ggsave("figures/EXT_DATA_FIGURE05_lcoh_comparison.png",
+       width = 180, height = 80, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/EXT_DATA_FIGURE05_lcoh_comparison.svg",
+       width = 180, height = 80, units = "mm", bg = "white")
+
+```
+
+
+## EXTENDED DATA FIGURE 6: Future implementation gap in 2030 (progressive scenario)
+
+```{r extended data figure 6}
+
+p.implementationgap2030.progressive <-
+  plotFutureImplementaionGap(scenario = "Progressive")
+
+print(p.implementationgap2030.progressive)
+
+ggsave("figures/EXT_DATA_FIGURE06_future_implementation_gap_progressive.png",
+       width = 180, height = 140, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/EXT_DATA_FIGURE06_future_implementation_gap_progressive.svg",
+       width = 180, height = 140, units = "mm", bg = "white")
+
+```
+
+## EXTENDED DATA FIGURE 7: Future implementation gap in 2030 (conservative scenario)
+
+```{r extended data figure 7}
+
+p.implementationgap2030.conservative <-
+  plotFutureImplementaionGap(scenario = "Conservative")
+
+print(p.implementationgap2030.conservative)
+
+ggsave("figures/EXT_DATA_FIGURE07_future_implementation_gap_conservative.png",
+       width = 180, height = 140, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/EXT_DATA_FIGURE07_future_implementation_gap_conservative.svg",
+       width = 180, height = 140, units = "mm", bg = "white")
+
+```
+
+## EXTENDED DATA FIGURE 8: Required subsidies in 1.5°C scenarios
+
+```{r extended data figure 8}
+
+# Color for cumulative with carbon price
+color.cumulative <- c(
+  "With CO2" = "#7C4569",
+  "Without CO2" = "#0e6684"
+)
+
+p.conservative.noco2price <- plotSubsidiesWithScenarios(
+  data.subsidies.annual = data.subsidies.annual,
+  scen = "Conservative",
+  color.cumulative = color.cumulative,
+  withCarbonPrice = FALSE
+)
+
+ymax <- p.conservative.noco2price[[2]] / p.conservative.noco2price[[3]]
+secaxis <- p.conservative.noco2price[[3]]
+
+# Create plot panels for default scenario without carbon price
+p.default.noco2price <- plotSubsidiesWithScenarios(
+  data.subsidies.annual = data.subsidies.annual,
+  scen = "Default",
+  color.cumulative = color.cumulative,
+  withCarbonPrice = FALSE,
+  ymax.subsidies = ymax,
+  secaxis.factor = secaxis
+)
+
+p.default.co2price <- plotSubsidiesWithScenarios(
+  data.subsidies.annual = data.subsidies.annual,
+  scen = "Default",
+  color.cumulative = color.cumulative,
+  withCarbonPrice = TRUE,
+  ymax.subsidies = ymax,
+  secaxis.factor = secaxis
+)
+
+p.progressive.noco2price <- plotSubsidiesWithScenarios(
+  data.subsidies.annual = data.subsidies.annual,
+  scen = "Progressive",
+  color.cumulative = color.cumulative,
+  withCarbonPrice = FALSE,
+  ymax.subsidies = ymax,
+  secaxis.factor = secaxis
+)
+
+p.progressive.co2price <- plotSubsidiesWithScenarios(
+  data.subsidies.annual = data.subsidies.annual,
+  scen = "Progressive",
+  color.cumulative = color.cumulative,
+  withCarbonPrice = TRUE,
+  ymax.subsidies = ymax,
+  secaxis.factor = secaxis
+)
+
+p.conservative.noco2price <- plotSubsidiesWithScenarios(
+  data.subsidies.annual = data.subsidies.annual,
+  scen = "Conservative",
+  color.cumulative = color.cumulative,
+  withCarbonPrice = FALSE,
+  ymax.subsidies = ymax,
+  secaxis.factor = secaxis
+)
+
+p.conservative.co2price <- plotSubsidiesWithScenarios(
+  data.subsidies.annual = data.subsidies.annual,
+  scen = "Conservative",
+  color.cumulative = color.cumulative,
+  withCarbonPrice = TRUE,
+  ymax.subsidies = ymax,
+  secaxis.factor = secaxis
+)
+
+p.panels <- plot_grid(
+  p.default.noco2price[[1]] + theme(legend.position = "none"),
+  p.default.co2price[[1]] + theme(legend.position = "none"),
+  p.progressive.noco2price[[1]] + theme(legend.position = "none"),
+  p.progressive.co2price[[1]] + theme(legend.position = "none"),
+  p.conservative.noco2price[[1]] + theme(legend.position = "none"),
+  p.conservative.co2price[[1]] + theme(legend.position = "none"),
+  ncol = 2,
+  labels = "auto",
+  label_size = font.size
+)
+
+p.legend <- get_legend(p.default.noco2price[[1]])
+
+p <- plot_grid(
+  p.panels,
+  NULL,
+  p.legend,
+  ncol = 3,
+  rel_widths = c(1,0.02,0.22)
+)
+
+ggsave("figures/EXT_DATA_FIGURE08_subsidies_for_1.5c_scenarios.png",
+       width = 180, height = 140, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/EXT_DATA_FIGURE08_subsidies_for_1.5c_scenarios.svg",
+       width = 180, height = 140, units = "mm", bg = "white", dpi = 600)
+
+```
+
+
+## EXTENDED DATA FIGURE 9: Capacity backed by announced subsidies
+
+```{r extended data figure 9}
+
+# Subsidy tracker from BNEF
+data.subsidies.world <- data.subsidies.tracker %>% 
+  filter(publication == 2023,
+         region == "World") %>% 
+  pull(value)
+
+# Capacity backed by demand-side policies
+data.cap.backed.demand <- data.demand.addedcap %>% 
+  mutate(cap.backed.demand = 1E3*value) %>% 
+  select(scenario, region, period, cap.backed.demand)
+
+# Calculate how much of capacity is not backed by demand-side regulation yet
+data.cap.notbacked <- full_join(data.newcap.until2030,
+                  data.cap.backed.demand, by = c("year" = "period")) %>% 
+  mutate(cap.notbacked = cap - cap.backed.demand) %>% 
+  filter(year <= 2030)
+
+
+# Calculate how much capacity can be built given announced subsidies
+data.subsidies.capacity <- data.subsidies.annual %>%
+  filter(variable %in% c("Subsidies|Annual", "Subsidies|Annual|w/o CO2"),
+         projects.until <= 2030) %>% 
+  group_by(scenario, variable, projects.until) %>%
+  # Don't allow negative subsidies
+  mutate(value = ifelse(value < 0, 0, value)) %>% 
+  summarise(subsidies.required = sum(value)) %>%
+  # Total subsidies
+  mutate(subsidies.tot = data.subsidies.world) %>% 
+  # Calculate left subsidies
+  mutate(subsidies.left = subsidies.tot - cumsum(subsidies.required)) %>% 
+  # Calculate new capacities that can be built with given subsidies
+  full_join(data.cap.notbacked, by = c("projects.until" = "year",
+                                       "scenario" = "scenario")) %>% 
+  mutate(cap.backed.subsidies = case_when(
+    # If subsidies are left, all new project announcement capacity can be built
+    subsidies.left > 0 ~ cap.notbacked,
+    # If already for project announcements in previous year no subsidies were
+    # left, nothing can be built
+    lag(subsidies.left) < 0 ~ 0,
+    # If some subsidies are left (but not enough), only a part of new project
+    # announcement capacity can be built
+    subsidies.left < 0 ~ lag(subsidies.left)/subsidies.required * cap.notbacked))
+
+# Extract capacity of certain project announcements (operational and FID/Construction)
+data.cumcap.certain <- data.v2023 %>%
+  filter(year %in% seq(2020, 2030),
+         status %in% c("Decommissioned", "Operational", "FID/Construction")) %>%
+  group_by(year) %>%
+  summarise(cumcap.certain = sum(cumcap.sum))
+
+# Reformat data for plotting
+data.cap <- data.subsidies.capacity %>%
+  mutate(cap = 1E-3 * cap,
+         cap.backed.demand = 1E-3 * cap.backed.demand,
+         cap.backed.subsidies = 1E-3 * cap.backed.subsidies) %>% 
+  mutate(cap.notbacked = cap - cap.backed.demand - cap.backed.subsidies) %>% 
+  select(-c("subsidies.required", "subsidies.tot", "subsidies.left", "cap")) %>%
+  mutate(cumcap.backed.demand = cumsum(cap.backed.demand),
+         cumcap.backed.subsidies = cumsum(cap.backed.subsidies),
+         cumcap.notbacked = cumsum(cap.notbacked)) %>% 
+  full_join(data.cumcap.certain, by = c("projects.until" = "year")) %>% 
+  pivot_longer(cols = c("cumcap.backed.subsidies", "cumcap.backed.demand", "cumcap.notbacked", "cumcap.certain"),
+               names_to = "type",
+               names_prefix = "cumcap.") %>% 
+  select(scenario, variable, projects.until, type, value) %>% 
+  order.levels(type = c("notbacked", "backed.subsidies", "backed.demand", "certain"),
+               scenario = c("Default", "Progressive", "Conservative"),
+               variable = c("Subsidies|Annual|w/o CO2",
+                            "Subsidies|Annual")) %>% 
+  filter(projects.until >= 2024)
+
+# Save time series for scenario "Default" without CO2 price into csv file
+# This is used in figure 1 for illustration and overwritten here
+data.cap %>%
+  filter(variable == "Subsidies|Annual|w/o CO2",
+         type %in% c("certain", "backed.subsidies", "backed.demand")) %>%
+  group_by(scenario, projects.until) %>%
+  summarise(value = sum(value)) %>% 
+  rename(year = projects.until) %>%
+  write_csv("data/fig1_capacity_backed_by_subsidies.csv")
+
+colors.cap.type <- c(
+  "notbacked" = "grey80",
+  "backed.subsidies" = "#00A087FF",
+  "backed.demand" = "#d8593b",
+  "certain" = "#3C5488FF"
+)
+
+labels.cap.type <- c(
+  "notbacked" = "Unsupported",
+  "backed.subsidies" = "Supported by announced subsidies",
+  "backed.demand" = "Supported by implemented demand-side policies",
+  "certain" = "Operational/FID/Construction"
+)
+
+# Create plot
+p <- ggplot() +
+  geom_col(data = data.cap,
+           mapping = aes(x = projects.until, y = value, fill = type)) +
+  scale_fill_manual(
+    name = "Project announcements",
+    values = colors.cap.type,
+    labels = labels.cap.type
+  ) +
+  scale_x_continuous("Year", breaks = seq(2024, 2030, 2)) +
+  ylab("Capacity (GW)") +
+  ggtitle("Global green hydrogen project announcements by policy support") +
+  facet_grid(scenario ~ variable,
+             labeller = labeller(variable = c("Subsidies|Annual|w/o CO2" = "Without carbon price",
+                                              "Subsidies|Annual" = "With carbon price"))) +
+  theme(strip.background = element_rect(fill = NA),
+        axis.line = element_line(linewidth = 0),
+        panel.border = element_rect(color = "black"))
+
+print(p)
+
+ggsave("figures/EXT_DATA_FIGURE09_capacity_backed_by_subsidies.png",
+       width = 120, height = 80, units = "mm", bg = "white", dpi = 600)
+ggsave("figures/EXT_DATA_FIGURE09_capacity_backed_by_subsidies.svg",
+       width = 120, height = 80, units = "mm", bg = "white")
+
+```
