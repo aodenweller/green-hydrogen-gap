@@ -1,4 +1,4 @@
-# The green hydrogen ambition and implementation gap
+# The Green Hydrogen Ambition and Implementation Gap
 
 This respository contains the code to run the analysis and reproduce all figures of the article:
 

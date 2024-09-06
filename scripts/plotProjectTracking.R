@@ -41,7 +41,12 @@ plotProjectTracking <- function(data.track.calc,
                                  !is.na(stat21t22), "Newly operational", status2022),
            status2023 = ifelse(isEq(status2023, "Operational") &
                                  !is.na(stat22t23), "Newly operational", status2023),
-           status2023 = ifelse(isEq(status2022, "Newly operational"), "Newly operational", status2023))
+           status2023 = ifelse(isEq(status2022, "Newly operational"), "Newly operational", status2023)) %>% 
+    # Simplify incoming projects: Assign all to "New"
+    mutate(stat21t22 = ifelse(isEq(stat21t22, "Delayed/in"), "New", stat21t22),
+           stat21t22 = ifelse(isEq(stat21t22, "Early"), "New", stat21t22),
+           stat22t23 = ifelse(isEq(stat22t23, "Delayed/in"), "New", stat22t23),
+           stat22t23 = ifelse(isEq(stat22t23, "Early"), "New", stat22t23))
   
   # Select required columns
   df <- data.track.calc %>% 
@@ -135,13 +140,13 @@ plotProjectTracking <- function(data.track.calc,
   # Fill colours for transition stages (outgoing)
   fill.change.out <- c(
     #"Cap/out" = "grey30",
-    "No info" = alpha("darkred", 0.1),
-    "Delayed/out" = alpha("darkorange", 0.1),
+    "No info" = alpha("darkred", 0.07),
+    "Delayed/out" = alpha("darkorange", 0.07),
     "Operational" = alpha("darkgreen", 0.7)
   )
   
   fill.change.in <- c(
-    "New" = "grey50",
+    "New" = "grey70",
     "Early" = "grey40",
     #"Cap/in" = "grey30",
     "Delayed/in" = "grey20"
@@ -159,8 +164,8 @@ plotProjectTracking <- function(data.track.calc,
   # Border colours for transition stages (outgoing)
   color.change.out <- c(
     #"Cap/out" = NA_character_,
-    "No info" = alpha("darkred", 0.3),
-    "Delayed/out" = alpha("darkorange", 0.3),
+    "No info" = alpha("darkred", 0.2),
+    "Delayed/out" = alpha("darkorange", 0.2),
     "Operational" = "black")
   
   # Border colours for transition stages (incoming)
@@ -217,6 +222,19 @@ plotProjectTracking <- function(data.track.calc,
   
   data.dummy.change.in <- data.dummy %>% 
     filter(node %in% names(fill.change.in))
+  
+  # x axis labels
+  if (year.tracking == 2022){
+    labels.x <- c(
+      "status2021" = "Announcements\nin 2021",
+      "status2022" = "Announcements\nin 2022",
+      "status2023" = "Outcome\nin 2023")
+  } else if (year.tracking >= 2023) {
+    labels.x <- c(
+      "status2021" = "Announcements\nin 2021",
+      "status2022" = "Announcements\nin 2022",
+      "status2023" = "Announcements\nin 2023")
+  }
   
   # Alluvial plot
   p <- ggplot() +
@@ -294,7 +312,7 @@ plotProjectTracking <- function(data.track.calc,
         alpha = node,
         lwd = node
       ),
-      flow.alpha = 0.2,
+      flow.alpha = 0.12,
       flow.color = 0,
       width = 0.2,
       show.legend = FALSE) +
@@ -306,19 +324,15 @@ plotProjectTracking <- function(data.track.calc,
     scale_linewidth_manual(values = lwd.all) +
     # Formatting
     scale_x_discrete(
-      name = "Year of expectation",
+      name = NULL,
       breaks = c("status2021", "status2022", "status2023"),
-      labels = c(
-        "status2021" = "2021",
-        "status2022" = "2022",
-        "status2023" = "2023"
-      )) +
+      labels = labels.x) +
     scale_y_continuous(
-      name = paste("Added capacity in", year.tracking, "(GW)"),
+      name = paste("Capacity additions in", year.tracking, "(GW)"),
       labels = function(x) x * 1E-3,
       breaks = c(seq(0, y.upper, 1000))
     ) +
-    ggtitle(paste("Tracking green hydrogen projects announced for", year.tracking))
+    ggtitle(paste("Tracking global green hydrogen projects announced for", year.tracking))
   
   # Add annotations for announcements vs realisation
   # Status 2021
@@ -372,17 +386,17 @@ plotProjectTracking <- function(data.track.calc,
     
     # Tibble with annotation labels
     # Hack: Use dummy labels with alpha=0 to preserve x axis order
-    status2021.label <- ifelse(year.tracking >= 2021, "expected", "realised")
-    status2022.label <- ifelse(year.tracking >= 2022, "expected", "realised")
-    status2023.label <- ifelse(year.tracking >= 2023, "expected", "realised")
+    status2021.label <- ifelse(year.tracking >= 2021, "announced in ", "realised as of ")
+    status2022.label <- ifelse(year.tracking >= 2022, "announced in ", "realised as of ")
+    status2023.label <- ifelse(year.tracking >= 2023, "announced in ", "realised as of ")
     
     data.annotations.total <- tribble(
       ~x, ~y, ~label, ~alpha,
-      "status2021", cap.2021, paste0(round(cap.2021/1E3, 2), " GW\n", status2021.label, " in 2021"), 1,
+      "status2021", cap.2021, paste0(round(cap.2021/1E3, 2), " GW\n", status2021.label, "2021"), 1,
       "stat21t22", 0, "", 0,
-      "status2022", cap.2022, paste0(round(cap.2022/1E3, 2), " GW\n", status2022.label, " in 2022"), 1,
+      "status2022", cap.2022, paste0(round(cap.2022/1E3, 2), " GW\n", status2022.label, "2022"), 1,
       "stat22t23", 0, "", 0,
-      "status2023", cap.2023, paste0(round(cap.2023/1E3, 2), " GW\n", status2023.label, " in 2023"), 1,
+      "status2023", cap.2023, paste0(round(cap.2023/1E3, 2), " GW\n", status2023.label, "2023"), 1,
     ) %>% 
       mutate(x = factor(x, levels = c("status2021", "stat21t22", "status2022", "stat22t23", "status2023")))
     
@@ -514,21 +528,19 @@ plotProjectTracking <- function(data.track.calc,
                       hjust = 0,
                       lineheight = 1) +
       theme(legend.position = "none")
-    
   }
   
   # Change spacing
   if (annotate.gap == TRUE){
     p <- p +
       theme(plot.margin = margin(t = 1, r = 22, b = 1, l = 1, unit = "mm")) +
-      coord_cartesian(xlim = c(0.7, 5), clip = "off")
+      coord_cartesian(xlim = c(0.7, 5.1), clip = "off")
   }
   else if (annotate.labels == TRUE){
     p <- p +
       theme(plot.margin = margin(t = 1, r = 12, b = 1, l = 1, unit = "mm")) +
-      coord_cartesian(xlim = c(0.7, 5), clip = "off")
+      coord_cartesian(xlim = c(0.7, 5.1), clip = "off")
   }
 
-  
   return(p)
 }

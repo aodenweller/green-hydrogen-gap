@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   class="svglite"
+   width="453.54pt"
+   height="226.77pt"
+   viewBox="0 0 453.54 226.77"
+   version="1.1"
+   id="svg198"
+   sodipodi:docname="EXT_DATA_FIGURE03_illustration_model_edited.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev1\figures\FINAL\EXT_DATA_FIGURE03_illustration_model_edited.png"
+   inkscape:export-xdpi="599.97998"
+   inkscape:export-ydpi="599.97998">
+  <metadata
+     id="metadata202">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1377"
+     id="namedview200"
+     showgrid="false"
+     inkscape:zoom="2.5397472"
+     inkscape:cx="243.02849"
+     inkscape:cy="148.15496"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg198" />
+  <defs
+     id="defs4">
+    <style
+       type="text/css"
+       id="style2"><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+  </defs>
+  <rect
+     width="100%"
+     height="100%"
+     style="stroke: none; fill: #FFFFFF;"
+     id="rect6" />
+  <defs
+     id="defs11">
+    <clipPath
+       id="cpMC4wMHw0NTMuNTR8MC4wMHwyMjYuNzc=">
+      <rect
+         x="0.00"
+         y="0.00"
+         width="453.54"
+         height="226.77"
+         id="rect8" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#cpMC4wMHw0NTMuNTR8MC4wMHwyMjYuNzc=)"
+     id="g13" />
+  <defs
+     id="defs18">
+    <clipPath
+       id="cpMjIuODh8MzQ5Ljg3fDExLjU0fDIwOS4xOQ==">
+      <rect
+         x="22.88"
+         y="11.54"
+         width="326.99"
+         height="197.65"
+         id="rect15" />
+    </clipPath>
+  </defs>
+  <g
+     clip-path="url(#cpMjIuODh8MzQ5Ljg3fDExLjU0fDIwOS4xOQ==)"
+     id="g126">
+    <polyline
+       points="37.74,209.19 37.74,32.79 "
+       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       id="polyline20" />
+    <polyline
+       points="186.38,209.19 186.38,32.79 "
+       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       id="polyline22" />
+    <polyline
+       points="146.74,209.19 146.74,48.92 "
+       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       id="polyline24" />
+    <polyline
+       points="295.37,209.19 295.37,48.92 "
+       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       id="polyline26" />
+    <polyline
+       points="227.11,209.19 227.11,126.24 "
+       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       id="polyline28" />
+    <polyline
+       points="264.77,209.19 264.77,114.57 "
+       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       id="polyline30" />
+    <polyline
+       points="37.74,65.06 47.65,80.01 57.56,86.61 67.47,92.33 77.38,96.10 87.29,98.89 97.20,104.22 107.10,106.86 117.01,109.08 126.92,111.06 136.83,112.87 146.74,114.57 156.65,116.17 166.56,117.71 176.47,119.18 186.38,120.61 196.28,121.99 206.19,123.40 216.10,124.77 226.01,126.10 235.92,127.39 245.83,128.66 255.74,129.90 265.65,131.12 275.56,132.31 285.46,133.49 295.37,134.64 "
+       style="stroke-width: 1.07; stroke: #76AF63; stroke-linecap: butt;"
+       id="polyline32" />
+    <polyline
+       points="37.74,160.59 47.65,160.26 57.56,158.53 67.47,156.79 77.38,155.06 87.29,153.33 97.20,151.59 107.10,150.13 117.01,148.67 126.92,147.21 136.83,145.75 146.74,144.29 156.65,142.31 166.56,140.34 176.47,138.36 186.38,136.39 196.28,134.41 206.19,131.79 216.10,129.16 226.01,126.53 235.92,123.91 245.83,121.28 255.74,117.77 265.65,114.25 275.56,110.74 285.46,107.23 295.37,103.72 "
+       style="stroke-width: 1.07; stroke: #6A5541; stroke-linecap: butt;"
+       id="polyline34" />
+    <polyline
+       points="37.74,65.06 186.38,65.06 "
+       style="stroke-width: 1.07; stroke: #76AF63; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;"
+       id="polyline36" />
+    <text
+       x="191.33"
+       y="63.61"
+       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
+       textLength="45.99px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text38">LCOH of projects</text>
+    <text
+       x="191.33"
+       y="70.81"
+       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
+       textLength="32.32px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text40">built in 2024</text>
+    <polyline
+       points="186.38,36.82 186.38,28.75 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline42" />
+    <polyline
+       points="186.38,32.79 37.74,32.79 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline44" />
+    <polyline
+       points="37.74,36.82 37.74,28.75 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline46" />
+    <text
+       x="112.06"
+       y="30.90"
+       text-anchor="middle"
+       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
+       textLength="67.66px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text48">Payback period: 15 years</text>
+    <polyline
+       points="295.37,52.96 295.37,44.89 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline50" />
+    <polyline
+       points="295.37,48.92 146.74,48.92 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline52" />
+    <polyline
+       points="146.74,52.96 146.74,44.89 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline54" />
+    <text
+       x="221.06"
+       y="47.04"
+       text-anchor="middle"
+       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
+       textLength="67.66px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text56">Payback period: 15 years</text>
+    <polyline
+       points="146.74,114.57 295.37,114.57 "
+       style="stroke-width: 1.07; stroke: #76AF63; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;"
+       id="polyline58" />
+    <text
+       x="300.33"
+       y="113.11"
+       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
+       textLength="45.99px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text60">LCOH of projects</text>
+    <text
+       x="300.33"
+       y="120.31"
+       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
+       textLength="32.32px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text62">built in 2035</text>
+    <polygon
+       points="37.74,160.59 47.65,160.26 57.56,158.53 67.47,156.79 77.38,155.06 87.29,153.33 97.20,151.59 107.10,150.13 117.01,148.67 126.92,147.21 136.83,145.75 146.74,144.29 156.65,142.31 166.56,140.34 176.47,138.36 186.38,136.39 186.38,65.06 176.47,65.06 166.56,65.06 156.65,65.06 146.74,65.06 136.83,65.06 126.92,65.06 117.01,65.06 107.10,65.06 97.20,65.06 87.29,65.06 77.38,65.06 67.47,65.06 57.56,65.06 47.65,65.06 37.74,65.06 "
+       style="stroke-width: 0.00; stroke: none; stroke-linecap: butt; fill: #C10505; fill-opacity: 0.10;"
+       id="polygon64" />
+    <polyline
+       points="37.74,160.59 47.65,160.26 57.56,158.53 67.47,156.79 77.38,155.06 87.29,153.33 97.20,151.59 107.10,150.13 117.01,148.67 126.92,147.21 136.83,145.75 146.74,144.29 156.65,142.31 166.56,140.34 176.47,138.36 186.38,136.39 "
+       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt;"
+       id="polyline66" />
+    <polyline
+       points="186.38,65.06 176.47,65.06 166.56,65.06 156.65,65.06 146.74,65.06 136.83,65.06 126.92,65.06 117.01,65.06 107.10,65.06 97.20,65.06 87.29,65.06 77.38,65.06 67.47,65.06 57.56,65.06 47.65,65.06 37.74,65.06 "
+       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt;"
+       id="polyline68" />
+    <polygon
+       points="146.74,144.29 156.65,142.31 166.56,140.34 176.47,138.36 186.38,136.39 196.28,134.41 206.19,131.79 216.10,129.16 226.01,126.53 235.92,123.91 245.83,121.28 255.74,117.77 265.65,114.57 275.56,114.57 285.46,114.57 295.37,114.57 295.37,114.57 285.46,114.57 275.56,114.57 265.65,114.57 255.74,114.57 245.83,114.57 235.92,114.57 226.01,114.57 216.10,114.57 206.19,114.57 196.28,114.57 186.38,114.57 176.47,114.57 166.56,114.57 156.65,114.57 146.74,114.57 "
+       style="stroke-width: 0.00; stroke: none; stroke-linecap: butt; fill: #892F71; fill-opacity: 0.10;"
+       id="polygon70" />
+    <polyline
+       points="146.74,144.29 156.65,142.31 166.56,140.34 176.47,138.36 186.38,136.39 196.28,134.41 206.19,131.79 216.10,129.16 226.01,126.53 235.92,123.91 245.83,121.28 255.74,117.77 265.65,114.57 275.56,114.57 285.46,114.57 295.37,114.57 "
+       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt;"
+       id="polyline72" />
+    <polyline
+       points="295.37,114.57 285.46,114.57 275.56,114.57 265.65,114.57 255.74,114.57 245.83,114.57 235.92,114.57 226.01,114.57 216.10,114.57 206.19,114.57 196.28,114.57 186.38,114.57 176.47,114.57 166.56,114.57 156.65,114.57 146.74,114.57 "
+       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt;"
+       id="polyline74" />
+    <line
+       x1="62.51"
+       y1="67.48"
+       x2="62.51"
+       y2="154.37"
+       style="stroke-width: 0.53; stroke: #C10505; stroke-linecap: butt;"
+       id="line76" />
+    <polyline
+       points="63.93,69.93 62.51,67.48 61.10,69.93 "
+       style="stroke-width: 0.53; stroke: #C10505; stroke-linecap: butt;"
+       id="polyline78" />
+    <polyline
+       points="61.10,151.92 62.51,154.37 63.93,151.92 "
+       style="stroke-width: 0.53; stroke: #C10505; stroke-linecap: butt;"
+       id="polyline80" />
+    <line
+       x1="112.06"
+       y1="67.48"
+       x2="112.06"
+       y2="146.25"
+       style="stroke-width: 0.53; stroke: #C10505; stroke-linecap: butt;"
+       id="line82" />
+    <polyline
+       points="113.48,69.93 112.06,67.48 110.64,69.93 "
+       style="stroke-width: 0.53; stroke: #C10505; stroke-linecap: butt;"
+       id="polyline84" />
+    <polyline
+       points="110.64,143.80 112.06,146.25 113.48,143.80 "
+       style="stroke-width: 0.53; stroke: #C10505; stroke-linecap: butt;"
+       id="polyline86" />
+    <line
+       x1="161.60"
+       y1="67.48"
+       x2="161.60"
+       y2="137.92"
+       style="stroke-width: 0.53; stroke: #C10505; stroke-linecap: butt;"
+       id="line88" />
+    <polyline
+       points="163.02,69.93 161.60,67.48 160.19,69.93 "
+       style="stroke-width: 0.53; stroke: #C10505; stroke-linecap: butt;"
+       id="polyline90" />
+    <polyline
+       points="160.19,135.46 161.60,137.92 163.02,135.46 "
+       style="stroke-width: 0.53; stroke: #C10505; stroke-linecap: butt;"
+       id="polyline92" />
+    <line
+       x1="171.51"
+       y1="116.99"
+       x2="171.51"
+       y2="135.94"
+       style="stroke-width: 0.53; stroke: #892F71; stroke-linecap: butt;"
+       id="line94" />
+    <polyline
+       points="172.93,119.44 171.51,116.99 170.10,119.44 "
+       style="stroke-width: 0.53; stroke: #892F71; stroke-linecap: butt;"
+       id="polyline96" />
+    <polyline
+       points="170.10,133.49 171.51,135.94 172.93,133.49 "
+       style="stroke-width: 0.53; stroke: #892F71; stroke-linecap: butt;"
+       id="polyline98" />
+    <line
+       x1="221.06"
+       y1="116.99"
+       x2="221.06"
+       y2="124.11"
+       style="stroke-width: 0.53; stroke: #892F71; stroke-linecap: butt;"
+       id="line100" />
+    <polyline
+       points="222.47,119.44 221.06,116.99 219.64,119.44 "
+       style="stroke-width: 0.53; stroke: #892F71; stroke-linecap: butt;"
+       id="polyline102" />
+    <polyline
+       points="219.64,121.66 221.06,124.11 222.47,121.66 "
+       style="stroke-width: 0.53; stroke: #892F71; stroke-linecap: butt;"
+       id="polyline104" />
+    <polygon
+       points="207.62,172.37 284.04,172.37 284.00,172.37 284.17,172.36 284.34,172.33 284.50,172.26 284.65,172.18 284.79,172.07 284.90,171.94 285.00,171.79 285.06,171.63 285.11,171.46 285.12,171.29 285.12,171.29 285.12,158.35 285.12,158.35 285.11,158.18 285.06,158.01 285.00,157.85 284.90,157.70 284.79,157.57 284.65,157.46 284.50,157.37 284.34,157.31 284.17,157.28 284.04,157.27 207.62,157.27 207.75,157.28 207.58,157.27 207.40,157.29 207.24,157.34 207.08,157.41 206.94,157.51 206.81,157.63 206.71,157.77 206.63,157.93 206.57,158.09 206.54,158.26 206.54,158.35 206.54,171.29 206.54,171.20 206.54,171.38 206.57,171.55 206.63,171.71 206.71,171.87 206.81,172.00 206.94,172.12 207.08,172.22 207.24,172.30 207.40,172.35 207.58,172.37 "
+       style="stroke-width: 0.53; fill: #FFFFFF;"
+       id="polygon106" />
+    <text
+       x="245.83"
+       y="163.37"
+       text-anchor="middle"
+       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
+       textLength="62.97px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text108">Projects built after 2043</text>
+    <text
+       x="245.83"
+       y="170.57"
+       text-anchor="middle"
+       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
+       textLength="74.98px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text110">do not require any subsidies</text>
+    <polygon
+       points="58.65,192.10 135.74,192.10 135.69,192.10 135.87,192.09 136.04,192.06 136.20,192.00 136.35,191.91 136.49,191.80 136.60,191.67 136.69,191.52 136.76,191.36 136.80,191.20 136.82,191.02 136.82,191.02 136.82,170.88 136.82,170.88 136.80,170.71 136.76,170.54 136.69,170.38 136.60,170.24 136.49,170.11 136.35,170.00 136.20,169.91 136.04,169.85 135.87,169.81 135.74,169.80 58.65,169.80 58.78,169.81 58.61,169.81 58.44,169.83 58.27,169.87 58.11,169.95 57.97,170.05 57.85,170.17 57.74,170.31 57.66,170.46 57.61,170.63 57.58,170.80 57.57,170.88 57.57,191.02 57.58,190.94 57.58,191.11 57.61,191.28 57.66,191.45 57.74,191.60 57.85,191.74 57.97,191.86 58.11,191.96 58.27,192.03 58.44,192.08 58.61,192.10 "
+       style="stroke-width: 0.53; stroke: #C10505; fill: #FFFFFF;"
+       id="polygon112" />
+    <text
+       x="97.20"
+       y="175.90"
+       text-anchor="middle"
+       style="font-size: 6.00px;fill: #C10505; font-family: &quot;Arial&quot;;"
+       textLength="55.65px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text114">Projects built in 2024</text>
+    <text
+       x="97.20"
+       y="183.10"
+       text-anchor="middle"
+       style="font-size: 6.00px;fill: #C10505; font-family: &quot;Arial&quot;;"
+       textLength="75.64px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text116">require subsidies throughout</text>
+    <text
+       x="97.20"
+       y="190.30"
+       text-anchor="middle"
+       style="font-size: 6.00px;fill: #C10505; font-family: &quot;Arial&quot;;"
+       textLength="53.99px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text118">their payback period</text>
+    <polygon
+       points="208.62,91.70 283.04,91.70 283.00,91.70 283.17,91.69 283.34,91.65 283.50,91.59 283.65,91.51 283.79,91.40 283.90,91.27 284.00,91.12 284.06,90.96 284.11,90.79 284.12,90.62 284.12,90.62 284.12,77.68 284.12,77.68 284.11,77.51 284.06,77.34 284.00,77.18 283.90,77.03 283.79,76.90 283.65,76.79 283.50,76.70 283.34,76.64 283.17,76.61 283.04,76.60 208.62,76.60 208.75,76.61 208.58,76.60 208.40,76.62 208.24,76.67 208.08,76.74 207.94,76.84 207.81,76.96 207.71,77.10 207.63,77.26 207.57,77.42 207.54,77.59 207.54,77.68 207.54,90.62 207.54,90.53 207.54,90.70 207.57,90.88 207.63,91.04 207.71,91.19 207.81,91.33 207.94,91.45 208.08,91.55 208.24,91.63 208.40,91.67 208.58,91.70 "
+       style="stroke-width: 0.53; stroke: #892F71; fill: #FFFFFF;"
+       id="polygon120" />
+    <text
+       x="245.83"
+       y="82.70"
+       text-anchor="middle"
+       style="font-size:6px;fill:#892F71;font-family:'Arial';stroke-width:0.99974995;stroke-miterlimit:10;stroke-dasharray:none"
+       textLength="55.65px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text122">Projects built in 2035</text>
+    <text
+       x="245.83"
+       y="89.90"
+       text-anchor="middle"
+       style="font-size: 6.00px;fill: #892F71; font-family: &quot;Arial&quot;;"
+       textLength="72.98px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text124">require subsidies until 2047</text>
+  </g>
+  <g
+     clip-path="url(#cpMC4wMHw0NTMuNTR8MC4wMHwyMjYuNzc=)"
+     id="g196">
+    <polyline
+       points="22.88,209.19 22.88,11.54 "
+       style="stroke-width: 0.53; stroke-linecap: square;"
+       id="polyline128" />
+    <text
+       x="20.10"
+       y="206.99"
+       text-anchor="end"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="2.86px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text130">0</text>
+    <text
+       x="20.10"
+       y="166.66"
+       text-anchor="end"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="5.72px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text132">50</text>
+    <text
+       x="20.10"
+       y="126.32"
+       text-anchor="end"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="8.58px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text134">100</text>
+    <text
+       x="20.10"
+       y="85.99"
+       text-anchor="end"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="8.58px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text136">150</text>
+    <text
+       x="20.10"
+       y="45.65"
+       text-anchor="end"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="8.58px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text138">200</text>
+    <polyline
+       points="21.38,205.15 22.88,205.15 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline140" />
+    <polyline
+       points="21.38,164.82 22.88,164.82 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline142" />
+    <polyline
+       points="21.38,124.48 22.88,124.48 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline144" />
+    <polyline
+       points="21.38,84.15 22.88,84.15 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline146" />
+    <polyline
+       points="21.38,43.81 22.88,43.81 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline148" />
+    <polyline
+       points="22.88,209.19 349.87,209.19 "
+       style="stroke-width: 0.53; stroke-linecap: square;"
+       id="polyline150" />
+    <polyline
+       points="37.74,210.68 37.74,209.19 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline152" />
+    <polyline
+       points="97.20,210.68 97.20,209.19 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline154" />
+    <polyline
+       points="146.74,210.68 146.74,209.19 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline156" />
+    <polyline
+       points="196.28,210.68 196.28,209.19 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline158" />
+    <polyline
+       points="245.83,210.68 245.83,209.19 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline160" />
+    <polyline
+       points="295.37,210.68 295.37,209.19 "
+       style="stroke-width: 0.53; stroke-linecap: butt;"
+       id="polyline162" />
+    <text
+       x="37.74"
+       y="215.64"
+       text-anchor="middle"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="11.43px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text164">2024</text>
+    <text
+       x="97.20"
+       y="215.64"
+       text-anchor="middle"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="11.43px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text166">2030</text>
+    <text
+       x="146.74"
+       y="215.64"
+       text-anchor="middle"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="11.43px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text168">2035</text>
+    <text
+       x="196.28"
+       y="215.64"
+       text-anchor="middle"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="11.43px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text170">2040</text>
+    <text
+       x="245.83"
+       y="215.64"
+       text-anchor="middle"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="11.43px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text172">2045</text>
+    <text
+       x="295.37"
+       y="215.64"
+       text-anchor="middle"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="11.43px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text174">2050</text>
+    <text
+       x="186.38"
+       y="222.52"
+       text-anchor="middle"
+       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
+       textLength="12.12px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text176">Year</text>
+    <text
+       transform="translate(7.68,123.93) rotate(-90)"
+       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
+       textLength="18.99px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text178">$/MWh</text>
+    <text
+       transform="translate(8.77,104.95) rotate(-90)"
+       style="font-size: 4.20px; font-family: &quot;Arial&quot;;"
+       textLength="2.33px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text180">L</text>
+    <text
+       transform="translate(8.77,102.61) rotate(-90)"
+       style="font-size: 4.20px; font-family: &quot;Arial&quot;;"
+       textLength="3.02px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text182">H</text>
+    <text
+       transform="translate(8.77,99.59) rotate(-90)"
+       style="font-size: 4.20px; font-family: &quot;Arial&quot;;"
+       textLength="2.79px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text184">V</text>
+    <line
+       x1="356.51"
+       y1="107.08"
+       x2="361.77"
+       y2="107.08"
+       style="stroke-width: 1.07; stroke: #76AF63; stroke-linecap: butt;"
+       id="line186" />
+    <line
+       x1="356.51"
+       y1="113.65"
+       x2="361.77"
+       y2="113.65"
+       style="stroke-width: 1.07; stroke: #6A5541; stroke-linecap: butt;"
+       id="line188" />
+    <text
+       x="365.41"
+       y="108.92"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="69.70px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text190">Green hydrogen costs (LCOH)</text>
+    <text
+       x="365.41"
+       y="115.49"
+       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
+       textLength="85.14px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text192">Natural gas prices (with carbon price)</text>
+    <text
+       x="186.38"
+       y="7.29"
+       text-anchor="middle"
+       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
+       textLength="110.28px"
+       lengthAdjust="spacingAndGlyphs"
+       id="text194">Modelling the pay-as-bid market premium</text>
+  </g>
+  <path
+     style="fill:none;stroke:#c10505;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+     d="M 98.559332,169.55546 C 98.952581,153.49329 93.019487,133.13578 86.030605,124.24323"
+     id="path1027"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+     d="M 247.61322,157.39755 C 245.40879,142.9907 234.64179,131.31187 228.4184,127.86705"
+     id="path1031"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#892f71;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+     d="m 246.57965,91.69219 c 1.37229,10.32024 9.80887,18.89709 17.12769,21.70492"
+     id="path1035"
+     sodipodi:nodetypes="cc" />
+</svg>

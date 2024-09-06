@@ -1,22 +1,15 @@
 #' Calculate project tracking
 #' 
-#' @param data.v2021proj Dataset of project expectations in 2021
-#' @param data.v2022proj Dataset of project expectations in 2022
-#' @param data.v2023proj Dataset of project expectations in 2023
+#' @param data.v2021proj Dataset of project announcements in 2021
+#' @param data.v2022proj Dataset of project announcements in 2022
+#' @param data.v2023proj Dataset of project announcements in 2023
 #' @param year.tracking Year for which projects should be tracked
-#' @param type "additional" or "cumulative"
 #' @returns Wide dataset with five additional columns for a Sankey plot
 #' 
 calcProjectTracking <- function(data.v2021proj,
                                 data.v2022proj,
                                 data.v2023proj,
-                                year.tracking,
-                                type) {
-  
-  # Type has to be either "additional" or "cumulative"
-  if (!(type %in% c("additional", "cumulative"))) {
-    stop("type has to be 'additional'  or 'cumulative'")
-  }
+                                year.tracking) {
   
   # Helper function used in ifelse statements below
   isEq <- function(var, values){
@@ -26,75 +19,65 @@ calcProjectTracking <- function(data.v2021proj,
   ### Added capacities
   ### Only extract added capacities in year.tracking, ignoring cumulative
   ### project announcements and already operational projects
-  if (type == "additional"){
-    
-    # Data handling for IEA v2021
-    data.v2021proj.renamed <- data.v2021proj %>%
-      # Exclude confidential projects
-      filter(reference != 0) %>%
-      # Exclude operational projects (only additional projects)
-      filter(status != "Operational") %>% 
-      # Exclude projects that have already been decommissioned again
-      # This assumes that the decommissioned date is true, even if in the future
-      group_by(reference) %>%
-      filter(!(n() >= 2 & max(year) <= year.tracking)) %>%
-      # Remove decommissioned rows, which are now all beyond the tracking year
-      filter(status != "Decommissioned") %>%
-      # Rename columns
-      rename(
-        name2021 = name,
-        region2021 = region,
-        status2021 = status,
-        year2021 = year,
-        capacity2021 = capacity
-      )
+
+  # Data handling for IEA v2021
+  data.v2021proj.renamed <- data.v2021proj %>%
+    # Exclude confidential projects
+    filter(reference != 0) %>%
+    # Exclude operational projects (only additional projects)
+    filter(status != "Operational") %>% 
+    # Exclude projects that have already been decommissioned again
+    # This assumes that the decommissioned date is true, even if in the future
+    group_by(reference) %>%
+    filter(!(n() >= 2 & max(year) <= year.tracking)) %>%
+    # Remove decommissioned rows, which are now all beyond the tracking year
+    filter(status != "Decommissioned") %>%
+    # Rename columns
+    rename(
+      name2021 = name,
+      region2021 = region,
+      status2021 = status,
+      year2021 = year,
+      capacity2021 = capacity
+    )
+
+  # Data handling for IEA v2022
+  data.v2022proj.renamed <- data.v2022proj %>%
+    # Exclude confidential projects
+    filter(reference != 0) %>%
+    # Exclude projects that have already been decommissioned again
+    # This assumes that the decommissioned date is true, even if in the future
+    group_by(reference) %>%
+    filter(!(n() >= 2 & max(year) <= year.tracking)) %>%
+    # Remove decommissioned rows, which are now all beyond the tracking year
+    filter(status != "Decommissioned") %>%
+    # Rename columns
+    rename(
+      name2022 = name,
+      region2022 = region,
+      status2022 = status,
+      year2022 = year,
+      capacity2022 = capacity
+    )
   
-    # Data handling for IEA v2022
-    data.v2022proj.renamed <- data.v2022proj %>%
-      # Exclude confidential projects
-      filter(reference != 0) %>%
-      # Exclude projects that have already been decommissioned again
-      # This assumes that the decommissioned date is true, even if in the future
-      group_by(reference) %>%
-      filter(!(n() >= 2 & max(year) <= year.tracking)) %>%
-      # Remove decommissioned rows, which are now all beyond the tracking year
-      filter(status != "Decommissioned") %>%
-      # Rename columns
-      rename(
-        name2022 = name,
-        region2022 = region,
-        status2022 = status,
-        year2022 = year,
-        capacity2022 = capacity
-      )
-    
-    # Data handling for IEA v2023
-    data.v2023proj.renamed <- data.v2023proj %>%
-      # Exclude confidential projects
-      filter(reference != 0) %>%
-      # Exclude projects that have already been decommissioned again
-      # This assumes that the decommissioned date is true, even if in the future
-      group_by(reference) %>%
-      filter(!(n() >= 2 & max(year) <= year.tracking)) %>%
-      # Remove decommissioned rows, which are now all beyond the tracking year
-      filter(status != "Decommissioned") %>%
-      # Rename columns
-      rename(
-        name2023 = name,
-        region2023 = region,
-        status2023 = status,
-        year2023 = year,
-        capacity2023 = capacity
-      )
-  
-    
-    ### Extract cumulative capacities in year.tracking, including project
-    ### announcements of previous years and already operational projects
-  } else if (type == "cumulative") {
-    # Simply change year to year.tracking for all projects with year <= year.tracking
-    
-    
-  }
+  # Data handling for IEA v2023
+  data.v2023proj.renamed <- data.v2023proj %>%
+    # Exclude confidential projects
+    filter(reference != 0) %>%
+    # Exclude projects that have already been decommissioned again
+    # This assumes that the decommissioned date is true, even if in the future
+    group_by(reference) %>%
+    filter(!(n() >= 2 & max(year) <= year.tracking)) %>%
+    # Remove decommissioned rows, which are now all beyond the tracking year
+    filter(status != "Decommissioned") %>%
+    # Rename columns
+    rename(
+      name2023 = name,
+      region2023 = region,
+      status2023 = status,
+      year2023 = year,
+      capacity2023 = capacity
+    )
   
   # Join all datasets
   data.list <- list(data.v2021proj.renamed,
@@ -124,7 +107,6 @@ calcProjectTracking <- function(data.v2021proj,
     ungroup() %>% 
     # If projects announced for year.tracking are finished early, change
     # year2022 or year2023 to year.tracking to ensure these projects count
-    # TODO: This probably only makes sense for additional projects
     mutate(
       year2022 = ifelse(
         status2022 == "Operational" & year2022 < year.tracking,
@@ -313,7 +295,6 @@ calcProjectTracking <- function(data.v2021proj,
                )
            ) %>% 
     # If no capacity is set now, remove projects (if we only look at additional projects)
-    # TODO: How for cumulative projects?
     filter(!is.na(capacity))
   
   # Bind all together

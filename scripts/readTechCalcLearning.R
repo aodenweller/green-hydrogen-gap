@@ -1,19 +1,19 @@
 readTechCalcLearning <- function(file.costs,
-                                 data.v2023,
+                                 data.iea.enduse,
                                  data.scenarios) {
 
-  range.learning <- seq(2023,2045)
-  range.costs <- seq(2024,2045)
+  range.learning <- seq(2023, 2050)
+  range.costs <- seq(2024, 2050)
   
-  # Read costs data to calculate CAPEX learning (from 2023)
+  # Read costs data to calculate electrolysis CAPEX learning (from 2023)
   data.capex <- read_excel(file.costs) %>% 
     # Remove source and comments columns
     select(-c("source", "comments")) %>% 
     # Filter for CAPEX variables
-    filter(variable %in% c("Tech|ELH2|CAPEX", "Tech|ELH2|CAPEX|Stack|Share"),
+    filter(variable %in% c("Tech|Green hydrogen|CAPEX", "Tech|Green hydrogen|CAPEX|Stack|Share"),
            period == range.learning[1]) %>% 
-    calc_addVariable("`Tech|ELH2|CAPEX|Stack`" = "`Tech|ELH2|CAPEX` * `Tech|ELH2|CAPEX|Stack|Share`", 
-                     "`Tech|ELH2|CAPEX|Other`" = "`Tech|ELH2|CAPEX` * (1 - `Tech|ELH2|CAPEX|Stack|Share`)",
+    calc_addVariable("`Tech|Green hydrogen|CAPEX|Stack`" = "`Tech|Green hydrogen|CAPEX` * `Tech|Green hydrogen|CAPEX|Stack|Share`", 
+                     "`Tech|Green hydrogen|CAPEX|Other`" = "`Tech|Green hydrogen|CAPEX` * (1 - `Tech|Green hydrogen|CAPEX|Stack|Share`)",
                      units = "USD/kW")
   
   # Read costs data for other technologies (from 2024)
@@ -21,7 +21,7 @@ readTechCalcLearning <- function(file.costs,
     # Remove source and comments columns
     select(-c("source", "comments")) %>% 
     # Filter for non-CAPEX variables
-    filter(!(variable %in% c("Tech|ELH2|CAPEX", "Tech|ELH2|CAPEX|Stack|Share"))) %>% 
+    filter(!(variable %in% c("Tech|Green hydrogen|CAPEX", "Tech|Green hydrogen|CAPEX|Stack|Share"))) %>% 
     # Step 1: For each (scenario-variable-region-unit) tuple, set period to
     # first of range.costs if missing
     group_by(scenario, variable, region, unit) %>% 
@@ -44,8 +44,8 @@ readTechCalcLearning <- function(file.costs,
     mutate(value = ifelse(is.na(value), last(na.omit(value)), value))
 
   # Calculate cumulative capacity (used for learning until 2030)
-  data.v2023.cap <- data.v2023 %>%
-    filter(year %in% seq(range.learning[1],2030)) %>%
+  data.iea.cumcap <- data.iea.enduse %>%
+    filter(year %in% seq(range.learning[1], 2030)) %>%
     group_by(year) %>%
     summarise(cumcap = sum(cumcap.sum))
   
@@ -56,7 +56,7 @@ readTechCalcLearning <- function(file.costs,
     summarise(cumcap = median(value.gw))
   
   # Bind project data and median capacity from 1.5°C scenarios
-  data.cumcap <- bind_rows(data.v2023.cap, data.scenarios.median) %>% 
+  data.cumcap <- bind_rows(data.iea.cumcap, data.scenarios.median) %>% 
     complete(year = range.learning) %>% 
     # Interpolate linearly
     mutate(cumcap = zoo::na.approx(cumcap))
@@ -64,13 +64,13 @@ readTechCalcLearning <- function(file.costs,
   # Stack learning rate
   lr.stack <- data.costs %>% 
     ungroup() %>% 
-    filter(variable == "Tech|ELH2|CAPEX|Stack|LR") %>% 
+    filter(variable == "Tech|Green hydrogen|CAPEX|Stack|LR") %>% 
     rename(lr = value) %>% 
     select(scenario, region, period, lr)
   
   # Calculate learning for stack
   capex.stack <- data.capex %>% 
-    filter(variable == "Tech|ELH2|CAPEX|Stack") %>% 
+    filter(variable == "Tech|Green hydrogen|CAPEX|Stack") %>% 
     group_by(scenario, variable, region, unit) %>% 
     complete(period = range.learning) %>% 
     right_join(data.cumcap, by = c("period" = "year")) %>% 
@@ -82,13 +82,13 @@ readTechCalcLearning <- function(file.costs,
   # Other CAPEX learning rate
   lr.other <- data.costs %>% 
     ungroup() %>% 
-    filter(variable == "Tech|ELH2|CAPEX|Other|LR") %>% 
+    filter(variable == "Tech|Green hydrogen|CAPEX|Other|LR") %>% 
     rename(lr = value) %>% 
     select(scenario, region, period, lr)
   
   # Calculate learning for other CAPEX
   capex.other <- data.capex %>% 
-    filter(variable == "Tech|ELH2|CAPEX|Other") %>% 
+    filter(variable == "Tech|Green hydrogen|CAPEX|Other") %>% 
     group_by(scenario, variable, region, unit) %>% 
     complete(period = range.learning) %>% 
     right_join(data.cumcap, by = c("period" = "year")) %>% 
@@ -100,9 +100,14 @@ readTechCalcLearning <- function(file.costs,
   # Combine and calculate total
   capex.learning <- bind_rows(capex.stack, capex.other) %>% 
     ungroup() %>% 
-    calc_addVariable("`Tech|ELH2|CAPEX`" = "`Tech|ELH2|CAPEX|Stack` + `Tech|ELH2|CAPEX|Other`",
+    calc_addVariable("`Tech|Green hydrogen|CAPEX`" = "`Tech|Green hydrogen|CAPEX|Stack` + `Tech|Green hydrogen|CAPEX|Other`",
                      units = "USD/kW") %>% 
     # Convert CAPEX to USD/MW
+    mutate(value = ifelse(unit == "USD/kW", value*1E3, value),
+           unit = "USD/MW")
+  
+  # Convert CAPEX of e-fuel plants to USD/MW
+  data.costs <- data.costs %>% 
     mutate(value = ifelse(unit == "USD/kW", value*1E3, value),
            unit = "USD/MW")
   

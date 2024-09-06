@@ -1,7 +1,7 @@
 readIEAHydrogenProjectsDB <- function(file.h2projects,
                                       h2projects.range,
                                       end.year,
-                                      decommissioned = TRUE) {
+                                      checked = FALSE) {
   
   # Column names
   columns <- c(
@@ -38,92 +38,121 @@ readIEAHydrogenProjectsDB <- function(file.h2projects,
     "Column31" = "cap.iea.estimate.nm3H2h",
     "Column32" = "source"
   )
+
+  # Columns to select for project-level data
+  columns.select.proj <- c(
+    "reference",
+    "name",
+    "country",
+    "date.online",
+    "date.decommissioned",
+    "status",
+    "technology",
+    "cap.mwel")
+  
+  # Columns to select for summary data
+  columns.select.stat <- c(
+    "reference",
+    "name",
+    "region",
+    "status",
+    "year",
+    "capacity")
+
+  if (checked == TRUE) {
+    columns <- c(columns, c("Column33" = "checked"))
+    
+    columns.select.proj <- c(columns.select.proj, "checked")
+    
+    columns.select.stat <- c(columns.select.stat, "checked")
+    
+  }
   
   # Country
   region.mapping <- c(
-    "ALB" = "Other",  # Albania
+    "ALB" = "Europe",  # Albania
     "AGO" = "Other",  # Angola
     "ARE" = "MENA",  # United Arab Emirates
     "ARG" = "C. + S. America",  # Argentina
     "AUS" = "Australia",
-    "AUT" = "Rest EU",  # Austria
-    "BEL" = "Rest EU",  # Belgium
+    "AUT" = "Europe",  # Austria
+    "BEL" = "Europe",  # Belgium
     "BGD" = "Asia",  # Bangladesh
     "BRA" = "C. + S. America",  # Brazil
     "BRB" = "C. + S. America",  # Barbados
     "CAN" = "N. America",  # Canada
-    "CHE" = "Other",  # Switzerland
+    "CHE" = "Europe",  # Switzerland
     "CHL" = "C. + S. America",  # Chile
     "CHN" = "Asia",  # China
     "COK" = "Other",  # Cook Islands
     "COL" = "C. + S. America",  # Colombia
     "CRI" = "C. + S. America",  # Costa Rica
-    "CYP" = "Rest EU",  # Cyprus
-    "CZE" = "Rest EU",  # Czech Republic
-    "DEU" = "Germany",
-    "DEU\r\nDNK" = "Rest EU",  # Germany + Denmark
+    "CYP" = "Europe",  # Cyprus
+    "CZE" = "Europe",  # Czech Republic
+    "DEU" = "Europe",
+    "DEU\r\nDNK" = "Europe",  # Germany + Denmark
     "DJI" = "MENA",  # Djibouti
-    "DNK" = "Denmark",
+    "DNK" = "Europe",
     "DMA" = "C. + S. America",  # Dominican Republic
     "EGY" = "MENA",  # Egypt
-    "EST" = "Rest EU",  # Estonia
-    "ESP" = "Spain",
-    "ESP\r\nFRA" = "Spain",  # Project: HyDeal Ambition
-    "EU" = "Rest EU",
-    "FIN" = "Rest EU",  # Finland
-    "FRA" = "France",
-    "GBR" = "Other",  # United Kingdom
-    "GRC" = "Rest EU",  # Greece
-    "GUF" = "France",  # French Guiana
-    "HUN" = "Rest EU",  # Hungary
+    "EST" = "Europe",  # Estonia
+    "ESP" = "Europe",
+    "ESP\r\nFRA" = "Europe",  # Project: HyDeal Ambition
+    "EU" = "Europe",
+    "FIN" = "Europe",  # Finland
+    "FRA" = "Europe",
+    "GBR" = "Europe",  # United Kingdom
+    "GRC" = "Europe",  # Greece
+    "GUF" = "Europe",  # French Guiana
+    "HUN" = "Europe",  # Hungary
     "IDN" = "Asia",  # Indonesia
     "IND" = "Asia",  # India
-    "IRL" = "Rest EU",  # Ireland
+    "IRL" = "Europe",  # Ireland
     "IRN" = "MENA",  # Iran
-    "ISL" = "Other",  # Iceland
-    "ITA" = "Rest EU",  # Italy
+    "ISL" = "Europe",  # Iceland
+    "ITA" = "Europe",  # Italy
     "JOR" = "MENA",  # Jordan
     "JPN" = "Asia",  # Japan
     "KAZ" = "Asia",  # Kazakhstan
     "KEN" = "Other",  # Kenya
     "KOR" = "Asia",  # South Korea
     "LBN" = "MENA",  # Lebanon
-    "LTU" = "Rest EU",  # Lithuania
-    "LVA" = "Rest EU",  # Latvia
+    "LTU" = "Europe",  # Lithuania
+    "LVA" = "Europe",  # Latvia
     "MAR" = "MENA",  # Morocco
     "MEX" = "C. + S. America",  # Mexico
     "MNG" = "Asia",  # Mongolia
-    "MNR" = "Other",  # Montenegro
+    "MNR" = "Europe",  # Montenegro
     "MOZ" = "Other",  # Mozambique
     "MRT" = "MENA",  # Mauritania
     "MYS" = "Asia",  # Malaysia
     "NAM" = "Other",  # Namibia
     "NER" = "Other",  # Niger
-    "NLD" = "Netherlands",
-    "NOR" = "Other",  # Norway
+    "NLD" = "Europe",
+    "NOR" = "Europe",  # Norway
     "NZL" = "Other",  # New Zealand
     "OMN" = "MENA",  # Oman
     "PAK" = "Other",  # Pakistan
     "PAN" = "C. + S. America",  # Panama
     "PER" = "Other",  # Peru
-    "POL" = "Rest EU",  # Poland
-    "PRT" = "Rest EU", # Portugal
-    "POL\r\nCZE\r\nSVK\r\nHUN" = "Rest EU",
-    "POR\r\nESP" = "Rest EU",
+    "POL" = "Europe",  # Poland
+    "PRT" = "Europe", # Portugal
+    "POL\r\nCZE\r\nSVK\r\nHUN" = "Europe",
+    "POR\r\nESP" = "Europe",
     "PRY" = "C. + S. America",  # Paraguay
-    "ROM\r\nDEU\r\nAUT" = "Rest EU",
-    "ROU" = "Rest EU",  # Romania
-    "RUS" = "Other",  # Russia
+    "ROM\r\nDEU\r\nAUT" = "Europe",
+    "ROU" = "Europe",  # Romania
+    "RUS" = "Asia",  # Russia
     "SAU" = "MENA",  # Saudi Arabia
     "SGP" = "Asia",  # Singapore
-    "SVK" = "Rest EU",  # Slovakia
-    "SVN" = "Rest EU",  # Slovenia
-    "SWE" = "Rest EU",  # Sweden
+    "SVK" = "Europe",  # Slovakia
+    "SVN" = "Europe",  # Slovenia
+    "SWE" = "Europe",  # Sweden
     "THA" = "Asia",  # Thailand
     "TTO" = "Other",  # Trinidad and Tobago
     "TUR" = "MENA",  # Turkey
     "TWN" = "Asia",  # Taiwan
-    "UKR" = "Other",  # Ukraine
+    "UKR" = "Europe",  # Ukraine
     "URY" = "C. + S. America",  # Uruguay
     "USA" = "N. America",  # USA
     "UZB" = "Other",  # Uzbekistan
@@ -142,23 +171,16 @@ readIEAHydrogenProjectsDB <- function(file.h2projects,
       col_names = columns
     ) %>%
     # Select columns
-    select(c(
-      reference,
-      name,
-      country,
-      date.online,
-      date.decommissioned,
-      status,
-      technology,
-      cap.mwel
-    )) %>%
+    select(all_of(columns.select.proj)) %>%
     # Map regions
     revalue.levels(country = region.mapping) %>%
     rename(region = country) %>%
     # Correct misspelling
     revalue.levels(status = c("Decommisioned" = "Decommissioned")) %>%
     # Drop if no capacity in MW given
-    filter(!is.na(cap.mwel)) %>% 
+    filter(!is.na(cap.mwel)) %>%
+    # Drop if capacity is zero
+    filter(cap.mwel != 0) %>% 
     # Drop if technology is NG w CCUS
     filter(technology != "NG w CCUS")
   
@@ -167,7 +189,7 @@ readIEAHydrogenProjectsDB <- function(file.h2projects,
     filter(name %in% c("Other projects from confidential sources (2000-2020)",
                        "Other projects from confidential sources (2000-2021)",
                        "Other projects from confidential sources (2000-2023)"))
-
+  
   # Print volume of projects without online date
   temp <- data.h2.projects %>% 
     filter(is.na(date.online),
@@ -217,8 +239,8 @@ readIEAHydrogenProjectsDB <- function(file.h2projects,
                                 TRUE ~ cap.mwel)) %>%
     filter(!is.na(status)) %>% 
     # Select and reorder
-    select(c(reference, name, region, status, year, cap.mwel)) %>%
-    rename(capacity = cap.mwel)
+    rename(capacity = cap.mwel) %>% 
+    select(columns.select.stat)
   
   # Calculate capacity shares of each region to distribute confidential projects
   data.h2.shares <- data.h2.projects %>% 
@@ -240,36 +262,45 @@ readIEAHydrogenProjectsDB <- function(file.h2projects,
     mutate(share = cap.sum/sum(cap.sum))
   
   # Confidential ALK projects
-  data.h2.projects.conf.alk <- data.h2.shares %>%
-    mutate(
-      name = paste0("Other projects from confidential sources (", year, ")"),
-      technology = "ALK",
-      status = "Operational",
-      # Distribute over 21 years from 2000 to 2020
-      capacity = 1/(end.year - 2000 + 1) * share * data.h2.projects.conf %>%
-        filter(technology == "ALK") %>%
-        pull(cap.mwel),
-      reference = 0
-    ) %>%
-    select(reference, name, region, status, year, capacity)
+  if (nrow(data.h2.projects.conf) > 0) {
+    data.h2.projects.conf.alk <- data.h2.shares %>%
+      mutate(
+        name = paste0("Other projects from confidential sources (", year, ")"),
+        technology = "ALK",
+        status = "Operational",
+        # Distribute over 21 years from 2000 to 2020
+        capacity = 1/(end.year - 2000 + 1) * share * data.h2.projects.conf %>%
+          filter(technology == "ALK") %>%
+          pull(cap.mwel),
+        reference = 0,
+        checked = NA_character_
+      ) %>%
+      select(columns.select.stat)
+    
+    # Confidential PEM projects
+    data.h2.projects.conf.pem <- data.h2.shares %>%
+      mutate(
+        name = paste0("Other projects from confidential sources (", year, ")"),
+        technology = "PEM",
+        status = "Operational",
+        # Distribute over 21 years from 2000 to 2020
+        capacity = 1/(end.year - 2000 + 1) * share * data.h2.projects.conf %>%
+          filter(technology == "PEM") %>%
+          pull(cap.mwel),
+        reference = 0,
+        checked = NA_character_
+      ) %>%
+      select(columns.select.stat)
+    
+    # Combine data
+    data.h2.projects <- bind_rows(data.h2.projects, data.h2.projects.conf.alk)
+    data.h2.projects <- bind_rows(data.h2.projects, data.h2.projects.conf.pem)
+  }
   
-  # Confidential PEM projects
-  data.h2.projects.conf.pem <- data.h2.shares %>%
-    mutate(
-      name = paste0("Other projects from confidential sources (", year, ")"),
-      technology = "PEM",
-      status = "Operational",
-      # Distribute over 21 years from 2000 to 2020
-      capacity = 1/(end.year - 2000 + 1) * share * data.h2.projects.conf %>%
-        filter(technology == "PEM") %>%
-        pull(cap.mwel),
-      reference = 0
-    ) %>%
-    select(reference, name, region, status, year, capacity)
-  
-  # Combine data
-  data.h2.projects <- bind_rows(data.h2.projects, data.h2.projects.conf.alk)
-  data.h2.projects <- bind_rows(data.h2.projects, data.h2.projects.conf.pem)
+  if (checked == TRUE) {
+    data.h2.projects <- data.h2.projects %>% 
+      mutate(checked = ifelse(!is.na(checked), TRUE, FALSE))
+  }
   
   # Calculate relevant statistics of project database
   data.h2 <- data.h2.projects %>%

@@ -1,33 +1,54 @@
 calcRates <- function(data.track.calc, year.tracking, compare){
   
-  if (compare == "v2021-v2023") {
+  if (compare %in% c("v2021-v2023", "v2021-out")) {
     # Only consider project announcements in v2021
     data.track.calc <- data.track.calc %>% 
       filter(status2021 != "Operational",
              year2021 == year.tracking) %>%
       rename(status = status2021)
     
-  } else if (compare == "v2022-v2023") {
+  } else if (compare %in% c("v2022-v2023", "v2022-out")) {
     # Only consider project announcements in v2022
     data.track.calc <- data.track.calc %>% 
       filter(status2022 != "Operational",
              year2022 == year.tracking) %>% 
       rename(status = status2022)
     
+  } else if (compare == "v2023-out") {
+    # Only consider projects announcements in v2023
+    data.track.calc <- data.track.calc %>% 
+      filter(status2023 != "Operational",
+             year2023 == year.tracking) %>% 
+      rename(status = status2023)
   } else {
-    stop("'compare' needs to be either 'v2021-v2023' or 'v2022-v2023'")
-  }
+    stop("'compare' needs to be either 'v2021-v2023', 'v2022-v2023', 'v2021-out', 'v2022-out', 'v2023-out'")
+    }
   
-  # Determine outcome of projects
-  data.rates <- data.track.calc %>%
-    # Remove dummy projects introduced for capacity changes (reference > 10k)
-    filter(reference < 10000) %>% 
-    # Create outcome column
-    mutate(outcome = case_when(status2023 == "Operational" ~ "On time",
-                               stat21t22 == "No info" ~ "No info",
-                               stat22t23 == "No info" ~ "No info",
-                               stat21t22 == "Delayed/out" ~ "Delayed",
-                               stat22t23 == "Delayed/out" ~ "Delayed"))
+  if (compare %in% c("v2021-v2023", "v2022-v2023")) {
+    # Determine outcome of projects
+    data.rates <- data.track.calc %>%
+      # Create outcome column
+      mutate(outcome = case_when(status2023 == "Operational" ~ "On time",
+                                 stat21t22 == "No info" ~ "No info",
+                                 stat22t23 == "No info" ~ "No info",
+                                 stat21t22 == "Delayed/out" ~ "Delayed",
+                                 stat22t23 == "Delayed/out" ~ "Delayed",
+                                 stat21t22 == "Cap/out" ~ "No info",
+                                 stat22t23 == "Cap/out" ~ "No info"))
+    
+  } else if (compare %in% c("v2021-out", "v2022-out", "v2023-out")) {
+    # Determine outcome of projects
+    data.rates <- data.track.calc %>%
+      # Create outcome column
+      mutate(outcome = case_when(status2023out == "Operational" ~ "On time",
+                                 stat21t22 == "No info" ~ "No info",
+                                 stat22t23 == "No info" ~ "No info",
+                                 stat23t23out == "No info" ~ "No info",
+                                 stat23t23out == "Cap/out" ~ "Delayed",  # Kuqa project (dummy)
+                                 stat21t22 == "Delayed/out" ~ "Delayed",
+                                 stat22t23 == "Delayed/out" ~ "Delayed",
+                                 stat23t23out == "Delayed/out" ~ "Delayed"))
+  }
   
   # Determine total rates irrespective of the project status
   data.rates.tot <- data.rates %>% 
@@ -65,8 +86,9 @@ calcRates <- function(data.track.calc, year.tracking, compare){
     # Position determined using the cumulative sum of cap.category
     mutate(x.pos = 1.55 + cumsum(cap.category) - 0.5 * cap.category) %>%
     # Create some distance between status categories
-    mutate(x.pos = x.pos + c(0, 0.05, 0.1)) %>%
-    select(-cap.category)
+    mutate(dist = 0.05,
+           x.pos = x.pos + cumsum(dist)) %>% 
+    select(status, x.pos)
   
   # Merge the disaggregated rates for each status with the x position
   data.rates.disagg <-
