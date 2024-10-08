@@ -15,7 +15,7 @@
    id="svg198"
    sodipodi:docname="EXT_DATA_FIGURE03_illustration_model_edited.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev1\figures\FINAL\EXT_DATA_FIGURE03_illustration_model_edited.png"
+   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev2\figures\EXT_DATA_FIGURE03_illustration_model_edited.png"
    inkscape:export-xdpi="599.97998"
    inkscape:export-ydpi="599.97998">
   <metadata
@@ -43,12 +43,13 @@
      id="namedview200"
      showgrid="false"
      inkscape:zoom="2.5397472"
-     inkscape:cx="243.02849"
-     inkscape:cy="148.15496"
+     inkscape:cx="337.92585"
+     inkscape:cy="181.38925"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg198" />
+     inkscape:current-layer="g126"
+     inkscape:document-rotation="0" />
   <defs
      id="defs4">
     <style
@@ -103,27 +104,27 @@
      id="g126">
     <polyline
        points="37.74,209.19 37.74,32.79 "
-       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       style="stroke-width:0.53024994;stroke:#CCCCCC;stroke-dasharray:2.12099976,2.12099976;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline20" />
     <polyline
        points="186.38,209.19 186.38,32.79 "
-       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       style="stroke-width:0.52999996;stroke:#CCCCCC;stroke-dasharray:2.11999983,2.11999983;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline22" />
     <polyline
        points="146.74,209.19 146.74,48.92 "
-       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       style="stroke-width:0.52999996;stroke:#CCCCCC;stroke-dasharray:2.11999983,2.11999983;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline24" />
     <polyline
        points="295.37,209.19 295.37,48.92 "
-       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       style="stroke-width:0.52999996;stroke:#CCCCCC;stroke-dasharray:2.11999983,2.11999983;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline26" />
     <polyline
        points="227.11,209.19 227.11,126.24 "
-       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       style="stroke-width:0.52999996;stroke:#CCCCCC;stroke-dasharray:2.11999983,2.11999983;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline28" />
     <polyline
        points="264.77,209.19 264.77,114.57 "
-       style="stroke-width: 0.53; stroke: #CCCCCC; stroke-dasharray: 4.00,4.00; stroke-linecap: butt;"
+       style="stroke-width:0.52999996;stroke:#CCCCCC;stroke-dasharray:2.11999983,2.11999983;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline30" />
     <polyline
        points="37.74,65.06 47.65,80.01 57.56,86.61 67.47,92.33 77.38,96.10 87.29,98.89 97.20,104.22 107.10,106.86 117.01,109.08 126.92,111.06 136.83,112.87 146.74,114.57 156.65,116.17 166.56,117.71 176.47,119.18 186.38,120.61 196.28,121.99 206.19,123.40 216.10,124.77 226.01,126.10 235.92,127.39 245.83,128.66 255.74,129.90 265.65,131.12 275.56,132.31 285.46,133.49 295.37,134.64 "
@@ -135,7 +136,7 @@
        id="polyline34" />
     <polyline
        points="37.74,65.06 186.38,65.06 "
-       style="stroke-width: 1.07; stroke: #76AF63; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;"
+       style="stroke-width:1.07000009;stroke:#76AF63;stroke-dasharray:4.28000034,4.28000034;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline36" />
     <text
        x="191.33"
@@ -193,7 +194,7 @@
        id="text56">Payback period: 15 years</text>
     <polyline
        points="146.74,114.57 295.37,114.57 "
-       style="stroke-width: 1.07; stroke: #76AF63; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;"
+       style="stroke-width:1.07000009;stroke:#76AF63;stroke-dasharray:4.28000034,4.28000034;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline58" />
     <text
        x="300.33"

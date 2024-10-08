@@ -263,9 +263,9 @@ plotProjectTracking2023 <- function(data.track.calc,
   
   # x axis labels
   labels.x <- c(
-    "status2021" = "Announcements\nin 2021",
-    "status2022" = "Announcements\nin 2022",
-    "status2023" = "Announcements\nin 2023",
+    "status2021" = "Announcements\nby 2021",
+    "status2022" = "Announcements\nby 2022",
+    "status2023" = "Announcements\nby 2023",
     "status2023out" = "Outcome\nin 2024")
   
   # Alluvial plot
@@ -360,7 +360,7 @@ plotProjectTracking2023 <- function(data.track.calc,
       breaks = c("status2021", "status2022", "status2023", "status2023out"),
       labels = labels.x) +
     scale_y_continuous(
-      name = paste("Capacity additions in", year.tracking, "(GW)"),
+      name = paste("Capacity additions announced for", year.tracking, "(GW)"),
       labels = function(x) x * 1E-3,
       breaks = c(seq(0, y.upper, 1000))
     ) +
@@ -425,11 +425,11 @@ plotProjectTracking2023 <- function(data.track.calc,
     # Hack: Use dummy labels with alpha=0 to preserve x axis order
     data.annotations.total <- tribble(
       ~x, ~y, ~label, ~alpha,
-      "status2021", cap.2021, paste0(round(cap.2021/1E3, 2), " GW\n announced in 2021"), 1,
+      "status2021", cap.2021, paste0(round(cap.2021/1E3, 2), " GW\n announced by 2021"), 1,
       "stat21t22", 0, "", 0,
-      "status2022", cap.2022, paste0(round(cap.2022/1E3, 2), " GW\n announced in 2022"), 1,
+      "status2022", cap.2022, paste0(round(cap.2022/1E3, 2), " GW\n announced by 2022"), 1,
       "stat22t23", 0, "", 0,
-      "status2023", cap.2023, paste0(round(cap.2023/1E3, 2), " GW\n announced in 2023"), 1,
+      "status2023", cap.2023, paste0(round(cap.2023/1E3, 2), " GW\n announced by 2023"), 1,
       "stat23t23out", 0, "", 0,
       "status2023out", cap.2023out, paste0(round(cap.2023out/1E3, 2), " GW\n realised as of 2024"), 1
     ) %>% 

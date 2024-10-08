@@ -71,7 +71,7 @@ plotSubsidyGap <- function(scenario.select,
     # Formatting
     scale_x_discrete(name = NULL,
                      labels = c("Without carbon price" = "Required\nwithout\ncarbon price",
-                                "With carbon price" = "Required\nwith\ncarbon price",
+                                "With carbon price" = "Required\nwith ambitious\ncarbon price",
                                 "BNEF" = "Announced\n(BNEF)")) +
     ggtitle(title) +
     scale_y_continuous(name = "Cumulative subsidies (Billion $)",

@@ -111,7 +111,7 @@ plotImplementationGap2023 <- function(
   
   bottom_row.left.title <- ggdraw() +
     draw_label(
-      "Announcements in 2021 vs. outcome in 2024",
+      "Announcements by 2021 vs. outcome in 2024",
       x = 0.55,
       hjust = 0.5,
       vjust = 0,
@@ -155,7 +155,7 @@ plotImplementationGap2023 <- function(
   
   bottom_row.centre.title <- ggdraw() +
     draw_label(
-      "Announcements in 2022 vs. outcome in 2024",
+      "Announcements by 2022 vs. outcome in 2024",
       x = 0.55,
       hjust = 0.5,
       vjust = 0,
@@ -199,7 +199,7 @@ plotImplementationGap2023 <- function(
   
   bottom_row.right.title <- ggdraw() +
     draw_label(
-      "Announcements in 2023 vs. outcome in 2024",
+      "Announcements by 2023 vs. outcome in 2024",
       x = 0.55,
       hjust = 0.5,
       vjust = 0,

@@ -15,7 +15,7 @@
    id="svg1199"
    sodipodi:docname="EXT_DATA_FIGURE01_electrolysis_1.5C_scenarios_edited.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev1\figures\FINAL\EXT_DATA_FIGURE01_electrolysis_1.5C_scenarios_edited.png"
+   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev2\figures\EXT_DATA_FIGURE01_electrolysis_1.5C_scenarios_edited.png"
    inkscape:export-xdpi="599.97998"
    inkscape:export-ydpi="599.97998">
   <metadata
@@ -42,9 +42,9 @@
      inkscape:window-height="1377"
      id="namedview1201"
      showgrid="false"
-     inkscape:zoom="2.2575199"
-     inkscape:cx="332.84514"
-     inkscape:cy="223.77771"
+     inkscape:zoom="1.5963077"
+     inkscape:cx="444.52031"
+     inkscape:cy="235.74481"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -573,9 +573,13 @@
      clip-path="url(#cpMTY2LjM4fDQ0My42OHwwLjAwfDE3MC4wOA==)"
      id="g197" />
   <path
-     style="fill:none;stroke:#000000;stroke-width:0.52499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;stroke-miterlimit:10;stroke-dasharray:2.09999996, 2.09999995999999989;stroke-dashoffset:0"
+     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;stroke-miterlimit:10;stroke-dasharray:2.1, 2.10000000000000009;stroke-dashoffset:0"
+     d="m 163.39999,11.6 86.88,105.35"
+     id="path2028" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;stroke-miterlimit:10;stroke-dasharray:2.1, 2.10000000000000009;stroke-dashoffset:0"
      d="m 163.39999,152.52001 86.88,-6.41001"
-     id="path2032" />
+     id="path2030" />
   <g
      clip-path="url(#cpMC4wMHw1MTAuMjR8MC4wMHwzNDAuMTY=)"
      id="g511">
@@ -830,6 +834,12 @@
        r="1.15"
        style="stroke-width: 0.71; stroke: #8491B4; fill: #8491B4;"
        id="circle303" />
+    <circle
+       cx="250.28"
+       cy="117.45"
+       r="1.15"
+       style="stroke-width: 0.71; stroke: #00A087; fill: #00A087;"
+       id="circle305" />
     <circle
        cx="352.49"
        cy="19.69"
@@ -1480,16 +1490,6 @@
        textLength="3.66px"
        lengthAdjust="spacingAndGlyphs"
        id="text509">b</text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;stroke-miterlimit:10;stroke-dasharray:2.1,2.1;stroke-dashoffset:0"
-       d="m 163.39999,11.6 86.88,105.35"
-       id="path2030" />
-    <circle
-       cx="250.28"
-       cy="117.45"
-       r="1.15"
-       style="stroke-width: 0.71; stroke: #00A087; fill: #00A087;"
-       id="circle305" />
   </g>
   <defs
      id="defs516">
@@ -2120,7 +2120,7 @@
   <path
      style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;stroke-miterlimit:10;stroke-dasharray:2.1, 2.10000000000000009;stroke-dashoffset:0"
      d="m 163.39999,322.58999 86.88,-6.41"
-     id="path2036" />
+     id="path2034" />
   <g
      clip-path="url(#cpMC4wMHw1MTAuMjR8MC4wMHwzNDAuMTY=)"
      id="g1064">
@@ -3236,7 +3236,7 @@
        id="text1195">Realised projects</text>
   </g>
   <path
-     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;stroke-miterlimit:10;stroke-dasharray:2.1,2.1;stroke-dashoffset:0"
+     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5;stroke-miterlimit:10;stroke-dasharray:2.1, 2.10000000000000009;stroke-dashoffset:0"
      d="m 163.39999,181.66999 86.88,105.35"
-     id="path2034" />
+     id="path2032" />
 </svg>

@@ -226,14 +226,14 @@ plotProjectTracking <- function(data.track.calc,
   # x axis labels
   if (year.tracking == 2022){
     labels.x <- c(
-      "status2021" = "Announcements\nin 2021",
-      "status2022" = "Announcements\nin 2022",
+      "status2021" = "Announcements\nby 2021",
+      "status2022" = "Announcements\nby 2022",
       "status2023" = "Outcome\nin 2023")
   } else if (year.tracking >= 2023) {
     labels.x <- c(
-      "status2021" = "Announcements\nin 2021",
-      "status2022" = "Announcements\nin 2022",
-      "status2023" = "Announcements\nin 2023")
+      "status2021" = "Announcements\nby 2021",
+      "status2022" = "Announcements\nby 2022",
+      "status2023" = "Announcements\nby 2023")
   }
   
   # Alluvial plot
@@ -328,7 +328,7 @@ plotProjectTracking <- function(data.track.calc,
       breaks = c("status2021", "status2022", "status2023"),
       labels = labels.x) +
     scale_y_continuous(
-      name = paste("Capacity additions in", year.tracking, "(GW)"),
+      name = paste("Capacity additions announced for", year.tracking, "(GW)"),
       labels = function(x) x * 1E-3,
       breaks = c(seq(0, y.upper, 1000))
     ) +
@@ -386,9 +386,9 @@ plotProjectTracking <- function(data.track.calc,
     
     # Tibble with annotation labels
     # Hack: Use dummy labels with alpha=0 to preserve x axis order
-    status2021.label <- ifelse(year.tracking >= 2021, "announced in ", "realised as of ")
-    status2022.label <- ifelse(year.tracking >= 2022, "announced in ", "realised as of ")
-    status2023.label <- ifelse(year.tracking >= 2023, "announced in ", "realised as of ")
+    status2021.label <- ifelse(year.tracking >= 2021, "announced by ", "realised as of ")
+    status2022.label <- ifelse(year.tracking >= 2022, "announced by ", "realised as of ")
+    status2023.label <- ifelse(year.tracking >= 2023, "announced by ", "realised as of ")
     
     data.annotations.total <- tribble(
       ~x, ~y, ~label, ~alpha,

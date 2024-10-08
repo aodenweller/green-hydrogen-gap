@@ -1,9 +1,7 @@
-readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
-                                                h2projects.range,
-                                                file.h2projects.2023outcome,
-                                                h2projects.range.2023outcome,
-                                                end.year,
-                                                checked = FALSE) {
+readIEAHydrogenProjectsDB <- function(file.h2projects,
+                                      h2projects.range,
+                                      end.year,
+                                      checked = FALSE) {
   
   # Column names
   columns <- c(
@@ -41,23 +39,6 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
     "Column32" = "source"
   )
 
-  enduse.cols <- c(
-    "enduse.refining",
-    "enduse.ammonia",
-    "enduse.methanol",
-    "enduse.ironsteel",
-    "enduse.otherind",
-    "enduse.mobility",
-    "enduse.power",
-    "enduse.gridinj",
-    "enduse.chp",
-    "enduse.domesticheat",
-    "enduse.biofuels",
-    "enduse.synfuels",
-    "enduse.ch4gridinj",
-    "enduse.ch4mobility"
-  )
-  
   # Columns to select for project-level data
   columns.select.proj <- c(
     "reference",
@@ -67,8 +48,6 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
     "date.decommissioned",
     "status",
     "technology",
-    "product",
-    enduse.cols,
     "cap.mwel")
   
   # Columns to select for summary data
@@ -77,7 +56,6 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
     "name",
     "region",
     "status",
-    "enduse",
     "year",
     "capacity")
 
@@ -191,26 +169,7 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
       sheet = "Projects",
       range = h2projects.range,
       col_names = columns
-    )
-  
-  # Read file for validated 2023 projects
-  data.h2.projects.2023outcome <-
-    read_excel(
-      file.h2projects.2023outcome,
-      sheet = "Projects",
-      range = h2projects.range.2023outcome,
-      col_names = columns
-    )
-  
-  # Get references of validated 2023 projects
-  refs.2023outcome <- data.h2.projects.2023outcome %>% 
-    pull(reference) %>% 
-    unique()
-  
-  # Overwrite projects in data.h2.projects with data.h2.projects.2023outcome
-  data.h2.projects <- data.h2.projects %>% 
-    filter(!(reference %in% refs.2023outcome)) %>% 
-    bind_rows(data.h2.projects.2023outcome) %>% 
+    ) %>%
     # Select columns
     select(all_of(columns.select.proj)) %>%
     # Map regions
@@ -225,36 +184,12 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
     # Drop if technology is NG w CCUS
     filter(technology != "NG w CCUS")
   
-  # Process enduse columns
-  data.h2.projects <- data.h2.projects %>% 
-    # Transform into long format
-    pivot_longer(cols = all_of(enduse.cols), names_to = "enduse", values_to = "enduse.value", names_prefix = "enduse.")
-  
-  # If no enduse given, set to other
-  data.h2.projects.noenduse <- data.h2.projects %>% 
-    group_by(reference) %>% 
-    filter(all(is.na(enduse.value))) %>%
-    filter(enduse == "refining") %>% 
-    mutate(enduse = NA_character_,
-           enduse.value = 1)
-  
-  # Continue with data with given enduse
-  data.h2.projects.enduse <- data.h2.projects %>% 
-    filter(!is.na(enduse.value)) %>% 
-    group_by(reference) %>% 
-    # Distribute capacity equally if multiple end-uses provided
-    mutate(cap.mwel = cap.mwel / n())
-  
-  # Combine data again
-  data.h2.projects <- bind_rows(data.h2.projects.noenduse,
-                                data.h2.projects.enduse)
-  
   # Get confidential projects
   data.h2.projects.conf <- data.h2.projects %>% 
     filter(name %in% c("Other projects from confidential sources (2000-2020)",
                        "Other projects from confidential sources (2000-2021)",
                        "Other projects from confidential sources (2000-2023)"))
-
+  
   # Print volume of projects without online date
   temp <- data.h2.projects %>% 
     filter(is.na(date.online),
@@ -272,14 +207,16 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
     # Map all NA regions to Other
     mutate(region = case_when(is.na(region) ~ "Other",
                               TRUE ~ region)) %>%
-    # If status == DEMO and there is no decommissioned date -> Operational
-    # If status == DEMO and there is a decommissioned date -> Decommissioned
-    mutate(status = case_when((status == "DEMO" &
-                                 is.na(date.decommissioned)) ~ "Operational",
-                              (status == "DEMO" &
-                                 !is.na(date.decommissioned)) ~ "Decommissioned",
-                              TRUE ~ status
-    )) %>%
+    # Map DEMO to other statuses
+    mutate(status = case_when(
+      # If already decommissioned -> Decommissioned
+      status == "DEMO" & date.decommissioned <= end.year ~ "Decommissioned",
+      # If announced date in the past and not yet decommissioned -> Operational
+      status == "DEMO" & (date.decommissioned > end.year | is.na(date.decommissioned)) & date.online <= end.year ~ "Operational",
+      # If announced date in the future -> FID/Construction
+      status == "DEMO" & date.online > end.year ~ "FID/Construction",
+      # Otherwise keep status unchanged
+      TRUE ~ status)) %>%
     # Create two rows for each project, one for online, one for decommissioned
     pivot_longer(
       cols = c("date.online", "date.decommissioned"),
@@ -305,8 +242,8 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
     filter(!is.na(status)) %>% 
     # Select and reorder
     rename(capacity = cap.mwel) %>% 
-    select(all_of(columns.select.stat))
-      
+    select(columns.select.stat)
+  
   # Calculate capacity shares of each region to distribute confidential projects
   data.h2.shares <- data.h2.projects %>% 
     filter(year %in% seq(2000, end.year),
@@ -316,7 +253,7 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
     complete(region,
              year = 2000:end.year,
              fill = list(capacity = 0)) %>% 
-    group_by(region, year, enduse) %>% 
+    group_by(region, year) %>% 
     # Calculate sum of projects
     summarise(cap.sum = sum(capacity)) %>% 
     arrange(year) %>% 
@@ -324,9 +261,7 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
     mutate(cap.sum = cumsum(cap.sum)) %>% 
     group_by(year) %>% 
     # Calculate share of each country for each year
-    mutate(share = cap.sum/sum(cap.sum)) %>% 
-    # Set enduse to NA
-    mutate(enduse = NA_character_)
+    mutate(share = cap.sum/sum(cap.sum))
   
   # Confidential ALK projects
   if (nrow(data.h2.projects.conf) > 0) {
@@ -342,7 +277,7 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
         reference = 0,
         checked = NA_character_
       ) %>%
-      select(all_of(columns.select.stat))
+      select(columns.select.stat)
     
     # Confidential PEM projects
     data.h2.projects.conf.pem <- data.h2.shares %>%
@@ -357,7 +292,7 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
         reference = 0,
         checked = NA_character_
       ) %>%
-      select(all_of(columns.select.stat))
+      select(columns.select.stat)
     
     # Combine data
     data.h2.projects <- bind_rows(data.h2.projects, data.h2.projects.conf.alk)
@@ -374,7 +309,7 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
     # Transform to GW
     mutate(capacity = capacity / 1E3) %>%
     # Capacity, mean and count
-    group_by(region, status, enduse, year) %>%
+    group_by(region, status, year) %>%
     summarise(
       cap.sum = sum(capacity),
       cap.mean = mean(capacity),
@@ -384,15 +319,14 @@ readIEAHydrogenProjectsDBWithEndUse <- function(file.h2projects,
     # Complete dataset
     complete(region,
              status,
-             enduse,
-             year = 2000:2050,
+             year = 2000:2045,
              fill = list(
                cap.sum = 0,
                cap.mean = 0,
                nprojects = 0
              )) %>%
     # Cumulative capacity (over years)
-    group_by(region, status, enduse) %>%
+    group_by(region, status) %>%
     arrange(year) %>%
     mutate(cumcap.sum = cumsum(cap.sum)) %>%
     ungroup() %>% 

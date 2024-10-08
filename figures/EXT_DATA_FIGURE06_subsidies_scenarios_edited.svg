@@ -15,7 +15,7 @@
    id="svg1496"
    sodipodi:docname="EXT_DATA_FIGURE06_subsidies_scenarios_edited.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev1\figures\FINAL\EXT_DATA_FIGURE06_subsidies_scenarios_edited.png"
+   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev2\figures\EXT_DATA_FIGURE06_subsidies_scenarios_edited.png"
    inkscape:export-xdpi="599.97998"
    inkscape:export-ydpi="599.97998">
   <metadata
@@ -43,8 +43,8 @@
      id="namedview1498"
      showgrid="false"
      inkscape:zoom="1.5278795"
-     inkscape:cx="209.8414"
-     inkscape:cy="350.44684"
+     inkscape:cx="212.39337"
+     inkscape:cy="307.26208"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -76,12 +76,10 @@
     </clipPath>
   </defs>
   <rect
-     width="510.23999"
+     width="100%"
      height="100%"
-     style="fill:#ffffff;stroke:none"
-     id="rect6"
-     x="0"
-     y="0" />
+     style="stroke: none; fill: #FFFFFF;"
+     id="rect6" />
   <defs
      id="defs11">
     <clipPath
@@ -165,9 +163,9 @@
        y="9.11"
        text-anchor="middle"
        style="font-size: 6.00px; font-weight: bold; font-family: &quot;Arial&quot;;"
-       textLength="50.58px"
+       textLength="80.56px"
        lengthAdjust="spacingAndGlyphs"
-       id="text42">With carbon price</text>
+       id="text42">With ambitious carbon price</text>
   </g>
   <defs
      id="defs49">
@@ -224,355 +222,355 @@
        x="30.08"
        y="133.72"
        width="4.76"
-       height="1.23"
+       height="1.24"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect69" />
     <rect
        x="35.36"
-       y="128.01"
+       y="127.87"
        width="4.76"
-       height="6.95"
+       height="7.09"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect71" />
     <rect
        x="40.65"
-       y="122.26"
+       y="122.14"
        width="4.76"
-       height="12.69"
+       height="12.81"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect73" />
     <rect
        x="45.94"
-       y="122.30"
+       y="122.18"
        width="4.76"
-       height="12.65"
+       height="12.77"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect75" />
     <rect
        x="45.94"
-       y="113.21"
+       y="113.12"
        width="4.76"
-       height="9.09"
+       height="9.07"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect77" />
     <rect
        x="51.23"
-       y="122.34"
+       y="122.22"
        width="4.76"
-       height="12.61"
+       height="12.73"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect79" />
     <rect
        x="51.23"
-       y="108.03"
+       y="107.96"
        width="4.76"
-       height="14.31"
+       height="14.26"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect81" />
     <rect
        x="56.51"
-       y="122.38"
+       y="122.26"
        width="4.76"
-       height="12.58"
+       height="12.69"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect83" />
     <rect
        x="56.51"
-       y="108.13"
+       y="108.06"
        width="4.76"
-       height="14.25"
+       height="14.20"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect85" />
     <rect
        x="56.51"
-       y="106.12"
+       y="106.05"
        width="4.76"
-       height="2.01"
+       height="2.00"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect87" />
     <rect
        x="61.80"
-       y="122.42"
+       y="122.30"
        width="4.76"
-       height="12.54"
+       height="12.66"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect89" />
     <rect
        x="61.80"
-       y="108.23"
+       y="108.15"
        width="4.76"
-       height="14.19"
+       height="14.14"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect91" />
     <rect
        x="61.80"
-       y="86.05"
+       y="86.04"
        width="4.76"
-       height="22.18"
+       height="22.11"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect93" />
     <rect
        x="67.09"
-       y="122.35"
+       y="122.24"
        width="4.76"
-       height="12.60"
+       height="12.72"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect95" />
     <rect
        x="67.09"
-       y="108.08"
+       y="108.00"
        width="4.76"
-       height="14.28"
+       height="14.23"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect97" />
     <rect
        x="67.09"
-       y="85.76"
+       y="85.75"
        width="4.76"
-       height="22.32"
+       height="22.25"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect99" />
     <rect
        x="72.37"
-       y="122.29"
+       y="122.17"
        width="4.76"
-       height="12.66"
+       height="12.78"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect101" />
     <rect
        x="72.37"
-       y="107.93"
+       y="107.85"
        width="4.76"
-       height="14.37"
+       height="14.32"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect103" />
     <rect
        x="72.37"
-       y="85.47"
+       y="85.46"
        width="4.76"
-       height="22.46"
+       height="22.39"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect105" />
     <rect
        x="77.66"
-       y="122.23"
+       y="122.11"
        width="4.76"
-       height="12.72"
+       height="12.84"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect107" />
     <rect
        x="77.66"
-       y="107.78"
+       y="107.70"
        width="4.76"
-       height="14.45"
+       height="14.41"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect109" />
     <rect
        x="77.66"
-       y="85.18"
+       y="85.17"
        width="4.76"
-       height="22.60"
+       height="22.53"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect111" />
     <rect
        x="82.95"
-       y="122.17"
+       y="122.05"
        width="4.76"
-       height="12.79"
+       height="12.91"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect113" />
     <rect
        x="82.95"
-       y="107.62"
+       y="107.55"
        width="4.76"
-       height="14.54"
+       height="14.50"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect115" />
     <rect
        x="82.95"
-       y="84.89"
+       y="84.88"
        width="4.76"
-       height="22.74"
+       height="22.67"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect117" />
     <rect
        x="88.24"
-       y="122.11"
+       y="121.99"
        width="4.76"
-       height="12.85"
+       height="12.97"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect119" />
     <rect
        x="88.24"
-       y="107.47"
+       y="107.40"
        width="4.76"
-       height="14.63"
+       height="14.59"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect121" />
     <rect
        x="88.24"
-       y="84.60"
+       y="84.59"
        width="4.76"
-       height="22.88"
+       height="22.81"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect123" />
     <rect
        x="93.52"
-       y="122.04"
-       width="4.76"
-       height="12.91"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
-       id="rect125" />
-    <rect
-       x="93.52"
-       y="107.32"
-       width="4.76"
-       height="14.72"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
-       id="rect127" />
-    <rect
-       x="93.52"
-       y="84.31"
-       width="4.76"
-       height="23.02"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
-       id="rect129" />
-    <rect
-       x="98.81"
-       y="121.98"
-       width="4.76"
-       height="12.97"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
-       id="rect131" />
-    <rect
-       x="98.81"
-       y="107.17"
-       width="4.76"
-       height="14.81"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
-       id="rect133" />
-    <rect
-       x="98.81"
-       y="84.02"
-       width="4.76"
-       height="23.16"
-       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
-       id="rect135" />
-    <rect
-       x="104.10"
        y="121.92"
        width="4.76"
        height="13.03"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
+       id="rect125" />
+    <rect
+       x="93.52"
+       y="107.25"
+       width="4.76"
+       height="14.67"
+       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
+       id="rect127" />
+    <rect
+       x="93.52"
+       y="84.30"
+       width="4.76"
+       height="22.95"
+       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
+       id="rect129" />
+    <rect
+       x="98.81"
+       y="121.86"
+       width="4.76"
+       height="13.09"
+       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
+       id="rect131" />
+    <rect
+       x="98.81"
+       y="107.10"
+       width="4.76"
+       height="14.76"
+       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
+       id="rect133" />
+    <rect
+       x="98.81"
+       y="84.01"
+       width="4.76"
+       height="23.09"
+       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
+       id="rect135" />
+    <rect
+       x="104.10"
+       y="121.80"
+       width="4.76"
+       height="13.16"
+       style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect137" />
     <rect
        x="104.10"
-       y="107.02"
+       y="106.95"
        width="4.76"
-       height="14.90"
+       height="14.85"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect139" />
     <rect
        x="104.10"
        y="83.72"
        width="4.76"
-       height="23.30"
+       height="23.23"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect141" />
     <rect
        x="109.38"
-       y="123.13"
+       y="123.01"
        width="4.76"
-       height="11.83"
+       height="11.94"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect143" />
     <rect
        x="109.38"
-       y="108.14"
+       y="108.07"
        width="4.76"
-       height="14.99"
+       height="14.94"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect145" />
     <rect
        x="109.38"
        y="84.70"
        width="4.76"
-       height="23.44"
+       height="23.37"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect147" />
     <rect
        x="114.67"
-       y="128.95"
+       y="128.97"
        width="4.76"
-       height="6.00"
+       height="5.98"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect149" />
     <rect
        x="114.67"
-       y="113.88"
+       y="113.94"
        width="4.76"
-       height="15.08"
+       height="15.03"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect151" />
     <rect
        x="114.67"
-       y="90.30"
+       y="90.44"
        width="4.76"
-       height="23.58"
+       height="23.51"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect153" />
     <rect
        x="119.96"
-       y="119.79"
+       y="119.84"
        width="4.76"
-       height="15.17"
+       height="15.12"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect155" />
     <rect
        x="119.96"
-       y="96.07"
+       y="96.19"
        width="4.76"
-       height="23.72"
+       height="23.65"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect157" />
     <rect
        x="125.25"
-       y="129.33"
+       y="129.35"
        width="4.76"
-       height="5.62"
+       height="5.61"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect159" />
     <rect
        x="125.25"
-       y="105.47"
+       y="105.56"
        width="4.76"
-       height="23.86"
+       height="23.78"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect161" />
     <rect
        x="130.53"
-       y="110.96"
+       y="111.03"
        width="4.76"
-       height="24.00"
+       height="23.92"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect163" />
     <rect
        x="135.82"
-       y="112.96"
+       y="113.03"
        width="4.76"
-       height="21.99"
+       height="21.93"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect165" />
     <polyline
-       points="32.46,134.87 37.74,134.40 43.03,133.55 48.32,132.70 53.61,131.86 58.89,131.01 64.18,130.17 69.47,129.32 74.75,128.47 80.04,127.62 85.33,126.76 90.62,125.90 95.90,125.03 101.19,124.16 106.48,123.29 111.76,122.49 117.05,122.09 122.34,122.09 127.63,122.09 132.91,122.09 138.20,122.09 143.49,122.09 "
-       style="stroke-width:1.07000004;stroke:#0E6684;stroke-dasharray:1.07000004,3.21000012;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
+       points="32.46,134.87 37.74,134.40 43.03,133.53 48.32,132.68 53.61,131.82 58.89,130.97 64.18,130.12 69.47,129.27 74.75,128.41 80.04,127.55 85.33,126.68 90.62,125.81 95.90,124.93 101.19,124.05 106.48,123.17 111.76,122.37 117.05,121.97 122.34,121.97 127.63,121.97 132.91,121.97 138.20,121.97 143.49,121.97 "
+       style="stroke-width:1.07025003;stroke:#0E6684;stroke-dasharray:1.07025003,3.21075007;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline167" />
     <polyline
-       points="32.46,134.87 37.74,134.40 43.03,133.55 48.32,132.09 53.61,130.29 58.89,128.48 64.18,126.69 69.47,124.89 74.75,123.07 80.04,121.25 85.33,119.41 90.62,117.57 95.90,115.71 101.19,113.85 106.48,111.97 111.76,110.17 117.05,108.76 122.34,107.74 127.63,107.36 132.91,107.36 138.20,107.36 143.49,107.36 "
+       points="32.46,134.87 37.74,134.40 43.03,133.53 48.32,132.07 53.61,130.26 58.89,128.45 64.18,126.65 69.47,124.84 74.75,123.02 80.04,121.19 85.33,119.35 90.62,117.50 95.90,115.64 101.19,113.77 106.48,111.89 111.76,110.09 117.05,108.68 122.34,107.66 127.63,107.28 132.91,107.28 138.20,107.28 143.49,107.28 "
        style="stroke-width:1.07025003;stroke:#0E6684;stroke-dasharray:4.28100009,4.28100009;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline169" />
     <polyline
-       points="32.46,134.87 37.74,134.40 43.03,133.55 48.32,132.09 53.61,130.29 58.89,128.35 64.18,125.07 69.47,121.76 74.75,118.44 80.04,115.10 85.33,111.74 90.62,108.36 95.90,104.96 101.19,101.54 106.48,98.10 111.76,94.72 117.05,91.73 122.34,89.11 127.63,87.14 132.91,85.52 138.20,84.05 143.49,84.05 "
+       points="32.46,134.87 37.74,134.40 43.03,133.53 48.32,132.07 53.61,130.26 58.89,128.32 64.18,125.03 69.47,121.73 74.75,118.41 80.04,115.06 85.33,111.70 90.62,108.32 95.90,104.92 101.19,101.50 106.48,98.06 111.76,94.69 117.05,91.70 122.34,89.09 127.63,87.12 132.91,85.51 138.20,84.04 143.49,84.04 "
        style="stroke-width: 1.07; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline171" />
   </g>
@@ -593,7 +591,7 @@
        id="text177">0</text>
     <text
        x="21.22"
-       y="108.40"
+       y="108.48"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="5.72px"
@@ -601,7 +599,7 @@
        id="text179">50</text>
     <text
        x="21.22"
-       y="80.01"
+       y="80.16"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -609,7 +607,7 @@
        id="text181">100</text>
     <text
        x="21.22"
-       y="51.61"
+       y="51.84"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -620,15 +618,15 @@
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline185" />
     <polyline
-       points="22.50,106.56 24.00,106.56 "
+       points="22.50,106.64 24.00,106.64 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline187" />
     <polyline
-       points="22.50,78.17 24.00,78.17 "
+       points="22.50,78.32 24.00,78.32 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline189" />
     <polyline
-       points="22.50,49.77 24.00,49.77 "
+       points="22.50,50.00 24.00,50.00 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline191" />
     <polyline
@@ -640,11 +638,11 @@
        style="stroke-width: 0.53; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline195" />
     <polyline
-       points="153.44,96.83 151.95,96.83 "
+       points="153.44,96.93 151.95,96.93 "
        style="stroke-width: 0.53; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline197" />
     <polyline
-       points="153.44,58.70 151.95,58.70 "
+       points="153.44,58.91 151.95,58.91 "
        style="stroke-width: 0.53; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline199" />
     <text
@@ -656,14 +654,14 @@
        id="text201">0</text>
     <text
        x="154.72"
-       y="98.67"
+       y="98.77"
        style="font-size: 5.14px;fill: #0E6684; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
        id="text203">1000</text>
     <text
        x="154.72"
-       y="60.54"
+       y="60.75"
        style="font-size: 5.14px;fill: #0E6684; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
@@ -814,357 +812,357 @@
      id="g361">
     <rect
        x="206.02"
-       y="134.04"
+       y="134.03"
        width="4.76"
        height="0.92"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect257" />
     <rect
        x="211.31"
-       y="129.90"
+       y="129.80"
        width="4.76"
-       height="5.06"
+       height="5.16"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect259" />
     <rect
        x="216.60"
-       y="126.30"
+       y="126.22"
        width="4.76"
-       height="8.65"
+       height="8.73"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect261" />
     <rect
        x="221.88"
-       y="126.56"
+       y="126.48"
        width="4.76"
-       height="8.40"
+       height="8.48"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect263" />
     <rect
        x="221.88"
-       y="121.31"
+       y="121.25"
        width="4.76"
-       height="5.24"
+       height="5.23"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect265" />
     <rect
        x="227.17"
-       y="126.81"
+       y="126.73"
        width="4.76"
-       height="8.15"
+       height="8.22"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect267" />
     <rect
        x="227.17"
-       y="119.06"
+       y="119.01"
        width="4.76"
-       height="7.75"
+       height="7.72"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect269" />
     <rect
        x="232.46"
-       y="127.06"
+       y="126.99"
        width="4.76"
-       height="7.89"
+       height="7.97"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect271" />
     <rect
        x="232.46"
-       y="119.69"
+       y="119.64"
        width="4.76"
-       height="7.37"
+       height="7.35"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect273" />
     <rect
        x="232.46"
-       y="118.49"
+       y="118.45"
        width="4.76"
-       height="1.20"
+       height="1.19"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect275" />
     <rect
        x="237.74"
-       y="127.31"
+       y="127.24"
        width="4.76"
-       height="7.64"
+       height="7.71"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect277" />
     <rect
        x="237.74"
-       y="120.31"
+       y="120.27"
        width="4.76"
-       height="7.00"
+       height="6.97"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect279" />
     <rect
        x="237.74"
-       y="110.01"
+       y="109.99"
        width="4.76"
-       height="10.31"
+       height="10.27"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect281" />
     <rect
        x="243.03"
-       y="127.53"
+       y="127.46"
        width="4.76"
-       height="7.42"
+       height="7.49"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect283" />
     <rect
        x="243.03"
-       y="120.85"
+       y="120.81"
        width="4.76"
-       height="6.68"
+       height="6.66"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect285" />
     <rect
        x="243.03"
-       y="111.08"
+       y="111.07"
        width="4.76"
-       height="9.77"
+       height="9.74"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect287" />
     <rect
        x="248.32"
-       y="127.75"
+       y="127.68"
        width="4.76"
-       height="7.21"
+       height="7.27"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect289" />
     <rect
        x="248.32"
-       y="121.39"
+       y="121.34"
        width="4.76"
-       height="6.36"
+       height="6.34"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect291" />
     <rect
        x="248.32"
-       y="112.15"
+       y="112.14"
        width="4.76"
-       height="9.23"
+       height="9.20"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect293" />
     <rect
        x="253.61"
-       y="127.96"
+       y="127.90"
        width="4.76"
-       height="6.99"
+       height="7.06"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect295" />
     <rect
        x="253.61"
-       y="121.92"
+       y="121.88"
        width="4.76"
-       height="6.04"
+       height="6.02"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect297" />
     <rect
        x="253.61"
-       y="113.23"
+       y="113.21"
        width="4.76"
-       height="8.70"
+       height="8.67"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect299" />
     <rect
        x="258.89"
-       y="128.18"
+       y="128.12"
        width="4.76"
-       height="6.77"
+       height="6.84"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect301" />
     <rect
        x="258.89"
-       y="122.46"
+       y="122.42"
        width="4.76"
-       height="5.72"
+       height="5.70"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect303" />
     <rect
        x="258.89"
-       y="114.30"
+       y="114.29"
        width="4.76"
-       height="8.16"
+       height="8.13"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect305" />
     <rect
        x="264.18"
-       y="128.40"
+       y="128.34"
        width="4.76"
-       height="6.56"
+       height="6.62"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect307" />
     <rect
        x="264.18"
-       y="123.00"
+       y="122.96"
        width="4.76"
-       height="5.40"
+       height="5.38"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect309" />
     <rect
        x="264.18"
-       y="115.37"
+       y="115.36"
        width="4.76"
-       height="7.62"
+       height="7.60"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect311" />
     <rect
        x="269.47"
-       y="128.69"
+       y="128.63"
        width="4.76"
-       height="6.26"
+       height="6.32"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect313" />
     <rect
        x="269.47"
-       y="123.73"
+       y="123.69"
        width="4.76"
-       height="4.96"
+       height="4.94"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect315" />
     <rect
        x="269.47"
-       y="116.83"
+       y="116.82"
        width="4.76"
-       height="6.90"
+       height="6.87"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect317" />
     <rect
        x="274.75"
-       y="128.99"
+       y="128.93"
        width="4.76"
-       height="5.97"
+       height="6.02"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect319" />
     <rect
        x="274.75"
-       y="124.46"
+       y="124.42"
        width="4.76"
-       height="4.53"
+       height="4.51"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect321" />
     <rect
        x="274.75"
-       y="118.00"
+       y="117.99"
        width="4.76"
-       height="6.46"
+       height="6.44"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect323" />
     <rect
        x="280.04"
-       y="129.28"
+       y="129.23"
        width="4.76"
-       height="5.67"
+       height="5.72"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect325" />
     <rect
        x="280.04"
-       y="125.19"
+       y="125.16"
        width="4.76"
-       height="4.09"
+       height="4.07"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect327" />
     <rect
        x="280.04"
-       y="119.10"
+       y="119.09"
        width="4.76"
-       height="6.09"
+       height="6.07"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect329" />
     <rect
        x="285.33"
-       y="130.21"
+       y="130.17"
        width="4.76"
-       height="4.74"
+       height="4.79"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect331" />
     <rect
        x="285.33"
-       y="126.56"
+       y="126.53"
        width="4.76"
-       height="3.65"
+       height="3.64"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect333" />
     <rect
        x="285.33"
-       y="120.82"
+       y="120.81"
        width="4.76"
-       height="5.74"
+       height="5.72"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect335" />
     <rect
        x="290.62"
-       y="133.04"
+       y="133.05"
        width="4.76"
        height="1.91"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect337" />
     <rect
        x="290.62"
-       y="129.75"
+       y="129.77"
        width="4.76"
-       height="3.29"
+       height="3.28"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect339" />
     <rect
        x="290.62"
-       y="124.37"
+       y="124.41"
        width="4.76"
-       height="5.38"
+       height="5.36"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect341" />
     <rect
        x="295.90"
-       y="132.00"
+       y="132.01"
        width="4.76"
-       height="2.95"
+       height="2.94"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect343" />
     <rect
        x="295.90"
-       y="127.09"
+       y="127.12"
        width="4.76"
-       height="4.91"
+       height="4.89"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect345" />
     <rect
        x="301.19"
-       y="134.03"
+       y="134.04"
        width="4.76"
        height="0.92"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect347" />
     <rect
        x="301.19"
-       y="129.60"
+       y="129.61"
        width="4.76"
-       height="4.44"
+       height="4.42"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect349" />
     <rect
        x="306.48"
-       y="130.99"
+       y="131.00"
        width="4.76"
-       height="3.96"
+       height="3.95"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect351" />
     <rect
        x="311.76"
-       y="131.96"
+       y="131.97"
        width="4.76"
-       height="2.99"
+       height="2.98"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect353" />
     <polyline
-       points="208.40,134.89 213.69,134.55 218.97,133.97 224.26,133.41 229.55,132.86 234.84,132.33 240.12,131.82 245.41,131.32 250.70,130.84 255.98,130.37 261.27,129.91 266.56,129.47 271.85,129.05 277.13,128.65 282.42,128.27 287.71,127.95 292.99,127.82 298.28,127.82 303.57,127.82 308.86,127.82 314.14,127.82 319.43,127.82 "
+       points="208.40,134.89 213.69,134.55 218.97,133.96 224.26,133.39 229.55,132.84 234.84,132.30 240.12,131.79 245.41,131.28 250.70,130.79 255.98,130.32 261.27,129.86 266.56,129.42 271.85,128.99 277.13,128.59 282.42,128.20 287.71,127.88 292.99,127.75 298.28,127.75 303.57,127.75 308.86,127.75 314.14,127.75 319.43,127.75 "
        style="stroke-width:1.07000004;stroke:#7C4569;stroke-dasharray:1.07000004,3.21000012;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline355" />
     <polyline
-       points="208.40,134.89 213.69,134.55 218.97,133.97 224.26,133.06 229.55,131.99 234.84,130.96 240.12,129.98 245.41,129.03 250.70,128.12 255.98,127.25 261.27,126.41 266.56,125.61 271.85,124.85 277.13,124.15 282.42,123.49 287.71,122.93 292.99,122.58 298.28,122.38 303.57,122.32 308.86,122.32 314.14,122.32 319.43,122.32 "
-       style="stroke-width:1.07000004;stroke:#7C4569;stroke-dasharray:4.28000017,4.28000017;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
+       points="208.40,134.89 213.69,134.55 218.97,133.96 224.26,133.04 229.55,131.97 234.84,130.94 240.12,129.95 245.41,129.00 250.70,128.09 255.98,127.21 261.27,126.37 266.56,125.57 271.85,124.81 277.13,124.10 282.42,123.45 287.71,122.88 292.99,122.53 298.28,122.33 303.57,122.27 308.86,122.27 314.14,122.27 319.43,122.27 "
+       style="stroke-width:1.07025003;stroke:#7C4569;stroke-dasharray:4.28100009,4.28100009;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline357" />
     <polyline
-       points="208.40,134.89 213.69,134.55 218.97,133.97 224.26,133.06 229.55,131.99 234.84,130.88 240.12,129.21 245.41,127.61 250.70,126.08 255.98,124.62 261.27,123.23 266.56,121.92 271.85,120.70 277.13,119.56 282.42,118.50 287.71,117.55 292.99,116.84 298.28,116.31 303.57,115.95 308.86,115.68 314.14,115.48 319.43,115.48 "
+       points="208.40,134.89 213.69,134.55 218.97,133.96 224.26,133.04 229.55,131.97 234.84,130.86 240.12,129.19 245.41,127.58 250.70,126.05 255.98,124.59 261.27,123.20 266.56,121.89 271.85,120.67 277.13,119.53 282.42,118.46 287.71,117.52 292.99,116.81 298.28,116.28 303.57,115.92 308.86,115.66 314.14,115.46 319.43,115.46 "
        style="stroke-width: 1.07; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline359" />
   </g>
@@ -1185,7 +1183,7 @@
        id="text365">0</text>
     <text
        x="197.17"
-       y="108.40"
+       y="108.48"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="5.72px"
@@ -1193,7 +1191,7 @@
        id="text367">50</text>
     <text
        x="197.17"
-       y="80.01"
+       y="80.16"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -1201,7 +1199,7 @@
        id="text369">100</text>
     <text
        x="197.17"
-       y="51.61"
+       y="51.84"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -1212,15 +1210,15 @@
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline373" />
     <polyline
-       points="198.45,106.56 199.94,106.56 "
+       points="198.45,106.64 199.94,106.64 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline375" />
     <polyline
-       points="198.45,78.17 199.94,78.17 "
+       points="198.45,78.32 199.94,78.32 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline377" />
     <polyline
-       points="198.45,49.77 199.94,49.77 "
+       points="198.45,50.00 199.94,50.00 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline379" />
     <polyline
@@ -1232,11 +1230,11 @@
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline383" />
     <polyline
-       points="329.38,96.83 327.89,96.83 "
+       points="329.38,96.93 327.89,96.93 "
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline385" />
     <polyline
-       points="329.38,58.70 327.89,58.70 "
+       points="329.38,58.91 327.89,58.91 "
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline387" />
     <text
@@ -1248,14 +1246,14 @@
        id="text389">0</text>
     <text
        x="330.67"
-       y="98.67"
+       y="98.77"
        style="font-size: 5.14px;fill: #7C4569; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
        id="text391">1000</text>
     <text
        x="330.67"
-       y="60.54"
+       y="60.75"
        style="font-size: 5.14px;fill: #7C4569; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
@@ -1406,93 +1404,103 @@
      id="g473">
     <rect
        x="381.06"
-       y="84.05"
+       y="84.04"
        width="31.04"
        height="50.91"
        style="stroke-width: 0.53; stroke: #0E6684; stroke-linecap: butt; stroke-linejoin: miter; fill: #0E6684; fill-opacity: 0.30;"
        id="rect445" />
     <rect
        x="415.54"
-       y="115.48"
+       y="115.46"
        width="31.04"
-       height="19.47"
+       height="19.50"
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt; stroke-linejoin: miter; fill: #7C4569; fill-opacity: 0.30;"
        id="rect447" />
     <rect
        x="450.03"
-       y="123.21"
+       y="123.25"
        width="31.04"
-       height="11.74"
+       height="11.71"
        style="stroke-width: 0.53; stroke: #4D4D4D; stroke-linecap: butt; stroke-linejoin: miter; fill: #4D4D4D; fill-opacity: 0.30;"
        id="rect449" />
     <line
        x1="412.09"
-       y1="84.05"
+       y1="84.04"
        x2="481.07"
-       y2="84.05"
-       style="stroke-width:0.52999998;stroke-dasharray:2.11999992,2.11999992;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
+       y2="84.04"
+       style="stroke-width:0.53025001;stroke-dasharray:2.12100003,2.12100003;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="line451" />
     <line
        x1="446.58"
-       y1="115.48"
+       y1="115.46"
        x2="465.55"
-       y2="115.48"
+       y2="115.46"
        style="stroke-width:0.52999998;stroke-dasharray:2.11999992,2.11999992;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="line453" />
     <line
        x1="460.37"
-       y1="123.21"
+       y1="123.25"
        x2="460.37"
-       y2="115.48"
+       y2="115.46"
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="line455" />
     <polyline
-       points="458.25,119.53 460.37,123.21 462.50,119.53 "
+       points="458.25,119.56 460.37,123.25 462.50,119.56 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="polyline457" />
     <polyline
-       points="462.50,119.16 460.37,115.48 458.25,119.16 "
+       points="462.50,119.14 460.37,115.46 458.25,119.14 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="polyline459" />
     <line
        x1="475.89"
-       y1="123.21"
+       y1="123.25"
        x2="475.89"
-       y2="84.05"
+       y2="84.04"
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="line461" />
     <polyline
-       points="473.77,119.53 475.89,123.21 478.02,119.53 "
+       points="473.77,119.56 475.89,123.25 478.02,119.56 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="polyline463" />
     <polyline
-       points="478.02,87.73 475.89,84.05 473.77,87.73 "
+       points="478.02,87.72 475.89,84.04 473.77,87.72 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="polyline465" />
     <text
        x="413.82001"
-       y="89.18"
+       y="89.169998"
        style="font-weight:bold;font-size:6px;font-family:Arial"
        textLength="52.48"
        lengthAdjust="spacingAndGlyphs"
        id="text467"
-       transform="translate(1.5,-22.5)">③ Green hydrogen</text>
+       transform="translate(0,-25.5)">③ Green hydrogen</text>
     <text
        x="413.82001"
-       y="96.379997"
+       y="96.370003"
        style="font-weight:bold;font-size:6px;font-family:Arial"
        textLength="56.639999"
        lengthAdjust="spacingAndGlyphs"
        id="text469"
-       transform="translate(1.5,-22.5)">implementation gap</text>
+       transform="translate(0,-25.5)">implementation gap</text>
     <text
        x="413.82001"
-       y="103.58"
+       y="103.57"
        style="font-weight:bold;font-size:6px;font-family:Arial"
        textLength="20.33"
        lengthAdjust="spacingAndGlyphs"
        id="text471"
-       transform="translate(1.5,-22.5)">in 2030</text>
+       transform="translate(0,-25.5)">in 2030</text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       d="m 445.71577,74.367775 c 0.64102,18.70601 4.96536,40.630465 11.59115,45.035325"
+       id="path2339"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       d="m 452.10039,74.36661 c 0.37663,16.98192 13.24764,26.8758 21.78065,31.49951"
+       id="path2341"
+       sodipodi:nodetypes="cc" />
   </g>
   <g
      clip-path="url(#cpMC4wMHw1MTAuMjR8MC4wMHw1MTAuMjQ=)"
@@ -1511,7 +1519,7 @@
        id="text477">0</text>
     <text
        x="373.11"
-       y="98.67"
+       y="98.77"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
@@ -1519,7 +1527,7 @@
        id="text479">1000</text>
     <text
        x="373.11"
-       y="60.54"
+       y="60.75"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
@@ -1530,11 +1538,11 @@
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline483" />
     <polyline
-       points="374.39,96.83 375.88,96.83 "
+       points="374.39,96.93 375.88,96.93 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline485" />
     <polyline
-       points="374.39,58.70 375.88,58.70 "
+       points="374.39,58.91 375.88,58.91 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline487" />
     <polyline
@@ -1590,9 +1598,9 @@
        y="151.87"
        text-anchor="middle"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
-       textLength="9.14px"
+       textLength="32.57px"
        lengthAdjust="spacingAndGlyphs"
-       id="text505">with</text>
+       id="text505">with ambitious</text>
     <text
        x="431.06"
        y="157.42"
@@ -1685,355 +1693,355 @@
        x="30.08"
        y="288.69"
        width="4.76"
-       height="0.88"
+       height="0.89"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect537" />
     <rect
        x="35.36"
-       y="284.66"
+       y="284.55"
        width="4.76"
-       height="4.92"
+       height="5.02"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect539" />
     <rect
        x="40.65"
-       y="281.08"
+       y="280.99"
        width="4.76"
-       height="8.49"
+       height="8.58"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect541" />
     <rect
        x="45.94"
-       y="281.20"
+       y="281.11"
        width="4.76"
-       height="8.38"
+       height="8.46"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect543" />
     <rect
        x="45.94"
-       y="275.84"
+       y="275.77"
        width="4.76"
-       height="5.36"
+       height="5.34"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect545" />
     <rect
        x="51.23"
-       y="281.31"
+       y="281.23"
        width="4.76"
-       height="8.26"
+       height="8.35"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect547" />
     <rect
        x="51.23"
-       y="273.20"
+       y="273.14"
        width="4.76"
-       height="8.11"
+       height="8.08"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect549" />
     <rect
        x="56.51"
-       y="281.43"
+       y="281.34"
        width="4.76"
-       height="8.14"
+       height="8.23"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect551" />
     <rect
        x="56.51"
-       y="273.49"
+       y="273.44"
        width="4.76"
-       height="7.93"
+       height="7.91"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect553" />
     <rect
        x="56.51"
-       y="272.32"
+       y="272.27"
        width="4.76"
        height="1.17"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect555" />
     <rect
        x="61.80"
-       y="281.54"
+       y="281.46"
        width="4.76"
-       height="8.03"
+       height="8.11"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect557" />
     <rect
        x="61.80"
-       y="273.79"
+       y="273.73"
        width="4.76"
-       height="7.76"
+       height="7.73"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect559" />
     <rect
        x="61.80"
-       y="262.39"
+       y="262.37"
        width="4.76"
-       height="11.40"
+       height="11.36"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect561" />
     <rect
        x="67.09"
-       y="281.48"
+       y="281.39"
        width="4.76"
-       height="8.10"
+       height="8.18"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect563" />
     <rect
        x="67.09"
-       y="273.62"
+       y="273.56"
        width="4.76"
-       height="7.85"
+       height="7.83"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect565" />
     <rect
        x="67.09"
-       y="262.07"
+       y="262.05"
        width="4.76"
-       height="11.55"
+       height="11.51"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect567" />
     <rect
        x="72.37"
-       y="281.41"
+       y="281.32"
        width="4.76"
-       height="8.16"
+       height="8.25"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect569" />
     <rect
        x="72.37"
-       y="273.46"
+       y="273.40"
        width="4.76"
-       height="7.95"
+       height="7.92"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect571" />
     <rect
        x="72.37"
-       y="261.76"
+       y="261.74"
        width="4.76"
-       height="11.70"
+       height="11.67"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect573" />
     <rect
        x="77.66"
-       y="281.34"
+       y="281.25"
        width="4.76"
-       height="8.23"
+       height="8.32"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect575" />
     <rect
        x="77.66"
-       y="273.30"
+       y="273.24"
        width="4.76"
-       height="8.04"
+       height="8.02"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect577" />
     <rect
        x="77.66"
-       y="261.44"
+       y="261.42"
        width="4.76"
-       height="11.85"
+       height="11.82"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect579" />
     <rect
        x="82.95"
-       y="281.27"
+       y="281.19"
        width="4.76"
-       height="8.30"
+       height="8.39"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect581" />
     <rect
        x="82.95"
-       y="273.13"
+       y="273.07"
        width="4.76"
-       height="8.14"
+       height="8.11"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect583" />
     <rect
        x="82.95"
-       y="261.13"
+       y="261.10"
        width="4.76"
-       height="12.01"
+       height="11.97"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect585" />
     <rect
        x="88.24"
-       y="281.20"
+       y="281.12"
        width="4.76"
-       height="8.37"
+       height="8.45"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect587" />
     <rect
        x="88.24"
-       y="272.97"
+       y="272.91"
        width="4.76"
-       height="8.23"
+       height="8.21"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect589" />
     <rect
        x="88.24"
-       y="260.81"
+       y="260.79"
        width="4.76"
-       height="12.16"
+       height="12.12"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect591" />
     <rect
        x="93.52"
-       y="281.13"
+       y="281.05"
        width="4.76"
-       height="8.44"
+       height="8.52"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect593" />
     <rect
        x="93.52"
-       y="272.81"
+       y="272.75"
        width="4.76"
-       height="8.33"
+       height="8.30"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect595" />
     <rect
        x="93.52"
-       y="260.50"
+       y="260.47"
        width="4.76"
-       height="12.31"
+       height="12.27"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect597" />
     <rect
        x="98.81"
-       y="281.07"
+       y="280.98"
        width="4.76"
-       height="8.51"
+       height="8.59"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect599" />
     <rect
        x="98.81"
-       y="272.64"
+       y="272.58"
        width="4.76"
-       height="8.42"
+       height="8.40"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect601" />
     <rect
        x="98.81"
-       y="260.18"
+       y="260.16"
        width="4.76"
-       height="12.46"
+       height="12.42"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect603" />
     <rect
        x="104.10"
-       y="281.00"
+       y="280.91"
        width="4.76"
-       height="8.57"
+       height="8.66"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect605" />
     <rect
        x="104.10"
-       y="272.48"
+       y="272.42"
        width="4.76"
-       height="8.52"
+       height="8.49"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect607" />
     <rect
        x="104.10"
-       y="259.87"
+       y="259.84"
        width="4.76"
-       height="12.61"
+       height="12.58"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect609" />
     <rect
        x="109.38"
-       y="281.82"
+       y="281.73"
        width="4.76"
-       height="7.76"
+       height="7.84"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect611" />
     <rect
        x="109.38"
-       y="273.20"
+       y="273.14"
        width="4.76"
-       height="8.61"
+       height="8.59"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect613" />
     <rect
        x="109.38"
-       y="260.44"
+       y="260.42"
        width="4.76"
-       height="12.77"
+       height="12.73"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect615" />
     <rect
        x="114.67"
-       y="285.83"
+       y="285.84"
        width="4.76"
-       height="3.74"
+       height="3.73"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect617" />
     <rect
        x="114.67"
-       y="277.12"
+       y="277.16"
        width="4.76"
-       height="8.71"
+       height="8.68"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect619" />
     <rect
        x="114.67"
-       y="264.20"
+       y="264.28"
        width="4.76"
-       height="12.92"
+       height="12.88"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect621" />
     <rect
        x="119.96"
-       y="280.77"
+       y="280.80"
        width="4.76"
-       height="8.80"
+       height="8.78"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect623" />
     <rect
        x="119.96"
-       y="267.70"
+       y="267.77"
        width="4.76"
-       height="13.07"
+       height="13.03"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect625" />
     <rect
        x="125.25"
-       y="286.40"
+       y="286.41"
        width="4.76"
-       height="3.18"
+       height="3.17"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect627" />
     <rect
        x="125.25"
-       y="273.17"
+       y="273.22"
        width="4.76"
-       height="13.22"
+       height="13.18"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect629" />
     <rect
        x="130.53"
-       y="276.20"
+       y="276.24"
        width="4.76"
-       height="13.37"
+       height="13.33"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect631" />
     <rect
        x="135.82"
-       y="277.35"
+       y="277.39"
        width="4.76"
-       height="12.22"
+       height="12.18"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect633" />
     <polyline
-       points="32.46,289.51 37.74,289.18 43.03,288.61 48.32,288.05 53.61,287.49 58.89,286.95 64.18,286.41 69.47,285.87 74.75,285.32 80.04,284.76 85.33,284.21 90.62,283.65 95.90,283.08 101.19,282.51 106.48,281.93 111.76,281.41 117.05,281.16 122.34,281.16 127.63,281.16 132.91,281.16 138.20,281.16 143.49,281.16 "
-       style="stroke-width:1.07000004;stroke:#0E6684;stroke-dasharray:1.07000004,3.21000012;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
+       points="32.46,289.51 37.74,289.17 43.03,288.60 48.32,288.03 53.61,287.47 58.89,286.92 64.18,286.37 69.47,285.82 74.75,285.27 80.04,284.71 85.33,284.15 90.62,283.58 95.90,283.01 101.19,282.43 106.48,281.85 111.76,281.32 117.05,281.07 122.34,281.07 127.63,281.07 132.91,281.07 138.20,281.07 143.49,281.07 "
+       style="stroke-width:1.07025003;stroke:#0E6684;stroke-dasharray:1.07025003,3.21075007;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline635" />
     <polyline
-       points="32.46,289.51 37.74,289.18 43.03,288.61 48.32,287.69 53.61,286.59 58.89,285.51 64.18,284.45 69.47,283.38 74.75,282.30 80.04,281.21 85.33,280.10 90.62,278.99 95.90,277.86 101.19,276.73 106.48,275.58 111.76,274.48 117.05,273.64 122.34,273.05 127.63,272.84 132.91,272.84 138.20,272.84 143.49,272.84 "
+       points="32.46,289.51 37.74,289.17 43.03,288.60 48.32,287.67 53.61,286.57 58.89,285.49 64.18,284.42 69.47,283.35 74.75,282.26 80.04,281.16 85.33,280.06 90.62,278.94 95.90,277.81 101.19,276.67 106.48,275.52 111.76,274.41 117.05,273.58 122.34,272.99 127.63,272.78 132.91,272.78 138.20,272.78 143.49,272.78 "
        style="stroke-width:1.07000004;stroke:#0E6684;stroke-dasharray:4.28000017,4.28000017;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline637" />
     <polyline
-       points="32.46,289.51 37.74,289.18 43.03,288.61 48.32,287.69 53.61,286.59 58.89,285.43 64.18,283.61 69.47,281.76 74.75,279.89 80.04,278.01 85.33,276.10 90.62,274.16 95.90,272.21 101.19,270.24 106.48,268.25 111.76,266.29 117.05,264.59 122.34,263.12 127.63,262.02 132.91,261.12 138.20,260.30 143.49,260.30 "
+       points="32.46,289.51 37.74,289.17 43.03,288.60 48.32,287.67 53.61,286.57 58.89,285.41 64.18,283.58 69.47,281.73 74.75,279.86 80.04,277.97 85.33,276.06 90.62,274.13 95.90,272.18 101.19,270.20 106.48,268.21 111.76,266.25 117.05,264.55 122.34,263.09 127.63,261.99 132.91,261.09 138.20,260.28 143.49,260.28 "
        style="stroke-width: 1.07; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline639" />
   </g>
@@ -2054,7 +2062,7 @@
        id="text645">0</text>
     <text
        x="21.22"
-       y="263.02"
+       y="263.09"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="5.72px"
@@ -2062,7 +2070,7 @@
        id="text647">50</text>
     <text
        x="21.22"
-       y="234.62"
+       y="234.78"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -2070,7 +2078,7 @@
        id="text649">100</text>
     <text
        x="21.22"
-       y="206.23"
+       y="206.46"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -2081,15 +2089,15 @@
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline653" />
     <polyline
-       points="22.50,261.18 24.00,261.18 "
+       points="22.50,261.25 24.00,261.25 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline655" />
     <polyline
-       points="22.50,232.78 24.00,232.78 "
+       points="22.50,232.94 24.00,232.94 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline657" />
     <polyline
-       points="22.50,204.39 24.00,204.39 "
+       points="22.50,204.62 24.00,204.62 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline659" />
     <polyline
@@ -2101,11 +2109,11 @@
        style="stroke-width: 0.53; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline663" />
     <polyline
-       points="153.44,251.44 151.95,251.44 "
+       points="153.44,251.55 151.95,251.55 "
        style="stroke-width: 0.53; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline665" />
     <polyline
-       points="153.44,213.32 151.95,213.32 "
+       points="153.44,213.52 151.95,213.52 "
        style="stroke-width: 0.53; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline667" />
     <text
@@ -2117,14 +2125,14 @@
        id="text669">0</text>
     <text
        x="154.72"
-       y="253.28"
+       y="253.39"
        style="font-size: 5.14px;fill: #0E6684; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
        id="text671">1000</text>
     <text
        x="154.72"
-       y="215.16"
+       y="215.36"
        style="font-size: 5.14px;fill: #0E6684; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
@@ -2275,170 +2283,170 @@
      id="g829">
     <rect
        x="206.02"
-       y="289.13"
+       y="289.12"
        width="4.76"
-       height="0.44"
+       height="0.45"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect725" />
     <rect
        x="211.31"
-       y="287.25"
+       y="287.20"
        width="4.76"
-       height="2.32"
+       height="2.37"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect727" />
     <rect
        x="216.60"
-       y="286.38"
+       y="286.34"
        width="4.76"
-       height="3.19"
+       height="3.23"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect729" />
     <rect
        x="221.88"
-       y="286.64"
+       y="286.60"
        width="4.76"
-       height="2.94"
+       height="2.97"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect731" />
     <rect
        x="221.88"
-       y="285.43"
+       y="285.40"
        width="4.76"
-       height="1.21"
+       height="1.20"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect733" />
     <rect
        x="227.17"
-       y="286.88"
+       y="286.85"
        width="4.76"
-       height="2.69"
+       height="2.72"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect735" />
     <rect
        x="227.17"
-       y="285.30"
+       y="285.28"
        width="4.76"
-       height="1.58"
+       height="1.57"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect737" />
     <rect
        x="232.46"
-       y="287.12"
+       y="287.09"
        width="4.76"
-       height="2.45"
+       height="2.48"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect739" />
     <rect
        x="232.46"
-       y="285.74"
+       y="285.72"
        width="4.76"
        height="1.38"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect741" />
     <rect
        x="232.46"
-       y="285.48"
+       y="285.46"
        width="4.76"
        height="0.25"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect743" />
     <rect
        x="237.74"
-       y="287.35"
+       y="287.33"
        width="4.76"
-       height="2.23"
+       height="2.25"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect745" />
     <rect
        x="237.74"
-       y="286.16"
+       y="286.14"
        width="4.76"
-       height="1.19"
+       height="1.18"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect747" />
     <rect
        x="237.74"
-       y="285.05"
+       y="285.04"
        width="4.76"
        height="1.11"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect749" />
     <rect
        x="243.03"
-       y="287.51"
+       y="287.50"
        width="4.76"
-       height="2.06"
+       height="2.07"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect751" />
     <rect
        x="243.03"
-       y="286.47"
+       y="286.46"
        width="4.76"
        height="1.04"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect753" />
     <rect
        x="243.03"
-       y="285.71"
+       y="285.70"
        width="4.76"
        height="0.76"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect755" />
     <rect
        x="248.32"
-       y="287.68"
+       y="287.67"
        width="4.76"
-       height="1.89"
+       height="1.90"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect757" />
     <rect
        x="248.32"
-       y="286.78"
+       y="286.77"
        width="4.76"
        height="0.90"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect759" />
     <rect
        x="248.32"
-       y="286.37"
+       y="286.36"
        width="4.76"
        height="0.41"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect761" />
     <rect
        x="253.61"
-       y="287.85"
+       y="287.84"
        width="4.76"
-       height="1.72"
+       height="1.73"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect763" />
     <rect
        x="253.61"
-       y="287.09"
+       y="287.08"
        width="4.76"
        height="0.76"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect765" />
     <rect
        x="253.61"
-       y="286.98"
+       y="286.97"
        width="4.76"
        height="0.11"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect767" />
     <rect
        x="258.89"
-       y="288.02"
+       y="288.01"
        width="4.76"
-       height="1.55"
+       height="1.56"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect769" />
     <rect
        x="258.89"
        y="287.39"
        width="4.76"
-       height="0.63"
+       height="0.62"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect771" />
     <rect
@@ -2450,7 +2458,7 @@
        id="rect773" />
     <rect
        x="264.18"
-       y="288.18"
+       y="288.17"
        width="4.76"
        height="1.40"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
@@ -2466,7 +2474,7 @@
        x="264.18"
        y="287.66"
        width="4.76"
-       height="0.030"
+       height="0.029"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect779" />
     <rect
@@ -2494,12 +2502,12 @@
        x="274.75"
        y="288.58"
        width="4.76"
-       height="1.00"
+       height="0.99"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect787" />
     <rect
        x="274.75"
-       y="288.43"
+       y="288.44"
        width="4.76"
        height="0.14"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
@@ -2522,7 +2530,7 @@
        x="280.04"
        y="288.74"
        width="4.76"
-       height="0.026"
+       height="0.025"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect795" />
     <rect
@@ -2534,42 +2542,42 @@
        id="rect797" />
     <rect
        x="285.33"
-       y="289.09"
+       y="289.10"
        width="4.76"
-       height="0.48"
+       height="0.47"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect799" />
     <rect
        x="285.33"
-       y="289.09"
+       y="289.10"
        width="4.76"
        height="0.00"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect801" />
     <rect
        x="285.33"
-       y="289.09"
+       y="289.10"
        width="4.76"
        height="0.00"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect803" />
     <rect
        x="290.62"
-       y="289.53"
+       y="289.54"
        width="4.76"
-       height="0.037"
+       height="0.036"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect805" />
     <rect
        x="290.62"
-       y="289.53"
+       y="289.54"
        width="4.76"
        height="0.00"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect807" />
     <rect
        x="290.62"
-       y="289.53"
+       y="289.54"
        width="4.76"
        height="0.00"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
@@ -2617,15 +2625,15 @@
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect821" />
     <polyline
-       points="208.40,289.54 213.69,289.39 218.97,289.17 224.26,288.97 229.55,288.79 234.84,288.63 240.12,288.48 245.41,288.34 250.70,288.21 255.98,288.10 261.27,287.99 266.56,287.90 271.85,287.82 277.13,287.75 282.42,287.70 287.71,287.67 292.99,287.67 298.28,287.67 303.57,287.67 308.86,287.67 314.14,287.67 319.43,287.67 "
-       style="stroke-width:1.07000004;stroke:#7C4569;stroke-dasharray:1.07000004,3.21000012;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
+       points="208.40,289.54 213.69,289.38 218.97,289.17 224.26,288.97 229.55,288.78 234.84,288.62 240.12,288.47 245.41,288.33 250.70,288.20 255.98,288.08 261.27,287.98 266.56,287.89 271.85,287.81 277.13,287.74 282.42,287.68 287.71,287.65 292.99,287.65 298.28,287.65 303.57,287.65 308.86,287.65 314.14,287.65 319.43,287.65 "
+       style="stroke-width:1.07025003;stroke:#7C4569;stroke-dasharray:1.07025003,3.21075007;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline823" />
     <polyline
-       points="208.40,289.54 213.69,289.39 218.97,289.17 224.26,288.89 229.55,288.61 234.84,288.35 240.12,288.12 245.41,287.91 250.70,287.72 255.98,287.56 261.27,287.41 266.56,287.29 271.85,287.18 277.13,287.11 282.42,287.05 287.71,287.02 292.99,287.02 298.28,287.02 303.57,287.02 308.86,287.02 314.14,287.02 319.43,287.02 "
+       points="208.40,289.54 213.69,289.38 218.97,289.17 224.26,288.89 229.55,288.60 234.84,288.34 240.12,288.11 245.41,287.90 250.70,287.71 255.98,287.54 261.27,287.40 266.56,287.27 271.85,287.17 277.13,287.10 282.42,287.04 287.71,287.01 292.99,287.01 298.28,287.01 303.57,287.01 308.86,287.01 314.14,287.01 319.43,287.01 "
        style="stroke-width:1.07000004;stroke:#7C4569;stroke-dasharray:4.28000017,4.28000017;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline825" />
     <polyline
-       points="208.40,289.54 213.69,289.39 218.97,289.17 224.26,288.89 229.55,288.61 234.84,288.33 240.12,288.03 245.41,287.77 250.70,287.55 255.98,287.38 261.27,287.23 266.56,287.10 271.85,287.00 277.13,286.92 282.42,286.87 287.71,286.84 292.99,286.83 298.28,286.83 303.57,286.83 308.86,286.83 314.14,286.83 319.43,286.83 "
+       points="208.40,289.54 213.69,289.38 218.97,289.17 224.26,288.89 229.55,288.60 234.84,288.32 240.12,288.02 245.41,287.76 250.70,287.54 255.98,287.37 261.27,287.22 266.56,287.09 271.85,286.99 277.13,286.91 282.42,286.86 287.71,286.82 292.99,286.82 298.28,286.82 303.57,286.82 308.86,286.82 314.14,286.82 319.43,286.82 "
        style="stroke-width: 1.07; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline827" />
   </g>
@@ -2646,7 +2654,7 @@
        id="text833">0</text>
     <text
        x="197.17"
-       y="263.02"
+       y="263.09"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="5.72px"
@@ -2654,7 +2662,7 @@
        id="text835">50</text>
     <text
        x="197.17"
-       y="234.62"
+       y="234.78"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -2662,7 +2670,7 @@
        id="text837">100</text>
     <text
        x="197.17"
-       y="206.23"
+       y="206.46"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -2673,15 +2681,15 @@
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline841" />
     <polyline
-       points="198.45,261.18 199.94,261.18 "
+       points="198.45,261.25 199.94,261.25 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline843" />
     <polyline
-       points="198.45,232.78 199.94,232.78 "
+       points="198.45,232.94 199.94,232.94 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline845" />
     <polyline
-       points="198.45,204.39 199.94,204.39 "
+       points="198.45,204.62 199.94,204.62 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline847" />
     <polyline
@@ -2693,11 +2701,11 @@
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline851" />
     <polyline
-       points="329.38,251.44 327.89,251.44 "
+       points="329.38,251.55 327.89,251.55 "
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline853" />
     <polyline
-       points="329.38,213.32 327.89,213.32 "
+       points="329.38,213.52 327.89,213.52 "
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline855" />
     <text
@@ -2709,14 +2717,14 @@
        id="text857">0</text>
     <text
        x="330.67"
-       y="253.28"
+       y="253.39"
        style="font-size: 5.14px;fill: #7C4569; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
        id="text859">1000</text>
     <text
        x="330.67"
-       y="215.16"
+       y="215.36"
        style="font-size: 5.14px;fill: #7C4569; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
@@ -2867,76 +2875,71 @@
      id="g941">
     <rect
        x="381.06"
-       y="260.30"
+       y="260.28"
        width="31.04"
-       height="29.27"
+       height="29.30"
        style="stroke-width: 0.53; stroke: #0E6684; stroke-linecap: butt; stroke-linejoin: miter; fill: #0E6684; fill-opacity: 0.30;"
        id="rect913" />
     <rect
        x="415.54"
-       y="286.83"
+       y="286.82"
        width="31.04"
-       height="2.74"
+       height="2.75"
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt; stroke-linejoin: miter; fill: #7C4569; fill-opacity: 0.30;"
        id="rect915" />
     <rect
        x="450.03"
-       y="277.83"
+       y="277.86"
        width="31.04"
-       height="11.74"
+       height="11.71"
        style="stroke-width: 0.53; stroke: #4D4D4D; stroke-linecap: butt; stroke-linejoin: miter; fill: #4D4D4D; fill-opacity: 0.30;"
        id="rect917" />
     <line
        x1="412.09"
-       y1="260.30"
+       y1="260.28"
        x2="481.07"
-       y2="260.30"
-       style="stroke-width:0.52999998;stroke-dasharray:2.11999992,2.11999992;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
+       y2="260.28"
+       style="stroke-width:0.53025001;stroke-dasharray:2.12100003,2.12100003;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="line919" />
     <line
        x1="475.89"
-       y1="277.83"
+       y1="277.86"
        x2="475.89"
-       y2="260.30"
+       y2="260.28"
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="line929" />
     <polyline
-       points="473.77,274.15 475.89,277.83 478.02,274.15 "
+       points="473.77,274.18 475.89,277.86 478.02,274.18 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="polyline931" />
     <polyline
-       points="478.02,263.98 475.89,260.30 473.77,263.98 "
+       points="478.02,263.96 475.89,260.28 473.77,263.96 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="polyline933" />
     <text
        x="413.82001"
-       y="261.10001"
+       y="261.07999"
        style="font-weight:bold;font-size:6px;font-family:Arial"
        textLength="52.48"
        lengthAdjust="spacingAndGlyphs"
        id="text935"
-       transform="translate(1.5,-18)">③ Green hydrogen</text>
+       transform="translate(0,-19.5)">③ Green hydrogen</text>
     <text
        x="413.82001"
-       y="268.29999"
+       y="268.28"
        style="font-weight:bold;font-size:6px;font-family:Arial"
        textLength="56.639999"
        lengthAdjust="spacingAndGlyphs"
        id="text937"
-       transform="translate(1.5,-18)">implementation gap</text>
+       transform="translate(0,-19.5)">implementation gap</text>
     <text
        x="413.82001"
-       y="275.5"
+       y="275.48001"
        style="font-weight:bold;font-size:6px;font-family:Arial"
        textLength="20.33"
        lengthAdjust="spacingAndGlyphs"
        id="text939"
-       transform="translate(1.5,-18)">in 2030</text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       d="m 450.62453,252.80134 c 5.33438,9.36581 13.27131,13.34126 21.59856,16.19893"
-       id="path2407"
-       sodipodi:nodetypes="cc" />
+       transform="translate(0,-19.5)">in 2030</text>
   </g>
   <g
      clip-path="url(#cpMC4wMHw1MTAuMjR8MC4wMHw1MTAuMjQ=)"
@@ -2955,7 +2958,7 @@
        id="text945">0</text>
     <text
        x="373.11"
-       y="253.28"
+       y="253.39"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
@@ -2963,7 +2966,7 @@
        id="text947">1000</text>
     <text
        x="373.11"
-       y="215.16"
+       y="215.36"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
@@ -2974,11 +2977,11 @@
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline951" />
     <polyline
-       points="374.39,251.44 375.88,251.44 "
+       points="374.39,251.55 375.88,251.55 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline953" />
     <polyline
-       points="374.39,213.32 375.88,213.32 "
+       points="374.39,213.52 375.88,213.52 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline955" />
     <polyline
@@ -3034,9 +3037,9 @@
        y="306.48"
        text-anchor="middle"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
-       textLength="9.14px"
+       textLength="32.57px"
        lengthAdjust="spacingAndGlyphs"
-       id="text973">with</text>
+       id="text973">with ambitious</text>
     <text
        x="431.06"
        y="312.04"
@@ -3127,357 +3130,357 @@
      id="g1109">
     <rect
        x="30.08"
-       y="442.14"
+       y="442.13"
        width="4.76"
-       height="2.05"
+       height="2.06"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1005" />
     <rect
        x="35.36"
-       y="432.27"
+       y="432.02"
        width="4.76"
-       height="11.92"
+       height="12.17"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1007" />
     <rect
        x="40.65"
-       y="421.43"
+       y="421.21"
        width="4.76"
-       height="22.76"
+       height="22.97"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1009" />
     <rect
        x="45.94"
-       y="421.41"
+       y="421.19"
        width="4.76"
-       height="22.78"
+       height="23.00"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1011" />
     <rect
        x="45.94"
-       y="403.47"
+       y="403.30"
        width="4.76"
-       height="17.94"
+       height="17.89"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1013" />
     <rect
        x="51.23"
-       y="421.39"
+       y="421.17"
        width="4.76"
-       height="22.80"
+       height="23.02"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1015" />
     <rect
        x="51.23"
-       y="392.91"
+       y="392.78"
        width="4.76"
-       height="28.48"
+       height="28.39"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1017" />
     <rect
        x="56.51"
-       y="421.36"
+       y="421.15"
        width="4.76"
-       height="22.82"
+       height="23.04"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1019" />
     <rect
        x="56.51"
-       y="392.85"
+       y="392.72"
        width="4.76"
-       height="28.51"
+       height="28.42"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1021" />
     <rect
        x="56.51"
-       y="389.07"
+       y="388.94"
        width="4.76"
-       height="3.79"
+       height="3.78"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1023" />
     <rect
        x="61.80"
-       y="421.34"
+       y="421.13"
        width="4.76"
-       height="22.85"
+       height="23.06"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1025" />
     <rect
        x="61.80"
-       y="392.80"
+       y="392.67"
        width="4.76"
-       height="28.54"
+       height="28.45"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1027" />
     <rect
        x="61.80"
        y="348.22"
        width="4.76"
-       height="44.58"
+       height="44.45"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1029" />
     <rect
        x="67.09"
-       y="421.29"
+       y="421.07"
        width="4.76"
-       height="22.90"
+       height="23.12"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1031" />
     <rect
        x="67.09"
-       y="392.67"
+       y="392.53"
        width="4.76"
-       height="28.62"
+       height="28.54"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1033" />
     <rect
        x="67.09"
        y="347.96"
        width="4.76"
-       height="44.70"
+       height="44.57"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1035" />
     <rect
        x="72.37"
-       y="421.23"
+       y="421.01"
        width="4.76"
-       height="22.96"
+       height="23.17"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1037" />
     <rect
        x="72.37"
-       y="392.53"
+       y="392.40"
        width="4.76"
-       height="28.70"
+       height="28.62"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1039" />
     <rect
        x="72.37"
        y="347.70"
        width="4.76"
-       height="44.83"
+       height="44.70"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1041" />
     <rect
        x="77.66"
-       y="421.18"
+       y="420.96"
        width="4.76"
-       height="23.01"
+       height="23.23"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1043" />
     <rect
        x="77.66"
-       y="392.39"
+       y="392.26"
        width="4.76"
-       height="28.78"
+       height="28.70"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1045" />
     <rect
        x="77.66"
        y="347.44"
        width="4.76"
-       height="44.95"
+       height="44.82"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1047" />
     <rect
        x="82.95"
-       y="421.12"
+       y="420.90"
        width="4.76"
-       height="23.07"
+       height="23.28"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1049" />
     <rect
        x="82.95"
-       y="392.26"
+       y="392.13"
        width="4.76"
-       height="28.86"
+       height="28.78"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1051" />
     <rect
        x="82.95"
        y="347.18"
        width="4.76"
-       height="45.08"
+       height="44.95"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1053" />
     <rect
        x="88.24"
-       y="421.07"
+       y="420.85"
        width="4.76"
-       height="23.12"
+       height="23.34"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1055" />
     <rect
        x="88.24"
-       y="392.12"
+       y="391.99"
        width="4.76"
-       height="28.95"
+       height="28.86"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1057" />
     <rect
        x="88.24"
        y="346.91"
        width="4.76"
-       height="45.21"
+       height="45.07"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1059" />
     <rect
        x="93.52"
-       y="421.01"
+       y="420.79"
        width="4.76"
-       height="23.18"
+       height="23.40"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1061" />
     <rect
        x="93.52"
-       y="391.98"
+       y="391.85"
        width="4.76"
-       height="29.03"
+       height="28.94"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1063" />
     <rect
        x="93.52"
        y="346.65"
        width="4.76"
-       height="45.33"
+       height="45.20"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1065" />
     <rect
        x="98.81"
-       y="420.96"
+       y="420.74"
        width="4.76"
-       height="23.23"
+       height="23.45"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1067" />
     <rect
        x="98.81"
-       y="391.85"
+       y="391.72"
        width="4.76"
-       height="29.11"
+       height="29.02"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1069" />
     <rect
        x="98.81"
        y="346.39"
        width="4.76"
-       height="45.46"
+       height="45.33"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1071" />
     <rect
        x="104.10"
-       y="420.90"
+       y="420.68"
        width="4.76"
-       height="23.29"
+       height="23.51"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1073" />
     <rect
        x="104.10"
-       y="391.71"
+       y="391.58"
        width="4.76"
-       height="29.19"
+       height="29.10"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1075" />
     <rect
        x="104.10"
        y="346.13"
        width="4.76"
-       height="45.58"
+       height="45.45"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1077" />
     <rect
        x="109.38"
-       y="422.95"
+       y="422.74"
        width="4.76"
-       height="21.24"
+       height="21.45"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1079" />
     <rect
        x="109.38"
-       y="393.68"
+       y="393.56"
        width="4.76"
-       height="29.27"
+       height="29.18"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1081" />
     <rect
        x="109.38"
-       y="347.97"
+       y="347.98"
        width="4.76"
-       height="45.71"
+       height="45.58"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1083" />
     <rect
        x="114.67"
-       y="433.03"
+       y="433.06"
        width="4.76"
-       height="11.16"
+       height="11.12"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1085" />
     <rect
        x="114.67"
-       y="403.68"
+       y="403.80"
        width="4.76"
-       height="29.35"
+       height="29.26"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1087" />
     <rect
        x="114.67"
-       y="357.84"
+       y="358.10"
        width="4.76"
-       height="45.83"
+       height="45.70"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1089" />
     <rect
        x="119.96"
-       y="414.76"
+       y="414.84"
        width="4.76"
-       height="29.43"
+       height="29.35"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1091" />
     <rect
        x="119.96"
-       y="368.80"
+       y="369.02"
        width="4.76"
-       height="45.96"
+       height="45.83"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1093" />
     <rect
        x="125.25"
-       y="433.26"
+       y="433.30"
        width="4.76"
-       height="10.93"
+       height="10.89"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1095" />
     <rect
        x="125.25"
-       y="387.18"
+       y="387.34"
        width="4.76"
-       height="46.09"
+       height="45.95"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1097" />
     <rect
        x="130.53"
-       y="397.98"
+       y="398.11"
        width="4.76"
-       height="46.21"
+       height="46.08"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1099" />
     <rect
        x="135.82"
-       y="401.77"
+       y="401.90"
        width="4.76"
-       height="42.42"
+       height="42.29"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1101" />
     <polyline
-       points="32.46,444.05 37.74,443.25 43.03,441.72 48.32,440.19 53.61,438.66 58.89,437.13 64.18,435.60 69.47,434.06 74.75,432.52 80.04,430.97 85.33,429.42 90.62,427.87 95.90,426.32 101.19,424.76 106.48,423.19 111.76,421.77 117.05,421.02 122.34,421.02 127.63,421.02 132.91,421.02 138.20,421.02 143.49,421.02 "
+       points="32.46,444.05 37.74,443.23 43.03,441.69 48.32,440.15 53.61,438.60 58.89,437.05 64.18,435.51 69.47,433.95 74.75,432.40 80.04,430.84 85.33,429.27 90.62,427.71 95.90,426.14 101.19,424.56 106.48,422.98 111.76,421.54 117.05,420.80 122.34,420.80 127.63,420.80 132.91,420.80 138.20,420.80 143.49,420.80 "
        style="stroke-width:1.07000004;stroke:#0E6684;stroke-dasharray:1.07000004,3.21000012;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline1103" />
     <polyline
-       points="32.46,444.05 37.74,443.25 43.03,441.72 48.32,438.99 53.61,435.55 58.89,432.10 64.18,428.65 69.47,425.19 74.75,421.72 80.04,418.24 85.33,414.76 90.62,411.26 95.90,407.76 101.19,404.24 106.48,400.72 111.76,397.33 117.05,394.61 122.34,392.63 127.63,391.90 132.91,391.90 138.20,391.90 143.49,391.90 "
+       points="32.46,444.05 37.74,443.23 43.03,441.69 48.32,438.95 53.61,435.49 58.89,432.04 64.18,428.58 69.47,425.11 74.75,421.63 80.04,418.15 85.33,414.65 90.62,411.15 95.90,407.63 101.19,404.11 106.48,400.58 111.76,397.18 117.05,394.47 122.34,392.50 127.63,391.77 132.91,391.77 138.20,391.77 143.49,391.77 "
        style="stroke-width:1.07000004;stroke:#0E6684;stroke-dasharray:4.28000017,4.28000017;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline1105" />
     <polyline
-       points="32.46,444.05 37.74,443.25 43.03,441.72 48.32,438.99 53.61,435.55 58.89,431.84 64.18,425.40 69.47,418.94 74.75,412.46 80.04,405.97 85.33,399.45 90.62,392.92 95.90,386.37 101.19,379.81 106.48,373.23 111.76,366.77 117.05,360.97 122.34,355.91 127.63,352.08 132.91,348.98 138.20,346.13 143.49,346.13 "
+       points="32.46,444.05 37.74,443.23 43.03,441.69 48.32,438.95 53.61,435.49 58.89,431.78 64.18,425.34 69.47,418.88 74.75,412.40 80.04,405.91 85.33,399.39 90.62,392.86 95.90,386.31 101.19,379.75 106.48,373.16 111.76,366.71 117.05,360.93 122.34,355.88 127.63,352.06 132.91,348.97 138.20,346.13 143.49,346.13 "
        style="stroke-width: 1.07; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline1107" />
   </g>
@@ -3498,7 +3501,7 @@
        id="text1113">0</text>
     <text
        x="21.22"
-       y="417.63"
+       y="417.71"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="5.72px"
@@ -3506,7 +3509,7 @@
        id="text1115">50</text>
     <text
        x="21.22"
-       y="389.24"
+       y="389.39"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -3514,7 +3517,7 @@
        id="text1117">100</text>
     <text
        x="21.22"
-       y="360.85"
+       y="361.08"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -3525,15 +3528,15 @@
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline1121" />
     <polyline
-       points="22.50,415.79 24.00,415.79 "
+       points="22.50,415.87 24.00,415.87 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline1123" />
     <polyline
-       points="22.50,387.40 24.00,387.40 "
+       points="22.50,387.55 24.00,387.55 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline1125" />
     <polyline
-       points="22.50,359.01 24.00,359.01 "
+       points="22.50,359.24 24.00,359.24 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline1127" />
     <polyline
@@ -3545,11 +3548,11 @@
        style="stroke-width: 0.53; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline1131" />
     <polyline
-       points="153.44,406.06 151.95,406.06 "
+       points="153.44,406.16 151.95,406.16 "
        style="stroke-width: 0.53; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline1133" />
     <polyline
-       points="153.44,367.93 151.95,367.93 "
+       points="153.44,368.14 151.95,368.14 "
        style="stroke-width: 0.53; stroke: #0E6684; stroke-linecap: butt;"
        id="polyline1135" />
     <text
@@ -3561,14 +3564,14 @@
        id="text1137">0</text>
     <text
        x="154.72"
-       y="407.90"
+       y="408.00"
        style="font-size: 5.14px;fill: #0E6684; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
        id="text1139">1000</text>
     <text
        x="154.72"
-       y="369.77"
+       y="369.98"
        style="font-size: 5.14px;fill: #0E6684; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
@@ -3721,355 +3724,355 @@
        x="206.02"
        y="442.35"
        width="4.76"
-       height="1.83"
+       height="1.84"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1193" />
     <rect
        x="211.31"
-       y="433.55"
+       y="433.32"
        width="4.76"
-       height="10.64"
+       height="10.86"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1195" />
     <rect
        x="216.60"
-       y="424.19"
+       y="424.00"
        width="4.76"
-       height="20.00"
+       height="20.19"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1197" />
     <rect
        x="221.88"
-       y="424.31"
+       y="424.12"
        width="4.76"
-       height="19.88"
+       height="20.06"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1199" />
     <rect
        x="221.88"
-       y="409.04"
+       y="408.89"
        width="4.76"
-       height="15.28"
+       height="15.23"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1201" />
     <rect
        x="227.17"
-       y="424.44"
+       y="424.25"
        width="4.76"
-       height="19.75"
+       height="19.94"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1203" />
     <rect
        x="227.17"
-       y="400.48"
+       y="400.36"
        width="4.76"
-       height="23.96"
+       height="23.89"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1205" />
     <rect
        x="232.46"
-       y="424.56"
+       y="424.38"
        width="4.76"
-       height="19.63"
+       height="19.81"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1207" />
     <rect
        x="232.46"
-       y="400.79"
+       y="400.68"
        width="4.76"
-       height="23.77"
+       height="23.70"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1209" />
     <rect
        x="232.46"
-       y="397.56"
+       y="397.45"
        width="4.76"
-       height="3.23"
+       height="3.22"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1211" />
     <rect
        x="237.74"
-       y="424.69"
+       y="424.50"
        width="4.76"
-       height="19.50"
+       height="19.69"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1213" />
     <rect
        x="237.74"
-       y="401.10"
+       y="400.99"
        width="4.76"
-       height="23.59"
+       height="23.52"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1215" />
     <rect
        x="237.74"
        y="364.61"
        width="4.76"
-       height="36.49"
+       height="36.38"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1217" />
     <rect
        x="243.03"
-       y="424.82"
+       y="424.64"
        width="4.76"
-       height="19.37"
+       height="19.55"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1219" />
     <rect
        x="243.03"
-       y="401.43"
+       y="401.32"
        width="4.76"
-       height="23.39"
+       height="23.32"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1221" />
     <rect
        x="243.03"
        y="365.28"
        width="4.76"
-       height="36.15"
+       height="36.05"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1223" />
     <rect
        x="248.32"
-       y="424.96"
+       y="424.78"
        width="4.76"
-       height="19.23"
+       height="19.41"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1225" />
     <rect
        x="248.32"
-       y="401.77"
+       y="401.66"
        width="4.76"
-       height="23.19"
+       height="23.11"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1227" />
     <rect
        x="248.32"
        y="365.95"
        width="4.76"
-       height="35.82"
+       height="35.71"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1229" />
     <rect
        x="253.61"
-       y="425.09"
+       y="424.91"
        width="4.76"
-       height="19.10"
+       height="19.28"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1231" />
     <rect
        x="253.61"
-       y="402.11"
+       y="402.00"
        width="4.76"
-       height="22.98"
+       height="22.91"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1233" />
     <rect
        x="253.61"
        y="366.62"
        width="4.76"
-       height="35.48"
+       height="35.38"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1235" />
     <rect
        x="258.89"
-       y="425.23"
+       y="425.05"
        width="4.76"
-       height="18.96"
+       height="19.14"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1237" />
     <rect
        x="258.89"
-       y="402.44"
+       y="402.33"
        width="4.76"
-       height="22.78"
+       height="22.71"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1239" />
     <rect
        x="258.89"
        y="367.29"
        width="4.76"
-       height="35.15"
+       height="35.05"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1241" />
     <rect
        x="264.18"
-       y="425.36"
+       y="425.19"
        width="4.76"
-       height="18.83"
+       height="19.00"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1243" />
     <rect
        x="264.18"
-       y="402.78"
+       y="402.67"
        width="4.76"
-       height="22.58"
+       height="22.51"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1245" />
     <rect
        x="264.18"
        y="367.96"
        width="4.76"
-       height="34.81"
+       height="34.71"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1247" />
     <rect
        x="269.47"
-       y="425.55"
+       y="425.38"
        width="4.76"
-       height="18.64"
+       height="18.81"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1249" />
     <rect
        x="269.47"
-       y="403.25"
+       y="403.14"
        width="4.76"
-       height="22.30"
+       height="22.23"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1251" />
     <rect
        x="269.47"
-       y="368.90"
+       y="368.89"
        width="4.76"
-       height="34.35"
+       height="34.25"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1253" />
     <rect
        x="274.75"
-       y="425.74"
+       y="425.57"
        width="4.76"
-       height="18.45"
+       height="18.62"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1255" />
     <rect
        x="274.75"
-       y="403.72"
+       y="403.61"
        width="4.76"
-       height="22.02"
+       height="21.95"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1257" />
     <rect
        x="274.75"
        y="369.83"
        width="4.76"
-       height="33.88"
+       height="33.78"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1259" />
     <rect
        x="280.04"
-       y="425.93"
+       y="425.76"
        width="4.76"
-       height="18.26"
+       height="18.43"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1261" />
     <rect
        x="280.04"
-       y="404.19"
+       y="404.08"
        width="4.76"
-       height="21.74"
+       height="21.68"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1263" />
     <rect
        x="280.04"
-       y="370.77"
+       y="370.76"
        width="4.76"
-       height="33.42"
+       height="33.32"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1265" />
     <rect
        x="285.33"
-       y="427.79"
+       y="427.63"
        width="4.76"
-       height="16.40"
+       height="16.56"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1267" />
     <rect
        x="285.33"
-       y="406.33"
+       y="406.24"
        width="4.76"
-       height="21.46"
+       height="21.40"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1269" />
     <rect
        x="285.33"
        y="373.38"
        width="4.76"
-       height="32.96"
+       height="32.86"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1271" />
     <rect
        x="290.62"
-       y="435.84"
+       y="435.87"
        width="4.76"
-       height="8.34"
+       height="8.32"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.30;"
        id="rect1273" />
     <rect
        x="290.62"
-       y="414.66"
+       y="414.75"
        width="4.76"
-       height="21.18"
+       height="21.12"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1275" />
     <rect
        x="290.62"
-       y="382.17"
+       y="382.36"
        width="4.76"
-       height="32.49"
+       height="32.39"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1277" />
     <rect
        x="295.90"
-       y="423.39"
+       y="423.45"
        width="4.76"
-       height="20.80"
+       height="20.74"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1279" />
     <rect
        x="295.90"
-       y="391.53"
+       y="391.69"
        width="4.76"
-       height="31.86"
+       height="31.77"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1281" />
     <rect
        x="301.19"
-       y="436.72"
+       y="436.75"
        width="4.76"
-       height="7.46"
+       height="7.44"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.20;"
        id="rect1283" />
     <rect
        x="301.19"
-       y="405.49"
+       y="405.61"
        width="4.76"
-       height="31.23"
+       height="31.14"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1285" />
     <rect
        x="306.48"
-       y="413.59"
+       y="413.68"
        width="4.76"
-       height="30.60"
+       height="30.51"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1287" />
     <rect
        x="311.76"
-       y="416.96"
+       y="417.04"
        width="4.76"
-       height="27.23"
+       height="27.15"
        style="stroke-width: 1.07; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #C10505; fill-opacity: 0.10;"
        id="rect1289" />
     <polyline
-       points="208.40,444.07 213.69,443.35 218.97,442.01 224.26,440.67 229.55,439.35 234.84,438.03 240.12,436.72 245.41,435.42 250.70,434.13 255.98,432.85 261.27,431.57 266.56,430.31 271.85,429.06 277.13,427.82 282.42,426.59 287.71,425.49 292.99,424.93 298.28,424.93 303.57,424.93 308.86,424.93 314.14,424.93 319.43,424.93 "
+       points="208.40,444.06 213.69,443.34 218.97,441.98 224.26,440.63 229.55,439.29 234.84,437.96 240.12,436.64 245.41,435.33 250.70,434.03 255.98,432.73 261.27,431.45 266.56,430.17 271.85,428.91 277.13,427.66 282.42,426.42 287.71,425.31 292.99,424.75 298.28,424.75 303.57,424.75 308.86,424.75 314.14,424.75 319.43,424.75 "
        style="stroke-width:1.07000004;stroke:#7C4569;stroke-dasharray:1.07000004,3.21000012;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline1291" />
     <polyline
-       points="208.40,444.07 213.69,443.35 218.97,442.01 224.26,439.65 229.55,436.71 234.84,433.80 240.12,430.91 245.41,428.04 250.70,425.19 255.98,422.36 261.27,419.56 266.56,416.78 271.85,414.03 277.13,411.31 282.42,408.63 287.71,406.09 292.99,404.10 298.28,402.71 303.57,402.21 308.86,402.21 314.14,402.21 319.43,402.21 "
-       style="stroke-width:1.07000004;stroke:#7C4569;stroke-dasharray:4.28000017,4.28000017;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
+       points="208.40,444.06 213.69,443.34 218.97,441.98 224.26,439.61 229.55,436.67 234.84,433.75 240.12,430.85 245.41,427.97 250.70,425.11 255.98,422.28 261.27,419.47 266.56,416.68 271.85,413.93 277.13,411.20 282.42,408.51 287.71,405.96 292.99,403.99 298.28,402.59 303.57,402.09 308.86,402.09 314.14,402.09 319.43,402.09 "
+       style="stroke-width:1.07025003;stroke:#7C4569;stroke-dasharray:4.28100009,4.28100009;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="polyline1293" />
     <polyline
-       points="208.40,444.07 213.69,443.35 218.97,442.01 224.26,439.65 229.55,436.71 234.84,433.58 240.12,428.24 245.41,422.94 250.70,417.69 255.98,412.48 261.27,407.32 266.56,402.20 271.85,397.15 277.13,392.15 282.42,387.22 287.71,382.47 292.99,378.31 298.28,374.77 303.57,372.17 308.86,370.12 314.14,368.29 319.43,368.29 "
+       points="208.40,444.06 213.69,443.34 218.97,441.98 224.26,439.61 229.55,436.67 234.84,433.53 240.12,428.19 245.41,422.89 250.70,417.64 255.98,412.43 261.27,407.26 266.56,402.15 271.85,397.09 277.13,392.10 282.42,387.17 287.71,382.41 292.99,378.26 298.28,374.74 303.57,372.15 308.86,370.10 314.14,368.28 319.43,368.28 "
        style="stroke-width: 1.07; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline1295" />
   </g>
@@ -4090,7 +4093,7 @@
        id="text1301">0</text>
     <text
        x="197.17"
-       y="417.63"
+       y="417.71"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="5.72px"
@@ -4098,7 +4101,7 @@
        id="text1303">50</text>
     <text
        x="197.17"
-       y="389.24"
+       y="389.39"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -4106,7 +4109,7 @@
        id="text1305">100</text>
     <text
        x="197.17"
-       y="360.85"
+       y="361.08"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="8.58px"
@@ -4117,15 +4120,15 @@
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline1309" />
     <polyline
-       points="198.45,415.79 199.94,415.79 "
+       points="198.45,415.87 199.94,415.87 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline1311" />
     <polyline
-       points="198.45,387.40 199.94,387.40 "
+       points="198.45,387.55 199.94,387.55 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline1313" />
     <polyline
-       points="198.45,359.01 199.94,359.01 "
+       points="198.45,359.24 199.94,359.24 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline1315" />
     <polyline
@@ -4137,11 +4140,11 @@
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline1319" />
     <polyline
-       points="329.38,406.06 327.89,406.06 "
+       points="329.38,406.16 327.89,406.16 "
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline1321" />
     <polyline
-       points="329.38,367.93 327.89,367.93 "
+       points="329.38,368.14 327.89,368.14 "
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt;"
        id="polyline1323" />
     <text
@@ -4153,14 +4156,14 @@
        id="text1325">0</text>
     <text
        x="330.67"
-       y="407.90"
+       y="408.00"
        style="font-size: 5.14px;fill: #7C4569; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
        id="text1327">1000</text>
     <text
        x="330.67"
-       y="369.77"
+       y="369.98"
        style="font-size: 5.14px;fill: #7C4569; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
        lengthAdjust="spacingAndGlyphs"
@@ -4318,16 +4321,16 @@
        id="rect1381" />
     <rect
        x="415.54"
-       y="368.29"
+       y="368.28"
        width="31.04"
-       height="75.90"
+       height="75.91"
        style="stroke-width: 0.53; stroke: #7C4569; stroke-linecap: butt; stroke-linejoin: miter; fill: #7C4569; fill-opacity: 0.30;"
        id="rect1383" />
     <rect
        x="450.03"
-       y="432.45"
+       y="432.48"
        width="31.04"
-       height="11.74"
+       height="11.71"
        style="stroke-width: 0.53; stroke: #4D4D4D; stroke-linecap: butt; stroke-linejoin: miter; fill: #4D4D4D; fill-opacity: 0.30;"
        id="rect1385" />
     <line
@@ -4335,39 +4338,39 @@
        y1="346.13"
        x2="481.07"
        y2="346.13"
-       style="stroke-width:0.52999998;stroke-dasharray:2.11999992,2.11999992;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
+       style="stroke-width:0.53025001;stroke-dasharray:2.12100003,2.12100003;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="line1387" />
     <line
        x1="446.58"
-       y1="368.29"
+       y1="368.28"
        x2="465.55"
-       y2="368.29"
+       y2="368.28"
        style="stroke-width:0.52999998;stroke-dasharray:2.11999992,2.11999992;stroke-linecap:butt;stroke-miterlimit:10;stroke-dashoffset:0"
        id="line1389" />
     <line
        x1="460.37"
-       y1="432.45"
+       y1="432.48"
        x2="460.37"
-       y2="368.29"
+       y2="368.28"
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="line1391" />
     <polyline
-       points="458.25,428.77 460.37,432.45 462.50,428.77 "
+       points="458.25,428.80 460.37,432.48 462.50,428.80 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="polyline1393" />
     <polyline
-       points="462.50,371.97 460.37,368.29 458.25,371.97 "
+       points="462.50,371.96 460.37,368.28 458.25,371.96 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="polyline1395" />
     <line
        x1="475.89"
-       y1="432.45"
+       y1="432.48"
        x2="475.89"
        y2="346.13"
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="line1397" />
     <polyline
-       points="473.77,428.77 475.89,432.45 478.02,428.77 "
+       points="473.77,428.80 475.89,432.48 478.02,428.80 "
        style="stroke-width: 1.07; stroke-linecap: butt;"
        id="polyline1399" />
     <polyline
@@ -4381,7 +4384,7 @@
        textLength="52.48"
        lengthAdjust="spacingAndGlyphs"
        id="text1403"
-       transform="translate(1.5,-9)">③ Green hydrogen</text>
+       transform="translate(0,-9)">③ Green hydrogen</text>
     <text
        x="413.82001"
        y="367.89001"
@@ -4389,7 +4392,7 @@
        textLength="56.639999"
        lengthAdjust="spacingAndGlyphs"
        id="text1405"
-       transform="translate(1.5,-9)">implementation gap</text>
+       transform="translate(0,-9)">implementation gap</text>
     <text
        x="413.82001"
        y="375.09"
@@ -4397,11 +4400,7 @@
        textLength="20.33"
        lengthAdjust="spacingAndGlyphs"
        id="text1407"
-       transform="translate(1.5,-9)">in 2030</text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 443.75226,90.321254 c 23.07119,16.198926 23.07119,16.198926 23.07119,16.198926"
-       id="path2395" />
+       transform="translate(0,-9)">in 2030</text>
   </g>
   <g
      clip-path="url(#cpMC4wMHw1MTAuMjR8MC4wMHw1MTAuMjQ=)"
@@ -4420,7 +4419,7 @@
        id="text1413">0</text>
     <text
        x="373.11"
-       y="407.90"
+       y="408.00"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
@@ -4428,7 +4427,7 @@
        id="text1415">1000</text>
     <text
        x="373.11"
-       y="369.77"
+       y="369.98"
        text-anchor="end"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
        textLength="11.43px"
@@ -4439,11 +4438,11 @@
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline1419" />
     <polyline
-       points="374.39,406.06 375.88,406.06 "
+       points="374.39,406.16 375.88,406.16 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline1421" />
     <polyline
-       points="374.39,367.93 375.88,367.93 "
+       points="374.39,368.14 375.88,368.14 "
        style="stroke-width: 0.53; stroke-linecap: butt;"
        id="polyline1423" />
     <polyline
@@ -4499,9 +4498,9 @@
        y="461.10"
        text-anchor="middle"
        style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
-       textLength="9.14px"
+       textLength="32.57px"
        lengthAdjust="spacingAndGlyphs"
-       id="text1441">with</text>
+       id="text1441">with ambitious</text>
     <text
        x="431.06"
        y="466.65"
@@ -4574,28 +4573,43 @@
      id="g1464" />
   <path
      style="fill:none;stroke:#0e6684;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5"
-     d="M 143.49,84.050001 H 381.05999"
+     d="M 381.05999,84.040004 143.49,84.039996"
      id="path2325" />
   <path
      style="fill:none;stroke:#7c4569;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5"
-     d="m 319.43,115.48 h 96.11001"
+     d="M 415.54001,115.46 H 319.43"
      id="path2327" />
   <path
      style="fill:none;stroke:#0e6684;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5"
-     d="m 143.49,260.3 237.56999,-2e-5"
+     d="M 381.05999,260.28 H 143.49"
      id="path2329" />
   <path
      style="fill:none;stroke:#7c4569;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5"
-     d="m 319.43,286.83 96.11001,-10e-6"
+     d="M 415.54001,286.82001 319.43,286.82"
      id="path2331" />
   <path
      style="fill:none;stroke:#0e6684;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5"
-     d="m 143.49,346.13 237.56999,1e-5"
+     d="M 381.05999,346.13001 143.49,346.13"
      id="path2333" />
   <path
      style="fill:none;stroke:#7c4569;stroke-width:0.75px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:0.5"
-     d="m 319.43,368.29 96.11001,10e-6"
+     d="M 415.54001,368.28 H 319.43"
      id="path2335" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.52499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:10;stroke-dasharray:none"
+     d="m 447.67928,251.81959 c 4.92498,9.72632 14.50197,15.6464 24.54381,17.91699"
+     id="path2345"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.52499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:10;stroke-dasharray:none"
+     d="m 466.15663,361.77591 c 0.98059,19.62446 2.83073,29.58065 8.09946,35.58854"
+     id="path2347"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:0.52499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:10;stroke-dasharray:none"
+     d="m 450.40646,360.79416 c 2.48685,20.69779 2.89927,33.76807 8.83578,43.19711"
+     id="path2349"
+     sodipodi:nodetypes="cc" />
   <g
      clip-path="url(#cpMC4wMHw1MTAuMjR8MC4wMHw0NTMuNTQ=-2)"
      id="g1533"
@@ -4756,24 +4770,4 @@
          y="451.64386"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.75">/</tspan></text>
   </g>
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-     d="m 452.09716,77.803911 c 5.41018,15.100599 14.12958,23.245149 20.86225,28.225389"
-     id="path2403"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-     d="m 444.48858,76.822154 c 3.5099,23.651896 7.48142,39.917856 12.29769,42.667716"
-     id="path2405"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-     d="m 466.08714,361.28503 c 1.57821,9.72292 1.2151,24.84212 7.85402,33.62503"
-     id="path2428"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-     d="m 448.41559,361.28503 c 1.19114,16.4169 2.00487,32.71664 9.81753,41.23362"
-     id="path2430"
-     sodipodi:nodetypes="cc" />
 </svg>

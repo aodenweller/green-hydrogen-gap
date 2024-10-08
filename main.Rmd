@@ -36,8 +36,8 @@ theme_update(
 )
 
 # Source functions
-source("scripts/readIEAHydrogenProjectsDatabase.R")
-source("scripts/readIEAHydrogenProjectsDatabaseWithEndUse.R")
+source("scripts/readIEAHydrogenProjectsDB.R")
+source("scripts/readIEAHydrogenProjectsDBWithEndUse.R")
 source("scripts/calcProjectTracking.R")
 source("scripts/calcProjectTracking2023.R")
 source("scripts/plotProjectTracking.R")
@@ -114,7 +114,7 @@ file.v2022.orig <-
 
 temp <- readIEAHydrogenProjectsDB(
   file.h2projects = file.v2022.orig,
-  h2projects.range = "A5:AF1481",
+  h2projects.range = "A5:AF1482",
   end.year = 2022
 )
 
@@ -133,7 +133,7 @@ file.v2022.checked <-
 
 temp <- readIEAHydrogenProjectsDB(
   file.h2projects = file.v2022.checked,
-  h2projects.range = "A5:AG1481",
+  h2projects.range = "A5:AG1482",
   end.year = 2022,
   checked = TRUE
 )
@@ -174,7 +174,7 @@ file.v2023.checked <-
 
 temp <- readIEAHydrogenProjectsDB(
   file.h2projects = file.v2023.checked,
-  h2projects.range = "A5:AG2001",
+  h2projects.range = "A5:AG2005",
   end.year = 2023,
   checked = TRUE
 )
@@ -194,7 +194,7 @@ file.v2023outcome <-
 
 temp <- readIEAHydrogenProjectsDB(
   file.h2projects = file.v2023outcome,
-  h2projects.range = "A5:AG127",
+  h2projects.range = "A5:AG128",
   end.year = 2024,
   checked = TRUE
 )
@@ -281,9 +281,9 @@ data.v2023.plot.left <- data.v2023 %>%
   group_by(year) %>% 
   summarise(sum = sum(cumcap.sum))
 
-legend.labels <- c("v2021" = "Announcements in 2021",
-                   "v2022" = "Announcements in 2022",
-                   "v2023" = "Announcements in 2023")
+legend.labels <- c("v2021" = "Announcements by 2021",
+                   "v2022" = "Announcements by 2022",
+                   "v2023" = "Announcements by 2023")
 
 # Plot until 2024
 p.left <- ggplot() +
@@ -472,9 +472,7 @@ p.right <- ggplot() +
                   breaks = c("v2021",
                              "v2022",
                              "v2023"),
-                  labels = c("v2021" = "Announcements in 2021",
-                             "v2022" = "Announcements in 2022",
-                             "v2023" = "Announcements in 2023")) +
+                  labels = legend.labels) +
   scale_alpha_manual(name = "Project announcements",
                      guide = guide_legend(order = 2),
                      breaks = c("v2021",
@@ -655,11 +653,11 @@ data.plot.text <- tribble(
   2021.75, data.v2021.plot.left %>%
     filter(year == 2022) %>%
     pull(cumcap.sum) %>%
-    sum(), "Announcements\nin 2021",
+    sum(), "Announcements\nby 2021",
   2022, data.v2022.plot.left %>%
     filter(year == 2022) %>%
     pull(cumcap.sum) %>%
-    sum(), "Announcements\nin 2022",
+    sum(), "Announcements\nby 2022",
   2022.25, data.v2023.plot.left %>%
     filter(year == 2022) %>%
     pull(cumcap.sum) %>%
@@ -744,15 +742,15 @@ data.plot.text <- tribble(
   2026.75, data.v2021.plot.right %>%
     filter(year == 2027) %>%
     pull(cumcap.sum) %>%
-    sum(), "Announcements\nin 2021",
+    sum(), "Announcements\nby 2021",
   2027, data.v2022.plot.right %>%
     filter(year == 2027) %>%
     pull(cumcap.sum) %>%
-    sum(), "Announcements\nin 2022",
+    sum(), "Announcements\nby 2022",
   2027.25, data.v2023.plot.right %>%
     filter(year == 2027) %>%
     pull(cumcap.sum) %>%
-    sum(), "Announcements\nin 2023"
+    sum(), "Announcements\nby 2023"
 )
 
 p.status.right <- ggplot() + 
@@ -988,6 +986,7 @@ data.rates.calc2023.v23out %>%
   summarise(rate = round(sum(cap.share.disagg), 3))
 
 ```
+
 
 ## FIGURE 3: 2023 implementation gap
 
@@ -1334,9 +1333,9 @@ file.v2023.checked <-
 
 temp <- readIEAHydrogenProjectsDBWithEndUse(
   file.h2projects = file.v2023.checked,
-  h2projects.range = "A5:AG2001",
+  h2projects.range = "A5:AG2005",
   file.h2projects.2023outcome = file.v2023outcome,
-  h2projects.range.2023outcome = "A5:AG127",
+  h2projects.range.2023outcome = "A5:AG128",
   end.year = 2023,
   checked = TRUE
 )
@@ -2076,7 +2075,7 @@ p.woco2 <- ggdraw() +
              fontface = "bold")
 
 p.wco2 <- ggdraw() +
-  draw_label(aes(label = "With carbon price"),
+  draw_label(aes(label = "With ambitious carbon price"),
              size = 6,
              fontface = "bold")
   
@@ -3230,7 +3229,7 @@ p.woco2 <- ggdraw() +
              fontface = "bold")
 
 p.wco2 <- ggdraw() +
-  draw_label(aes(label = "With carbon price"),
+  draw_label(aes(label = "With ambitious carbon price"),
              size = 6,
              fontface = "bold")
   
@@ -3400,7 +3399,7 @@ p.woco2 <- ggdraw() +
              fontface = "bold")
 
 p.wco2 <- ggdraw() +
-  draw_label(aes(label = "With carbon price"),
+  draw_label(aes(label = "With ambitious carbon price"),
              size = 6,
              fontface = "bold")
   
@@ -3524,7 +3523,7 @@ p.total.woco2 <- ggplot() +
                      limits = c(2010, 2050)) +
   scale_y_continuous(name = "Billion $/yr",
                      limits = c(ymin, ymax)) +
-  ggtitle("Total annual support without carbon pricing")
+  ggtitle("Total annual support without carbon price")
 
 p.total.wco2 <- ggplot() +
   # Line at zero
@@ -3557,7 +3556,7 @@ p.total.wco2 <- ggplot() +
                      limits = c(2010, 2050)) +
   scale_y_continuous(name = "Billion $/yr",
                      limits = c(ymin, ymax)) +
-  ggtitle("Total annual support with carbon pricing")
+  ggtitle("Total annual support with ambitious carbon price")
 
 # Relative support
 relative.vars <- c(
@@ -3623,7 +3622,7 @@ p.relative.woco2 <- ggplot() +
   scale_x_continuous(name = "Year",
                      limits = c(2010, 2050)) +
   ylab("$/MWh") +
-  ggtitle("Relative support without carbon pricing")
+  ggtitle("Relative support without carbon price")
 
 p.relative.wco2 <- ggplot() +
   # Line at zero
@@ -3652,7 +3651,7 @@ p.relative.wco2 <- ggplot() +
   scale_x_continuous(name = "Year",
                      limits = c(2010, 2050)) +
   ylab("$/MWh") +
-  ggtitle("Relative support with carbon pricing")
+  ggtitle("Relative support with ambitious carbon price")
 
 # Arrange
 p.panels <- plot_grid(
@@ -3743,9 +3742,9 @@ data.v2023.orig.plot.left <- data.v2023.orig %>%
   group_by(year) %>% 
   summarise(sum = sum(cumcap.sum))
 
-legend.labels <- c("v2021" = "Announcements in 2021",
-                   "v2022" = "Announcements in 2022",
-                   "v2023" = "Announcements in 2023")
+legend.labels <- c("v2021" = "Announcements by 2021",
+                   "v2022" = "Announcements by 2022",
+                   "v2023" = "Announcements by 2023")
 
 # Plot until 2024
 p.left <- ggplot() +
@@ -3851,9 +3850,7 @@ p.right <- ggplot() +
                   breaks = c("v2021",
                              "v2022",
                              "v2023"),
-                  labels = c("v2021" = "Announcements in 2021",
-                             "v2022" = "Announcements in 2022",
-                             "v2023" = "Announcements in 2023")) +
+                  labels = legend.labels) +
   scale_alpha_manual(name = "Project announcements",
                      guide = guide_legend(order = 1),
                      breaks = c("v2021",
@@ -3938,9 +3935,9 @@ p <- plot_grid(toplabel,
                rel_heights = c(0.08, 1))
 
 ggsave("figures/SUPP_FIGURE_S2_data_quality_validation_v2021.png",
-       width = 180, height = 120, units = "mm", bg = "white", dpi = 600)
+       width = 180, height = 110, units = "mm", bg = "white", dpi = 600)
 ggsave("figures/SUPP_FIGURE_S2_data_quality_validation_v2021.svg",
-       width = 180, height = 120, units = "mm", bg = "white")
+       width = 180, height = 110, units = "mm", bg = "white")
 
 ```
 
@@ -3989,9 +3986,9 @@ p <- plot_grid(toplabel,
                rel_heights = c(0.08, 1))
 
 ggsave("figures/SUPP_FIGURE_S3_data_quality_validation_v2022.png",
-       width = 180, height = 120, units = "mm", bg = "white", dpi = 600)
+       width = 180, height = 110, units = "mm", bg = "white", dpi = 600)
 ggsave("figures/SUPP_FIGURE_S3_data_quality_validation_v2022.svg",
-       width = 180, height = 120, units = "mm", bg = "white")
+       width = 180, height = 110, units = "mm", bg = "white")
 
 ```
 
@@ -4040,9 +4037,9 @@ p <- plot_grid(toplabel,
                rel_heights = c(0.08, 1))
 
 ggsave("figures/SUPP_FIGURE_S4_data_quality_validation_v2023.png",
-       width = 180, height = 120, units = "mm", bg = "white", dpi = 600)
+       width = 180, height = 110, units = "mm", bg = "white", dpi = 600)
 ggsave("figures/SUPP_FIGURE_S4_data_quality_validation_v2023.svg",
-       width = 180, height = 120, units = "mm", bg = "white")
+       width = 180, height = 110, units = "mm", bg = "white")
 
 ```
 
@@ -4156,7 +4153,7 @@ bottom_row.left.panels <- plot_grid(
 
 bottom_row.left.title <- ggdraw() +
   draw_label(
-    "Announcements in 2021 vs. outcome in 2023",
+    "Announcements by 2021 vs. outcome in 2023",
     x = 0.55,
     hjust = 0.5,
     vjust = 0,
@@ -4200,7 +4197,7 @@ bottom_row.right.panels <- plot_grid(
 
 bottom_row.right.title <- ggdraw() +
   draw_label(
-    "Announcements in 2022 vs. outcome in 2023",
+    "Announcements by 2022 vs. outcome in 2023",
     x = 0.55,
     hjust = 0.5,
     vjust = 0,
@@ -4811,7 +4808,7 @@ p.woco2 <- ggdraw() +
              fontface = "bold")
 
 p.wco2 <- ggdraw() +
-  draw_label(aes(label = "With carbon price"),
+  draw_label(aes(label = "With ambitious carbon price"),
              size = 6,
              fontface = "bold")
   
@@ -4948,7 +4945,7 @@ p <- ggplot() +
     values = colors.cap.type,
     labels = labels.cap.type) +
   facet_grid(scenario ~ carbonprice,
-             labeller = labeller(carbonprice = c("TRUE" = "With carbon price",
+             labeller = labeller(carbonprice = c("TRUE" = "With ambitious carbon price",
                                                  "FALSE" = "Without carbon price"),
                                  scenario = c("Default" = "Central"))) +
   scale_x_continuous(name = "Year",
