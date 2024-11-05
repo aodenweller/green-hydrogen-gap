@@ -43,12 +43,13 @@
      id="namedview1544"
      showgrid="false"
      inkscape:zoom="1.7188896"
-     inkscape:cx="226.75901"
-     inkscape:cy="284.58314"
+     inkscape:cx="296.80728"
+     inkscape:cy="294.43574"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g1399" />
+     inkscape:current-layer="svg1542"
+     inkscape:document-rotation="0" />
   <defs
      id="defs4">
     <pattern
@@ -4481,6 +4482,16 @@
            y="451.64386"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.75">/</tspan></text>
     </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       d="m 476.37128,323.03156 c 3.57788,7.92869 9.32934,14.07934 17.43198,16.81492"
+       id="path1629"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       d="m 469.5836,323.49436 c 0.56899,15.82225 3.36189,36.84949 9.10165,40.72604"
+       id="path1631"
+       sodipodi:nodetypes="cc" />
   </g>
   <defs
      id="defs1404">

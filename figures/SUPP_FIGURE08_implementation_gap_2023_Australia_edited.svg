@@ -13,9 +13,9 @@
    viewBox="0 0 510.24 425.20"
    version="1.1"
    id="svg864"
-   sodipodi:docname="SUPP_FIGURE_S8_implementation_gap_2023_Australia_edited.svg"
+   sodipodi:docname="SUPP_FIGURE08_implementation_gap_2023_Australia_edited.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev2\figures\SUPP_FIGURE_S8_implementation_gap_2023_Australia_edited.png"
+   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev3_final\figures\SUPP_FIGURE08_implementation_gap_2023_Australia_edited.png"
    inkscape:export-xdpi="599.97998"
    inkscape:export-ydpi="599.97998">
   <metadata
@@ -43,12 +43,13 @@
      id="namedview866"
      showgrid="false"
      inkscape:zoom="1.8334553"
-     inkscape:cx="331.11265"
-     inkscape:cy="250.28518"
+     inkscape:cx="244.48447"
+     inkscape:cy="288.73149"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg864" />
+     inkscape:current-layer="g862"
+     inkscape:document-rotation="0" />
   <defs
      id="defs4">
     <style
@@ -416,7 +417,7 @@
        style="stroke-width: 0.53;"
        id="polyline130" />
     <polyline
-       points="408.16,184.29 408.44,184.29 409.91,184.29 412.48,184.29 415.21,184.30 417.45,184.31 419.11,184.33 420.33,184.35 420.52,184.35 421.79,184.40 422.73,184.46 423.40,184.52 423.86,184.61 424.21,184.70 424.53,184.81 424.83,184.92 425.09,185.02 425.38,185.13 425.70,185.27 426.01,185.41 426.29,185.54 426.54,185.67 426.82,185.82 427.11,185.98 427.41,186.15 427.67,186.32 427.91,186.47 428.17,186.65 428.45,186.84 428.72,187.05 428.96,187.24 429.19,187.42 429.43,187.62 429.68,187.84 429.93,188.07 430.16,188.29 430.36,188.49 430.57,188.71 430.80,188.96 431.03,189.22 431.23,189.46 431.41,189.68 431.60,189.93 431.80,190.20 432.00,190.48 432.17,190.74 432.33,190.98 432.49,191.24 432.66,191.53 432.83,191.83 432.97,192.11 433.10,192.36 433.24,192.64 433.38,192.95 433.51,193.26 433.63,193.55 433.73,193.82 433.83,194.11 433.94,194.43 434.04,194.77 434.14,195.14 434.25,195.56 434.34,195.89 434.36,195.97 "
+       points="410.01,184.29 410.30,184.29 411.80,184.29 414.29,184.29 416.77,184.30 418.70,184.32 420.09,184.33 420.87,184.35 422.00,184.40 422.86,184.45 423.48,184.52 423.92,184.61 424.26,184.70 424.59,184.81 424.88,184.92 425.14,185.02 425.43,185.13 425.75,185.26 426.06,185.41 426.33,185.54 426.59,185.67 426.86,185.81 427.16,185.98 427.45,186.15 427.72,186.32 427.96,186.47 428.22,186.64 428.49,186.84 428.77,187.04 429.01,187.23 429.23,187.41 429.47,187.61 429.73,187.84 429.98,188.07 430.20,188.28 430.40,188.48 430.62,188.71 430.85,188.96 431.07,189.21 431.27,189.45 431.45,189.67 431.64,189.92 431.84,190.19 432.04,190.47 432.21,190.73 432.37,190.97 432.53,191.23 432.70,191.52 432.87,191.82 433.01,192.10 433.14,192.35 433.28,192.63 433.42,192.94 433.55,193.25 433.67,193.54 433.77,193.81 433.87,194.10 433.98,194.42 434.08,194.75 434.18,195.12 434.29,195.54 434.38,195.88 434.40,195.95 "
        style="stroke-width: 0.53;"
        id="polyline132" />
     <polygon
@@ -480,7 +481,7 @@
        lengthAdjust="spacingAndGlyphs"
        id="text150"> announced by 2023</text>
     <polygon
-       points="378.62,184.29 422.24,184.29 422.15,184.28 422.50,184.27 422.84,184.20 423.16,184.08 423.46,183.90 423.73,183.68 423.96,183.42 424.15,183.13 424.29,182.81 424.37,182.47 424.40,182.13 424.40,182.13 424.40,172.55 424.40,172.55 424.37,172.20 424.29,171.86 424.15,171.54 423.96,171.25 423.73,170.99 423.46,170.77 423.16,170.60 422.84,170.47 422.50,170.40 422.24,170.39 378.62,170.39 378.88,170.40 378.53,170.39 378.19,170.43 377.85,170.53 377.54,170.68 377.25,170.87 377.00,171.11 376.79,171.39 376.63,171.70 376.52,172.03 376.47,172.37 376.46,172.55 376.46,182.13 376.47,181.95 376.47,182.30 376.52,182.64 376.63,182.97 376.79,183.28 377.00,183.56 377.25,183.80 377.54,184.00 377.85,184.15 378.19,184.24 378.53,184.28 "
+       points="375.01,184.29 425.85,184.29 425.76,184.28 426.11,184.27 426.45,184.20 426.78,184.08 427.08,183.90 427.35,183.68 427.58,183.42 427.76,183.13 427.90,182.81 427.98,182.47 428.01,182.13 428.01,182.13 428.01,172.55 428.01,172.55 427.98,172.20 427.90,171.86 427.76,171.54 427.58,171.25 427.35,170.99 427.08,170.77 426.78,170.60 426.45,170.47 426.11,170.40 425.85,170.39 375.01,170.39 375.27,170.40 374.92,170.39 374.57,170.43 374.24,170.53 373.93,170.68 373.64,170.87 373.39,171.11 373.18,171.39 373.02,171.70 372.91,172.03 372.85,172.37 372.85,172.55 372.85,182.13 372.85,181.95 372.85,182.30 372.91,182.64 373.02,182.97 373.18,183.28 373.39,183.56 373.64,183.80 373.93,184.00 374.24,184.15 374.57,184.24 374.92,184.28 "
        style="stroke-width: 0.53; fill: #FFFFFF;"
        id="polygon152" />
     <text
@@ -496,9 +497,9 @@
        y="182.13"
        text-anchor="middle"
        style="font-size: 5.00px; font-family: &quot;Arial&quot;;"
-       textLength="43.62px"
+       textLength="50.85px"
        lengthAdjust="spacingAndGlyphs"
-       id="text156"> realised as of 2024</text>
+       id="text156"> operational as of 2024</text>
     <text
        x="76.85"
        y="195.23"
@@ -584,14 +585,20 @@
        textLength="28.33px"
        lengthAdjust="spacingAndGlyphs"
        id="text178">Disappeared</text>
+    <line
+       x1="451.09"
+       y1="196.44"
+       x2="442.76"
+       y2="196.44"
+       style="stroke-width: 0.53;"
+       id="line180" />
     <text
-       x="452.89001"
+       x="452.89"
        y="198.23"
-       style="font-size:5px;font-family:Arial"
-       textLength="17.5"
+       style="font-size: 5.00px; font-family: &quot;Arial&quot;;"
+       textLength="17.50px"
        lengthAdjust="spacingAndGlyphs"
-       id="text182"
-       transform="translate(0,-3)">On time</text>
+       id="text182">On time</text>
     <polyline
        points="21.47,205.25 21.47,11.44 "
        style="stroke-width: 0.53; stroke-linecap: square;"
@@ -705,7 +712,7 @@
        lengthAdjust="spacingAndGlyphs"
        id="text218">in 2024</text>
     <text
-       transform="rotate(-90,77.22,64.12)"
+       transform="rotate(-90,74.97,61.87)"
        text-anchor="middle"
        style="font-size:6px;font-family:Arial"
        textLength="119.96"
@@ -727,9 +734,35 @@
        lengthAdjust="spacingAndGlyphs"
        id="text224">a</text>
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.52499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:10;stroke-dasharray:none"
-       d="m 443.71211,196.4019 8.24368,-2.89251"
-       id="path1693" />
+       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
+       d="m 85.764904,220.04601 c 0.16703,21.75651 -24.22619,8.81263 -24.00791,33.84245"
+       id="path1662"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
+       d="m 202.91183,220.04601 c 0.12543,22.20292 15.76827,10.25718 15.61959,33.26396"
+       id="path1664"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
+       d="m 319.76953,219.75676 c -0.59869,22.85088 54.60385,8.3883 54.95783,34.71021"
+       id="path1666"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
+       d="m 436.04874,220.04601 c 0.13401,22.51038 -159.70809,0.7573 -159.9562,33.26396"
+       id="path1668"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
+       d="m 431.4207,219.75676 c 0.0747,17.52474 -311.35718,0.47372 -311.23484,34.42096"
+       id="path1670"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
+       d="m 439.51975,219.75676 c 0.17195,20.54976 -5.02909,8.61599 -4.91728,33.84245"
+       id="path1672"
+       sodipodi:nodetypes="cc" />
   </g>
   <defs
      id="defs231">
@@ -1282,7 +1315,7 @@
        textLength="12.77"
        lengthAdjust="spacingAndGlyphs"
        id="text432"
-       transform="translate(0,3)">0 GW</text>
+       transform="translate(0,1.5)">0 GW</text>
     <text
        x="118.62"
        y="416.15"
@@ -1874,7 +1907,7 @@
        textLength="12.77"
        lengthAdjust="spacingAndGlyphs"
        id="text647"
-       transform="translate(0,3)">0 GW</text>
+       transform="translate(0,1.5)">0 GW</text>
     <text
        x="274.99"
        y="416.15"
@@ -2396,7 +2429,7 @@
        textLength="12.77"
        lengthAdjust="spacingAndGlyphs"
        id="text842"
-       transform="translate(0,3)">0 GW</text>
+       transform="translate(0,1.5)">0 GW</text>
     <text
        x="432.59"
        y="416.15"
@@ -2413,83 +2446,57 @@
        lengthAdjust="spacingAndGlyphs"
        id="text846">d</text>
     <text
-       x="471.23"
-       y="330.95"
-       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
-       textLength="24.33px"
+       x="471.23001"
+       y="330.95001"
+       style="font-size:6px;font-family:Arial"
+       textLength="24.33"
        lengthAdjust="spacingAndGlyphs"
-       id="text848">Outcome</text>
+       id="text848"
+       transform="translate(-1.5)">Outcome</text>
     <rect
-       x="471.58"
-       y="334.96"
-       width="5.87"
-       height="5.87"
-       style="stroke-width: 0.53; stroke: #8B0000; stroke-linecap: butt; stroke-linejoin: miter; fill: #8B0000; fill-opacity: 0.50;"
+       x="470.07999"
+       y="334.95999"
+       width="5.8699999"
+       height="5.8699999"
+       style="fill:#8b0000;fill-opacity:0.5;stroke:#8b0000;stroke-width:0.53;stroke-linecap:butt;stroke-linejoin:miter"
        id="rect850" />
     <rect
-       x="471.58"
+       x="470.07999"
        y="341.53"
-       width="5.87"
-       height="5.87"
-       style="stroke-width: 0.53; stroke: #FF8C00; stroke-linecap: butt; stroke-linejoin: miter; fill: #FF8C00; fill-opacity: 0.50;"
+       width="5.8699999"
+       height="5.8699999"
+       style="fill:#ff8c00;fill-opacity:0.5;stroke:#ff8c00;stroke-width:0.53;stroke-linecap:butt;stroke-linejoin:miter"
        id="rect852" />
     <rect
-       x="471.58"
-       y="348.11"
-       width="5.87"
-       height="5.87"
-       style="stroke-width: 0.53; stroke: #006400; stroke-linecap: butt; stroke-linejoin: miter; fill: #006400; fill-opacity: 0.50;"
+       x="470.07999"
+       y="348.10999"
+       width="5.8699999"
+       height="5.8699999"
+       style="fill:#006400;fill-opacity:0.5;stroke:#006400;stroke-width:0.53;stroke-linecap:butt;stroke-linejoin:miter"
        id="rect854" />
     <text
-       x="480.79"
-       y="339.73"
-       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
-       textLength="29.15px"
+       x="480.79001"
+       y="339.73001"
+       style="font-size:5.14px;font-family:Arial"
+       textLength="29.15"
        lengthAdjust="spacingAndGlyphs"
-       id="text856">Disappeared</text>
+       id="text856"
+       transform="translate(-1.5)">Disappeared</text>
     <text
-       x="480.79"
+       x="480.79001"
        y="346.31"
-       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
-       textLength="18.86px"
+       style="font-size:5.14px;font-family:Arial"
+       textLength="18.860001"
        lengthAdjust="spacingAndGlyphs"
-       id="text858">Delayed</text>
+       id="text858"
+       transform="translate(-1.5)">Delayed</text>
     <text
-       x="480.79"
+       x="480.79001"
        y="352.88"
-       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
-       textLength="17.99px"
+       style="font-size:5.14px;font-family:Arial"
+       textLength="17.99"
        lengthAdjust="spacingAndGlyphs"
-       id="text860">On time</text>
+       id="text860"
+       transform="translate(-1.5)">On time</text>
   </g>
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-     d="m 85.764904,220.04601 c 0.16703,21.75651 -24.22619,8.81263 -24.00791,33.84244"
-     id="path1662"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-     d="m 202.91183,220.04601 c 0.12543,22.20292 15.76827,10.25718 15.61959,33.26395"
-     id="path1664"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-     d="m 319.76953,219.75676 c -0.59869,22.85088 54.60385,8.3883 54.95783,34.7102"
-     id="path1666"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-     d="m 436.04873,220.04601 c 0.13401,22.51038 -159.70809,0.7573 -159.9562,33.26395"
-     id="path1668"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-     d="m 431.42069,219.75676 c 0.0747,17.52474 -311.35717,0.47372 -311.23483,34.42095"
-     id="path1670"
-     sodipodi:nodetypes="cc" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-     d="m 439.51975,219.75676 c 0.17194,20.54976 -5.0291,8.61599 -4.91729,33.84245"
-     id="path1672"
-     sodipodi:nodetypes="cc" />
 </svg>

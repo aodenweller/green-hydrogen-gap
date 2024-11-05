@@ -431,7 +431,7 @@ plotProjectTracking2023 <- function(data.track.calc,
       "stat22t23", 0, "", 0,
       "status2023", cap.2023, paste0(round(cap.2023/1E3, 2), " GW\n announced by 2023"), 1,
       "stat23t23out", 0, "", 0,
-      "status2023out", cap.2023out, paste0(round(cap.2023out/1E3, 2), " GW\n realised as of 2024"), 1
+      "status2023out", cap.2023out, paste0(round(cap.2023out/1E3, 2), " GW\n operational as of 2024"), 1
     ) %>% 
       mutate(x = factor(x, levels = c("status2021", "stat21t22", "status2022", "stat22t23", "status2023", "stat23t23out", "status2023out")))
     

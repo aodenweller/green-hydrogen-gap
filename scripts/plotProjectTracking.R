@@ -386,9 +386,9 @@ plotProjectTracking <- function(data.track.calc,
     
     # Tibble with annotation labels
     # Hack: Use dummy labels with alpha=0 to preserve x axis order
-    status2021.label <- ifelse(year.tracking >= 2021, "announced by ", "realised as of ")
-    status2022.label <- ifelse(year.tracking >= 2022, "announced by ", "realised as of ")
-    status2023.label <- ifelse(year.tracking >= 2023, "announced by ", "realised as of ")
+    status2021.label <- ifelse(year.tracking >= 2021, "announced by ", "operational as of ")
+    status2022.label <- ifelse(year.tracking >= 2022, "announced by ", "operational as of ")
+    status2023.label <- ifelse(year.tracking >= 2023, "announced by ", "operational as of ")
     
     data.annotations.total <- tribble(
       ~x, ~y, ~label, ~alpha,

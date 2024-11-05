@@ -1,7 +1,7 @@
 ---
 title: "The Green Hydrogen Ambition and Implementation Gap"
 author: "Adrian Odenweller"
-date: "2024-09-06"
+date: "2024-11-05"
 output: pdf_document
 ---
 
@@ -3218,7 +3218,7 @@ p.row6 <- plot_grid(
   p.row6.enduse,
   ncol = 5,
   rel_widths = c(1, 1, 0, 0.1, 0.3),
-  labels = c("k", "m"),
+  labels = c("k", "l"),
   label_size = font.size
 )
 
@@ -3690,9 +3690,9 @@ ggsave("figures/EXT_DATA_FIGURE07_required_subsidies_comparison.svg",
 
 # SUPPLEMENTARY FIGURES
 
-## SUPPLEMENTARY FIGURE S1: IEA data quality validation (overview)
+## SUPPLEMENTARY FIGURE 1: IEA data quality validation (overview)
 
-```{r supplementary figure s1}
+```{r supplementary figure 1}
 
 range.left <- seq(2020, 2024)
 range.right <- seq(2024, 2030)
@@ -3883,16 +3883,16 @@ p <- plot_grid(
 
 print(p)
 
-ggsave("figures/SUPP_FIGURE_S1_database_quality_validation_overview.png",
+ggsave("figures/SUPP_FIGURE01_database_quality_validation_overview.png",
        width = 180, height = 70, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S1_database_quality_validation_overview.svg",
+ggsave("figures/SUPP_FIGURE01_database_quality_validation_overview.svg",
        width = 180, height = 70, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S2: IEA data quality validation (2021 project detail)
+## SUPPLEMENTARY FIGURE 2: IEA data quality validation (2021 project detail)
 
-```{r supplementary figure s2}
+```{r supplementary figure 2}
 
 p.status <- plotDatabaseDelta(data.new.proj = data.v2021.proj,
                               data.old.proj = data.v2021.orig.proj,
@@ -3934,16 +3934,16 @@ p <- plot_grid(toplabel,
                ncol = 1,
                rel_heights = c(0.08, 1))
 
-ggsave("figures/SUPP_FIGURE_S2_data_quality_validation_v2021.png",
+ggsave("figures/SUPP_FIGURE02_data_quality_validation_v2021.png",
        width = 180, height = 110, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S2_data_quality_validation_v2021.svg",
+ggsave("figures/SUPP_FIGURE02_data_quality_validation_v2021.svg",
        width = 180, height = 110, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S3: IEA data quality validation (2022 project detail)
+## SUPPLEMENTARY FIGURE 3: IEA data quality validation (2022 project detail)
 
-```{r supplementary figure s3}
+```{r supplementary figure 3}
 
 p.status <- plotDatabaseDelta(data.new.proj = data.v2022.proj,
                               data.old.proj = data.v2022.orig.proj,
@@ -3985,16 +3985,16 @@ p <- plot_grid(toplabel,
                ncol = 1,
                rel_heights = c(0.08, 1))
 
-ggsave("figures/SUPP_FIGURE_S3_data_quality_validation_v2022.png",
+ggsave("figures/SUPP_FIGURE03_data_quality_validation_v2022.png",
        width = 180, height = 110, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S3_data_quality_validation_v2022.svg",
+ggsave("figures/SUPP_FIGURE03_data_quality_validation_v2022.svg",
        width = 180, height = 110, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S4: IEA data quality validation (2023 project detail)
+## SUPPLEMENTARY FIGURE 4: IEA data quality validation (2023 project detail)
 
-```{r supplementary figure s4}
+```{r supplementary figure 4}
 
 p.status <- plotDatabaseDelta(data.new.proj = data.v2023.proj,
                               data.old.proj = data.v2023.orig.proj,
@@ -4036,16 +4036,16 @@ p <- plot_grid(toplabel,
                ncol = 1,
                rel_heights = c(0.08, 1))
 
-ggsave("figures/SUPP_FIGURE_S4_data_quality_validation_v2023.png",
+ggsave("figures/SUPP_FIGURE04_data_quality_validation_v2023.png",
        width = 180, height = 110, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S4_data_quality_validation_v2023.svg",
+ggsave("figures/SUPP_FIGURE04_data_quality_validation_v2023.svg",
        width = 180, height = 110, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S5: 2022 implementation gap
+## SUPPLEMENTARY FIGURE 5: 2022 implementation gap
 
-```{r supplementary figure s5}
+```{r supplementary figure 5}
 
 # Calculate project tracking for 2022
 data.track.calc2022 <-
@@ -4240,16 +4240,16 @@ p <- plot_grid(top_row,
 
 print(p)
 
-ggsave("figures/SUPP_FIGURE_S5_2022_implementation_gap.png",
+ggsave("figures/SUPP_FIGURE05_2022_implementation_gap.png",
        width = 180, height = 150, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S5_2022_implementation_gap.svg",
+ggsave("figures/SUPP_FIGURE05_2022_implementation_gap.svg",
        width = 180, height = 150, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S6: Project tracking for 2024
+## SUPPLEMENTARY FIGURE 6: Project tracking for 2024
 
-```{r supplementary figure s6}
+```{r supplementary figure 6}
 
 # Calculate project tracking for 2022
 data.track.calc2024 <-
@@ -4272,16 +4272,16 @@ p.track.2024 <-
     annotate.gap = FALSE
   )
 
-ggsave("figures/SUPP_FIGURE_S6_project_tracking_2024.png",
+ggsave("figures/SUPP_FIGURE06_project_tracking_2024.png",
        width = 180, height = 100, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S6_project_tracking_2024.svg",
+ggsave("figures/SUPP_FIGURE06_project_tracking_2024.svg",
        width = 180, height = 100, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S7-S10: Regional 2023 implementation gap
+## SUPPLEMENTARY FIGURE 7-10: Regional 2023 implementation gap
 
-```{r supplementary figure s7-s10}
+```{r supplementary figure 7-10}
 
 # Projects in Asia
 p.gap2023.asia <- plotImplementationGap2023(
@@ -4295,9 +4295,9 @@ p.gap2023.asia <- plotImplementationGap2023(
 
 print(p.gap2023.asia)
 
-ggsave("figures/SUPP_FIGURE_S7_implementation_gap_2023_Asia.png",
+ggsave("figures/SUPP_FIGURE07_implementation_gap_2023_Asia.png",
        width = 180, height = 150, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S7_implementation_gap_2023_Asia.svg",
+ggsave("figures/SUPP_FIGURE07_implementation_gap_2023_Asia.svg",
        width = 180, height = 150, units = "mm", bg = "white")
 
 
@@ -4313,9 +4313,9 @@ p.gap2023.australia <- plotImplementationGap2023(
 
 print(p.gap2023.australia)
 
-ggsave("figures/SUPP_FIGURE_S8_implementation_gap_2023_Australia.png",
+ggsave("figures/SUPP_FIGURE08_implementation_gap_2023_Australia.png",
        width = 180, height = 150, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S8_implementation_gap_2023_Australia.svg",
+ggsave("figures/SUPP_FIGURE08_implementation_gap_2023_Australia.svg",
        width = 180, height = 150, units = "mm", bg = "white")
 
 
@@ -4331,9 +4331,9 @@ p.gap2023.europe <- plotImplementationGap2023(
 
 print(p.gap2023.europe)
 
-ggsave("figures/SUPP_FIGURE_S9_implementation_gap_2023_Europe.png",
+ggsave("figures/SUPP_FIGURE09_implementation_gap_2023_Europe.png",
        width = 180, height = 150, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S9_implementation_gap_2023_Europe.svg",
+ggsave("figures/SUPP_FIGURE09_implementation_gap_2023_Europe.svg",
        width = 180, height = 150, units = "mm", bg = "white")
 
 
@@ -4349,16 +4349,16 @@ p.gap2023.namerica <- plotImplementationGap2023(
 
 print(p.gap2023.namerica)
 
-ggsave("figures/SUPP_FIGURE_S10_implementation_gap_2023_N_America.png",
+ggsave("figures/SUPP_FIGURE10_implementation_gap_2023_N_America.png",
        width = 180, height = 150, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S10_implementation_gap_2023_N_America.svg",
+ggsave("figures/SUPP_FIGURE10_implementation_gap_2023_N_America.svg",
        width = 180, height = 150, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENRATY FIGURE S11: Project announcements and median 1.5°C scenario until 2050
+## SUPPLEMENRATY FIGURE 11: Project announcements and median 1.5°C scenario until 2050
 
-```{r supplementary figure s11}
+```{r supplementary figure 11}
 
 # Project announcements
 data.plot.projects <- data.iea.enduse %>% 
@@ -4468,16 +4468,16 @@ p <- plot_grid(
 
 print(p)
 
-ggsave("figures/SUPP_FIGURE_S11_project_announcements_1.5C_median.png",
+ggsave("figures/SUPP_FIGURE11_project_announcements_1.5C_median.png",
        width = 160, height = 60, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S11_project_announcements_1.5C_median.svg",
+ggsave("figures/SUPP_FIGURE11_project_announcements_1.5C_median.svg",
        width = 160, height = 60, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S12: Technological learning for electrolysis
+## SUPPLEMENTARY FIGURE 12: Technological learning for electrolysis
 
-```{r supplementary figure s12}
+```{r supplementary figure 12}
 
 data.plot <- data.costs %>% 
   filter(variable %in% c("Tech|Green hydrogen|CAPEX|Stack", "Tech|Green hydrogen|CAPEX|Other")) %>% 
@@ -4511,16 +4511,16 @@ p <- ggplot() +
 
 print(p)
 
-ggsave("figures/SUPP_FIGURE_S12_technological_learning.png",
+ggsave("figures/SUPP_FIGURE12_technological_learning.png",
        width = 160, height = 60, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S12_technological_learning.svg",
+ggsave("figures/SUPP_FIGURE12_technological_learning.svg",
        width = 160, height = 60, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S13: Green hydrogen in 1.5°C scenario under IEA NZE end-use shares
+## SUPPLEMENTARY FIGURE 13: Green hydrogen in 1.5°C scenario under IEA NZE end-use shares
 
-```{r supplementary figure s13}
+```{r supplementary figure 13}
 
 # Mapping of IEA NZE scenario end uses to IEA Hydrogen Projects Database end uses
 mapping.nze.h2projects.plot <- tribble(
@@ -4644,16 +4644,16 @@ p <- plot_grid(
   rel_widths = c(3, 5),
   align = "h")
 
-ggsave("figures/SUPP_FIGURE_S13_iea_nze_enduse.png",
+ggsave("figures/SUPP_FIGURE13_iea_nze_enduse.png",
        width = 180, height = 80, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S13_iea_nze_enduse.svg",
+ggsave("figures/SUPP_FIGURE13_iea_nze_enduse.svg",
        width = 180, height = 80, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S14: Number of end-uses of green hydrogen projects
+## SUPPLEMENTARY FIGURE 14: Number of end-uses of green hydrogen projects
 
-```{r supplementary figure s14}
+```{r supplementary figure 14}
 
 data.plot <- data.v2023.proj.enduse %>% 
   filter(year <= 2030,
@@ -4675,16 +4675,16 @@ p <- ggplot() +
 
 print(p)
 
-ggsave("figures/SUPP_FIGURE_S14_enduse_numbers.png",
+ggsave("figures/SUPP_FIGURE14_enduse_numbers.png",
        width = 100, height = 60, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S14_enduse_numbers.svg",
+ggsave("figures/SUPP_FIGURE14_enduse_numbers.svg",
        width = 100, height = 60, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S15: End-use specific demand-side regulation
+## SUPPLEMENTARY FIGURE 15: End-use specific demand-side regulation
 
-```{r supplementary figure s15}
+```{r supplementary figure 15}
 
 # Capacity secured by demand policies
 data.plot.demandbacked <- data.subsidies.annual %>% 
@@ -4732,16 +4732,16 @@ p <- ggplot() +
 
 print(p)
 
-ggsave("figures/SUPP_FIGURE_S15_demand_regulation_by_enduse.png",
+ggsave("figures/SUPP_FIGURE15_demand_regulation_by_enduse.png",
        width = 180, height = 120, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S15_demand_regulation_by_enduse.svg",
+ggsave("figures/SUPP_FIGURE15_demand_regulation_by_enduse.svg",
        width = 180, height = 120, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S16: Required subsidies for 1.5°C scenario median
+## SUPPLEMENTARY FIGURE 16: Required subsidies for 1.5°C scenario median
 
-```{r supplementary figure s16}
+```{r supplementary figure 16}
 
 # Conservative scenario
 p.conservative.woco2 <- plotRequiredSubsidies1.5Cmedian(
@@ -4835,16 +4835,16 @@ p <- plot_grid(
   rel_widths = c(1, 0.03, 0.22)
   )
 
-ggsave("figures/SUPP_FIGURE_S16_subsidies_1.5C.png",
+ggsave("figures/SUPP_FIGURE16_subsidies_1.5C.png",
        width = 180, height = 180, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S16_subsidies_1.5C.svg",
+ggsave("figures/SUPP_FIGURE16_subsidies_1.5C.svg",
        width = 180, height = 180, units = "mm", bg = "white")
 
 ```
 
-## SUPPLEMENTARY FIGURE S17: Capacity backed by announced subsidies and demand-side regulation
+## SUPPLEMENTARY FIGURE 17: Capacity backed by announced subsidies and demand-side regulation
 
-```{r supplementary figure s17}
+```{r supplementary figure 17}
 
 # Subsidy tracker from BNEF
 data.subsidies.world <- data.subsidies.tracker %>% 
@@ -4967,18 +4967,18 @@ data.save <- data.plot %>%
 
 write.csv(data.save, "data/fig1_capacity_backed_by_subsidies.csv", row.names = FALSE)
 
-ggsave("figures/SUPP_FIGURE_S17_capacity_supported_by_policies.png",
+ggsave("figures/SUPP_FIGURE17_capacity_supported_by_policies.png",
        width = 120, height = 80, units = "mm", bg = "white", dpi = 600)
-ggsave("figures/SUPP_FIGURE_S17_capacity_supported_by_policies.svg",
+ggsave("figures/SUPP_FIGURE17_capacity_supported_by_policies.svg",
        width = 120, height = 80, units = "mm", bg = "white")
 
 ```
 
 # SUPPLEMENTARY TABLES
 
-## SUPPLEMENTARY TABLE S1: Number of validated projects
+## SUPPLEMENTARY TABLE 1: Number of validated projects
 
-```{r supplementary table s1}
+```{r supplementary table 1}
 
 # IEA DB v2021
 data.table.v2021 <- full_join(
@@ -5108,52 +5108,6 @@ data.table.v2023 %>%
     projects.checked = sum(checked),
     projects.checked.capshare = sum(capacity.y * checked) / sum(capacity.y)) %>% 
   print()
-
-```
-
-## SUPPLEMENTARY TABLE S3: Required cumulative subsidies for green hydrogen and electrofuels separately
-
-```{r supplementary table s3}
-
-# Subsidies required for projects announced until 2030
-data.subsidies.annual %>% 
-  filter(year.cap <= 2030) %>% 
-  mutate(group = ifelse(greenproduct == "Green hydrogen", "Green hydrogen", "Electrofuels")) %>% 
-  group_by(scenario, carbonprice, group) %>% 
-  summarise(subsidies.required = sum(subsidies.annual)) %>%
-  # Round numbers
-  mutate(subsidies.required.trillion = round(1E-3*subsidies.required, 1))
-
-# Specific subsidies for projects in 2030
-data.subsidies.annual %>% 
-  mutate(group = ifelse(greenproduct == "Green hydrogen", "Green hydrogen", "Electrofuels")) %>% 
-  filter(year == 2030) %>% 
-  rowwise() %>% 
-  mutate(prod = max(cap - cap.backed, 0) * flh.electrolysis * eta) %>% 
-  group_by(scenario, carbonprice, group) %>%
-  summarise(subsidies.relative = 1E9*sum(subsidies.annual) / sum(prod)) %>% 
-  # Round numbers
-  mutate(subsidies.relative.rounded = round(subsidies.relative, 0))
-
-# Subsidies required for 1.5°C scenario until 2050
-data.subsidies.annual %>% 
-  mutate(group = ifelse(greenproduct == "Green hydrogen", "Green hydrogen", "Electrofuels")) %>% 
-  filter(year.cap <= 2050) %>% 
-  group_by(scenario, carbonprice, group) %>% 
-  summarise(subsidies.required = sum(subsidies.annual)) %>% 
-  # Round numbers
-  mutate(subsidies.required.trillion = round(1E-3*subsidies.required, 1))
-
-# Specific subsidies required for 1.5°C scenario in 2050
-data.subsidies.annual %>% 
-  mutate(group = ifelse(greenproduct == "Green hydrogen", "Green hydrogen", "Electrofuels")) %>% 
-  filter(year == 2050) %>% 
-  rowwise() %>% 
-  mutate(prod = max(cap - cap.backed, 0) * flh.electrolysis * eta) %>% 
-  group_by(scenario, carbonprice, group) %>%
-  summarise(subsidies.relative = 1E9*sum(subsidies.annual) / sum(prod)) %>% 
-  # Round numbers
-  mutate(subsidies.relative.rounded = round(subsidies.relative, 0))
 
 ```
 

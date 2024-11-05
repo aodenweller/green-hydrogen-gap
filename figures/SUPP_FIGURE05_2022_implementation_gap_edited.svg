@@ -13,9 +13,9 @@
    viewBox="0 0 510.24 425.20"
    version="1.1"
    id="svg1195"
-   sodipodi:docname="SUPP_FIGURE_S5_2022_implementation_gap_edited.svg"
+   sodipodi:docname="SUPP_FIGURE05_2022_implementation_gap_edited.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev2\figures\SUPP_FIGURE_S5_2022_implementation_gap_edited.png"
+   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev3_final\figures\SUPP_FIGURE05_2022_implementation_gap_edited.png"
    inkscape:export-xdpi="599.97998"
    inkscape:export-ydpi="599.97998">
   <metadata
@@ -43,13 +43,12 @@
      id="namedview1197"
      showgrid="false"
      inkscape:zoom="1.8334553"
-     inkscape:cx="229.9615"
-     inkscape:cy="276.12713"
+     inkscape:cx="242.07419"
+     inkscape:cy="266.2635"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g252"
-     inkscape:document-rotation="0" />
+     inkscape:current-layer="g712" />
   <defs
      id="defs4">
     <style
@@ -491,7 +490,7 @@
        style="stroke-width: 0.53;"
        id="polyline158" />
     <polyline
-       points="379.77,183.55 380.12,183.55 381.62,183.55 383.42,183.56 384.73,183.57 385.58,183.59 386.19,183.61 386.66,183.65 387.01,183.69 387.26,183.74 387.47,183.80 387.66,183.86 387.84,183.93 388.00,183.99 388.17,184.06 388.36,184.14 388.55,184.22 388.72,184.30 388.87,184.38 389.04,184.47 389.21,184.57 389.39,184.67 389.55,184.77 389.69,184.86 389.85,184.97 390.01,185.08 390.18,185.21 390.33,185.32 390.46,185.43 390.60,185.55 390.76,185.68 390.91,185.82 391.04,185.95 391.16,186.07 391.29,186.21 391.43,186.36 391.57,186.51 391.68,186.65 391.79,186.79 391.91,186.93 392.03,187.10 392.15,187.27 392.25,187.42 392.34,187.56 392.44,187.72 392.55,187.90 392.65,188.08 392.73,188.24 392.81,188.40 392.89,188.56 392.98,188.75 393.06,188.94 393.12,189.11 393.19,189.27 393.25,189.45 393.31,189.64 393.37,189.84 393.43,190.06 393.50,190.32 393.55,190.52 393.57,190.56 "
+       points="383.39,184.12 383.59,184.12 384.45,184.12 385.50,184.13 386.26,184.14 386.77,184.15 387.16,184.18 387.47,184.21 387.72,184.25 387.93,184.29 388.12,184.35 388.29,184.40 388.45,184.46 388.60,184.52 388.76,184.58 388.93,184.65 389.10,184.73 389.25,184.81 389.39,184.88 389.54,184.95 389.71,185.05 389.87,185.14 390.01,185.23 390.14,185.32 390.29,185.41 390.44,185.52 390.59,185.63 390.72,185.73 390.84,185.83 390.98,185.94 391.12,186.06 391.25,186.19 391.38,186.31 391.49,186.42 391.61,186.54 391.73,186.68 391.85,186.82 391.96,186.95 392.06,187.07 392.17,187.21 392.28,187.36 392.39,187.51 392.48,187.65 392.57,187.78 392.66,187.93 392.75,188.09 392.84,188.25 392.92,188.40 392.99,188.54 393.07,188.70 393.14,188.87 393.22,189.04 393.28,189.20 393.33,189.34 393.39,189.50 393.45,189.68 393.51,189.86 393.56,190.06 393.62,190.30 393.67,190.48 393.68,190.52 "
        style="stroke-width: 0.53;"
        id="polyline160" />
     <polygon
@@ -535,7 +534,7 @@
        lengthAdjust="spacingAndGlyphs"
        id="text172">announced by 2022</text>
     <polygon
-       points="335.39,187.80 377.61,187.80 377.53,187.79 377.88,187.78 378.22,187.71 378.54,187.59 378.84,187.41 379.11,187.19 379.34,186.93 379.53,186.64 379.66,186.32 379.75,185.98 379.77,185.64 379.77,185.64 379.77,176.06 379.77,176.06 379.75,175.71 379.66,175.37 379.53,175.05 379.34,174.76 379.11,174.50 378.84,174.28 378.54,174.11 378.22,173.98 377.88,173.91 377.61,173.90 335.39,173.90 335.65,173.91 335.30,173.90 334.95,173.94 334.62,174.04 334.31,174.19 334.02,174.38 333.77,174.63 333.56,174.90 333.40,175.21 333.29,175.54 333.23,175.88 333.23,176.06 333.23,185.64 333.23,185.46 333.23,185.81 333.29,186.15 333.40,186.48 333.56,186.79 333.77,187.07 334.02,187.31 334.31,187.51 334.62,187.66 334.95,187.75 335.30,187.79 "
+       points="331.77,187.80 381.23,187.80 381.14,187.79 381.49,187.78 381.83,187.71 382.16,187.59 382.46,187.41 382.73,187.19 382.96,186.93 383.14,186.64 383.28,186.32 383.36,185.98 383.39,185.64 383.39,185.64 383.39,176.06 383.39,176.06 383.36,175.71 383.28,175.37 383.14,175.05 382.96,174.76 382.73,174.50 382.46,174.28 382.16,174.11 381.83,173.98 381.49,173.91 381.23,173.90 331.77,173.90 332.03,173.91 331.69,173.90 331.34,173.94 331.01,174.04 330.69,174.19 330.41,174.38 330.16,174.63 329.95,174.90 329.79,175.21 329.68,175.54 329.62,175.88 329.61,176.06 329.61,185.64 329.62,185.46 329.62,185.81 329.68,186.15 329.79,186.48 329.95,186.79 330.16,187.07 330.41,187.31 330.69,187.51 331.01,187.66 331.34,187.75 331.69,187.79 "
        style="stroke-width: 0.53; fill: #FFFFFF;"
        id="polygon174" />
     <text
@@ -551,9 +550,9 @@
        y="185.64"
        text-anchor="middle"
        style="font-size: 5.00px; font-family: &quot;Arial&quot;;"
-       textLength="42.23px"
+       textLength="49.46px"
        lengthAdjust="spacingAndGlyphs"
-       id="text178">realised as of 2023</text>
+       id="text178">operational as of 2023</text>
     <text
        x="78.57"
        y="186.06"
@@ -776,7 +775,7 @@
        lengthAdjust="spacingAndGlyphs"
        id="text244">in 2023</text>
     <text
-       transform="rotate(-90,73.47,60.37)"
+       transform="rotate(-90,75.72,62.62)"
        text-anchor="middle"
        style="font-size:6px;font-family:Arial"
        textLength="119.96"
@@ -809,7 +808,7 @@
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-       d="m 242.69857,220.33065 c -0.16784,29.8013 91.65491,14.15487 91.1143,33.84244"
+       d="m 242.69858,220.33065 c -0.16785,29.8013 91.6549,14.15487 91.11429,33.84244"
        id="path2058"
        sodipodi:nodetypes="cc" />
     <path
@@ -3750,17 +3749,17 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:5px;line-height:1;font-family:sans-serif;white-space:pre;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-       x="445.19803"
-       y="416.16891"
+       x="445.198"
+       y="415.90448"
        id="text2002"><tspan
          sodipodi:role="line"
          id="tspan2000"
-         x="445.19803"
-         y="416.16891"
+         x="445.198"
+         y="415.90448"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.75">0.1</tspan><tspan
          sodipodi:role="line"
-         x="445.19803"
-         y="421.22681"
+         x="445.198"
+         y="420.96237"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.75"
          id="tspan2004">GW</tspan></text>
   </g>

@@ -13,9 +13,9 @@
    viewBox="0 0 510.24 425.20"
    version="1.1"
    id="svg790"
-   sodipodi:docname="SUPP_FIGURE_S7_implementation_gap_2023_Asia_edited.svg"
+   sodipodi:docname="SUPP_FIGURE07_implementation_gap_2023_Asia_edited.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev2\figures\SUPP_FIGURE_S7_implementation_gap_2023_Asia_edited.png"
+   inkscape:export-filename="C:\Users\adrianod\Documents\PhD\Hydrogen_Gap\green-hydrogen-gap_rev3_final\figures\SUPP_FIGURE07_implementation_gap_2023_Asia_edited.png"
    inkscape:export-xdpi="599.97998"
    inkscape:export-ydpi="599.97998">
   <metadata
@@ -43,12 +43,13 @@
      id="namedview792"
      showgrid="false"
      inkscape:zoom="1.8334553"
-     inkscape:cx="290.08666"
-     inkscape:cy="282.40992"
+     inkscape:cx="253.18915"
+     inkscape:cy="264.79225"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g788" />
+     inkscape:current-layer="g788"
+     inkscape:document-rotation="0" />
   <defs
      id="defs4">
     <style
@@ -430,7 +431,7 @@
        style="stroke-width: 0.53;"
        id="polyline134" />
     <polyline
-       points="406.48,169.62 406.77,169.62 408.25,169.62 410.76,169.63 413.33,169.64 415.37,169.65 416.86,169.67 417.86,169.70 419.08,169.76 420.02,169.83 420.72,169.92 421.24,170.02 421.68,170.14 422.08,170.28 422.45,170.41 422.79,170.54 423.15,170.68 423.55,170.85 423.94,171.03 424.29,171.20 424.61,171.36 424.96,171.54 425.33,171.75 425.70,171.97 426.03,172.18 426.33,172.37 426.66,172.59 427.01,172.84 427.35,173.09 427.66,173.33 427.94,173.56 428.24,173.81 428.56,174.09 428.88,174.38 429.16,174.66 429.41,174.91 429.69,175.19 429.98,175.50 430.26,175.83 430.51,176.13 430.74,176.41 430.98,176.72 431.23,177.06 431.48,177.41 431.70,177.74 431.89,178.04 432.10,178.37 432.32,178.74 432.53,179.11 432.71,179.46 432.87,179.78 433.04,180.13 433.22,180.52 433.39,180.92 433.53,181.28 433.66,181.62 433.79,181.98 433.93,182.39 434.05,182.81 434.18,183.28 434.32,183.81 434.43,184.23 434.45,184.32 "
+       points="407.90,169.62 408.19,169.62 409.69,169.62 412.13,169.63 414.49,169.64 416.29,169.66 417.58,169.68 418.13,169.70 419.24,169.76 420.12,169.83 420.78,169.92 421.28,170.02 421.72,170.14 422.12,170.28 422.49,170.41 422.82,170.54 423.19,170.68 423.58,170.85 423.97,171.03 424.32,171.20 424.64,171.36 424.99,171.54 425.37,171.75 425.73,171.97 426.07,172.18 426.37,172.37 426.69,172.59 427.04,172.83 427.39,173.09 427.70,173.33 427.97,173.56 428.28,173.81 428.60,174.09 428.91,174.38 429.19,174.65 429.45,174.91 429.72,175.19 430.01,175.50 430.29,175.82 430.54,176.12 430.77,176.40 431.01,176.71 431.26,177.05 431.51,177.40 431.73,177.73 431.92,178.03 432.13,178.36 432.35,178.73 432.56,179.11 432.74,179.45 432.90,179.77 433.07,180.13 433.25,180.51 433.42,180.91 433.56,181.27 433.69,181.61 433.82,181.98 433.95,182.38 434.08,182.80 434.21,183.27 434.35,183.80 434.46,184.22 434.48,184.31 "
        style="stroke-width: 0.53;"
        id="polyline136" />
     <polygon
@@ -494,7 +495,7 @@
        lengthAdjust="spacingAndGlyphs"
        id="text154"> announced by 2023</text>
     <polygon
-       points="378.62,169.62 422.24,169.62 422.15,169.61 422.50,169.60 422.84,169.53 423.16,169.41 423.46,169.23 423.73,169.01 423.96,168.75 424.15,168.46 424.29,168.14 424.37,167.80 424.40,167.46 424.40,167.46 424.40,157.88 424.40,157.88 424.37,157.53 424.29,157.19 424.15,156.87 423.96,156.58 423.73,156.32 423.46,156.10 423.16,155.93 422.84,155.80 422.50,155.73 422.24,155.72 378.62,155.72 378.88,155.73 378.53,155.72 378.19,155.76 377.85,155.86 377.54,156.01 377.25,156.21 377.00,156.45 376.79,156.72 376.63,157.03 376.52,157.36 376.47,157.70 376.46,157.88 376.46,167.46 376.47,167.28 376.47,167.63 376.52,167.97 376.63,168.30 376.79,168.61 377.00,168.89 377.25,169.13 377.54,169.33 377.85,169.48 378.19,169.57 378.53,169.61 "
+       points="375.01,169.62 425.85,169.62 425.76,169.61 426.11,169.60 426.45,169.53 426.78,169.41 427.08,169.23 427.35,169.01 427.58,168.75 427.76,168.46 427.90,168.14 427.98,167.80 428.01,167.46 428.01,167.46 428.01,157.88 428.01,157.88 427.98,157.53 427.90,157.19 427.76,156.87 427.58,156.58 427.35,156.32 427.08,156.10 426.78,155.93 426.45,155.80 426.11,155.73 425.85,155.72 375.01,155.72 375.27,155.73 374.92,155.72 374.57,155.76 374.24,155.86 373.93,156.01 373.64,156.21 373.39,156.45 373.18,156.72 373.02,157.03 372.91,157.36 372.85,157.70 372.85,157.88 372.85,167.46 372.85,167.28 372.85,167.63 372.91,167.97 373.02,168.30 373.18,168.61 373.39,168.89 373.64,169.13 373.93,169.33 374.24,169.48 374.57,169.57 374.92,169.61 "
        style="stroke-width: 0.53; fill: #FFFFFF;"
        id="polygon156" />
     <text
@@ -510,9 +511,9 @@
        y="167.46"
        text-anchor="middle"
        style="font-size: 5.00px; font-family: &quot;Arial&quot;;"
-       textLength="43.62px"
+       textLength="50.85px"
        lengthAdjust="spacingAndGlyphs"
-       id="text160"> realised as of 2024</text>
+       id="text160"> operational as of 2024</text>
     <text
        x="76.85"
        y="178.06"
@@ -723,7 +724,7 @@
        lengthAdjust="spacingAndGlyphs"
        id="text222">in 2024</text>
     <text
-       transform="rotate(-90,77.22,64.12)"
+       transform="rotate(-90,75.72,62.62)"
        text-anchor="middle"
        style="font-size:6px;font-family:Arial"
        textLength="119.96"
@@ -746,32 +747,32 @@
        id="text228">a</text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-       d="m 85.764904,220.04601 c 0.16703,21.75651 -24.22619,8.81263 -24.00791,33.84244"
+       d="m 85.764904,220.04601 c 0.16703,21.75651 -24.22619,8.81263 -24.00791,33.84245"
        id="path1662"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-       d="m 202.91183,220.04601 c 0.12543,22.20292 15.76827,10.25718 15.61959,33.26395"
+       d="m 202.91183,220.04601 c 0.12543,22.20292 15.76827,10.25718 15.61959,33.26396"
        id="path1664"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-       d="m 319.76953,219.75676 c -0.59869,22.85088 54.60385,8.3883 54.95783,34.7102"
+       d="m 319.76953,219.75676 c -0.59869,22.85088 54.60385,8.3883 54.95783,34.71021"
        id="path1666"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-       d="m 436.04873,220.04601 c 0.13401,22.51038 -159.7081,0.7573 -159.95621,33.26395"
+       d="m 436.04874,220.04601 c 0.13401,22.51038 -159.7081,0.7573 -159.95621,33.26396"
        id="path1668"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-       d="m 431.42069,219.75676 c 0.0747,17.52474 -311.35717,0.47372 -311.23483,34.42095"
+       d="m 431.4207,219.75676 c 0.0747,17.52474 -311.35718,0.47372 -311.23484,34.42096"
        id="path1670"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.525;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:2.1, 2.1;stroke-dashoffset:0;stroke-opacity:0.5"
-       d="m 439.51975,219.75676 c 0.17194,20.54976 -5.0291,8.61599 -4.91729,33.84245"
+       d="m 439.51975,219.75676 c 0.17195,20.54976 -5.02909,8.61599 -4.91728,33.84245"
        id="path1672"
        sodipodi:nodetypes="cc" />
   </g>
@@ -1621,17 +1622,17 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:5px;line-height:1;font-family:sans-serif;white-space:pre;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.75"
-       x="301.27267"
-       y="415.56198"
+       x="301.32959"
+       y="415.90811"
        id="text1621"><tspan
          sodipodi:role="line"
          id="tspan1619"
-         x="301.27267"
-         y="415.56198"
+         x="301.32959"
+         y="415.90811"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.75">0.1</tspan><tspan
          sodipodi:role="line"
-         x="301.27267"
-         y="420.61987"
+         x="301.32959"
+         y="420.966"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;stroke-width:0.75"
          id="tspan1623">GW</tspan></text>
   </g>
@@ -2199,53 +2200,57 @@
        lengthAdjust="spacingAndGlyphs"
        id="text772">d</text>
     <text
-       x="471.23"
-       y="330.95"
-       style="font-size: 6.00px; font-family: &quot;Arial&quot;;"
-       textLength="24.33px"
+       x="471.23001"
+       y="330.95001"
+       style="font-size:6px;font-family:Arial"
+       textLength="24.33"
        lengthAdjust="spacingAndGlyphs"
-       id="text774">Outcome</text>
+       id="text774"
+       transform="translate(-1.5)">Outcome</text>
     <rect
-       x="471.58"
-       y="334.96"
-       width="5.87"
-       height="5.87"
-       style="stroke-width: 0.53; stroke: #8B0000; stroke-linecap: butt; stroke-linejoin: miter; fill: #8B0000; fill-opacity: 0.50;"
+       x="470.07999"
+       y="334.95999"
+       width="5.8699999"
+       height="5.8699999"
+       style="fill:#8b0000;fill-opacity:0.5;stroke:#8b0000;stroke-width:0.53;stroke-linecap:butt;stroke-linejoin:miter"
        id="rect776" />
     <rect
-       x="471.58"
+       x="470.07999"
        y="341.53"
-       width="5.87"
-       height="5.87"
-       style="stroke-width: 0.53; stroke: #FF8C00; stroke-linecap: butt; stroke-linejoin: miter; fill: #FF8C00; fill-opacity: 0.50;"
+       width="5.8699999"
+       height="5.8699999"
+       style="fill:#ff8c00;fill-opacity:0.5;stroke:#ff8c00;stroke-width:0.53;stroke-linecap:butt;stroke-linejoin:miter"
        id="rect778" />
     <rect
-       x="471.58"
-       y="348.11"
-       width="5.87"
-       height="5.87"
-       style="stroke-width: 0.53; stroke: #006400; stroke-linecap: butt; stroke-linejoin: miter; fill: #006400; fill-opacity: 0.50;"
+       x="470.07999"
+       y="348.10999"
+       width="5.8699999"
+       height="5.8699999"
+       style="fill:#006400;fill-opacity:0.5;stroke:#006400;stroke-width:0.53;stroke-linecap:butt;stroke-linejoin:miter"
        id="rect780" />
     <text
-       x="480.79"
-       y="339.73"
-       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
-       textLength="29.15px"
+       x="480.79001"
+       y="339.73001"
+       style="font-size:5.14px;font-family:Arial"
+       textLength="29.15"
        lengthAdjust="spacingAndGlyphs"
-       id="text782">Disappeared</text>
+       id="text782"
+       transform="translate(-1.5)">Disappeared</text>
     <text
-       x="480.79"
+       x="480.79001"
        y="346.31"
-       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
-       textLength="18.86px"
+       style="font-size:5.14px;font-family:Arial"
+       textLength="18.860001"
        lengthAdjust="spacingAndGlyphs"
-       id="text784">Delayed</text>
+       id="text784"
+       transform="translate(-1.5)">Delayed</text>
     <text
-       x="480.79"
+       x="480.79001"
        y="352.88"
-       style="font-size: 5.14px; font-family: &quot;Arial&quot;;"
-       textLength="17.99px"
+       style="font-size:5.14px;font-family:Arial"
+       textLength="17.99"
        lengthAdjust="spacingAndGlyphs"
-       id="text786">On time</text>
+       id="text786"
+       transform="translate(-1.5)">On time</text>
   </g>
 </svg>
