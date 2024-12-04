@@ -18,7 +18,7 @@ readScenarios <- function(file.path) {
   data.scenarios.cap <- data.scenarios %>% 
     filter(variable == "Capacity|Hydrogen|Electricity",
            unit == "GW(el)") %>% 
-    mutate(value.gw = value)
+    mutate(value.mw = value)
   
   # Recalculate final energy to GW using the following assumptions
   lhv = 3.333E4 # Hydrogen lower heating value in GWh/MtH2
@@ -28,7 +28,7 @@ readScenarios <- function(file.path) {
   # Scenarios with final energy: Calculate required electrolysis capacity
   data.scenarios.fe <- data.scenarios %>% 
     filter(str_detect(variable, "Final Energy\\|Hydrogen")) %>% 
-    mutate(value.gw = case_when(unit == "MtH2/yr" ~ lhv/(flh*eta) * value,
+    mutate(value.mw = case_when(unit == "MtH2/yr" ~ lhv/(flh*eta) * value,
                                 unit == "EJ/yr" ~ (10^6/3.6)/(flh*eta) *value,
                                 unit == "TWh/yr" ~ 1E3/(flh*eta) * value,
                                 unit == "Mtoe/yr" ~ 11630/(flh*eta) * value))
@@ -36,14 +36,14 @@ readScenarios <- function(file.path) {
   # Scenarios with electricity input: Calculate required electrolysis capacity
   data.scenarios.seinput <- data.scenarios %>% 
     filter(variable == "Secondary Energy Input|Electricity|Hydrogen") %>% 
-    mutate(value.gw = case_when(unit == "TWh/yr" ~ 1E3/flh * value))
+    mutate(value.mw = case_when(unit == "TWh/yr" ~ 1E3/flh * value))
   
   # Combine data
   data.scenarios <- bind_rows(data.scenarios.cap,
                               data.scenarios.fe,
                               data.scenarios.seinput) %>%
     mutate(year = as.integer(year)) %>%
-    filter(!is.na(value.gw))
+    filter(!is.na(value.mw))
   
   return(data.scenarios)
   

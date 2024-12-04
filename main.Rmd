@@ -2,7 +2,7 @@
 title: "The Green Hydrogen Ambition and Implementation Gap"
 author: "Adrian Odenweller"
 date: "2024-11-05"
-output: pdf_document
+output: html_document
 ---
 
 # Setup and configurations
@@ -304,13 +304,13 @@ p.left <- ggplot() +
              mapping = aes(x = year, y = sum, color = "v2023", alpha = "v2023"),
              size = 0.75) +
   scale_color_npg(name = "Project announcements",
-                  guide = guide_legend(order = 2),
+                  guide = guide_legend(order = 1),
                   breaks = c("v2021",
                              "v2022",
                              "v2023"),
                   labels = legend.labels) +
   scale_alpha_manual(name = "Project announcements",
-                     guide = guide_legend(order = 2),
+                     guide = guide_legend(order = 1),
                      breaks = c("v2021",
                                 "v2022",
                                 "v2023"),
@@ -1061,18 +1061,18 @@ p.scen <- ggplot() +
               fill = NA) +
   # Institutional scenarios
   geom_boxplot(data = data.scenarios.2030,
-               mapping = aes(x = "Institutional", y = value.gw),
+               mapping = aes(x = "Institutional", y = value.mw),
                linewidth = 0.25,
                width = 0.15) +
   geom_sina(data = data.scenarios.2030,
-              mapping = aes(x = "Institutional", y = value.gw, color = highlight, group = factor("Institutional")),
+              mapping = aes(x = "Institutional", y = value.mw, color = highlight, group = factor("Institutional")),
             size = 1,
             alpha = 0.5,
             show.legend = FALSE) +
   scale_color_manual(values = c("yes" = "darkred",
                                 "no" = "grey50")) +
   geom_violin(data = data.scenarios.2030,
-              mapping = aes(x = "Institutional", y = value.gw),
+              mapping = aes(x = "Institutional", y = value.mw),
               linewidth = 0.25,
               fill = NA) +
   scale_x_discrete(name = NULL,
@@ -1132,17 +1132,17 @@ d <- 5
 iea.2030.v2021 <- data.scenarios.2030 %>%
   filter(scen.name == "IEA NZE 2021",
          year == 2030) %>%
-  pull(value.gw)
+  pull(value.mw)
 
 iea.2030.v2022 <- data.scenarios.2030 %>%
   filter(scen.name == "IEA NZE 2022",
          year == 2030) %>%
-  pull(value.gw)
+  pull(value.mw)
 
 iea.2030.v2023 <- data.scenarios.2030 %>%
   filter(scen.name == "IEA NZE 2023",
          year == 2030) %>%
-  pull(value.gw)
+  pull(value.mw)
 
 # Arrow data
 data.arrows <- tribble(
@@ -1168,11 +1168,11 @@ data.number <- tribble(
 
 # Scenario range
 data.plot.scenarios.range <- data.scenarios.2030 %>% 
-  summarise(min = min(value.gw),
-            max = max(value.gw),
-            lower = quantile(value.gw, 0.25),
-            upper = quantile(value.gw, 0.75),
-            median = median(value.gw))
+  summarise(min = min(value.mw),
+            max = max(value.mw),
+            lower = quantile(value.mw, 0.25),
+            upper = quantile(value.mw, 0.75),
+            median = median(value.mw))
 
 # Plot closing green hydrogen ambition gap in 2030
 p.gap <- ggplot() + 
@@ -1665,7 +1665,7 @@ data.newcap.until2030 <- data.iea.enduse %>%
 data.scenarios.median.after2030 <- data.scenarios %>%
   filter(year %in% c(2040, 2050)) %>% 
   group_by(year) %>% 
-  summarise(cumcap = median(value.gw))
+  summarise(cumcap = median(value.mw))
 
 # Cumulative capacity of project announcements in 2030
 data.cumcap.2030.total <- data.iea.enduse %>% 
@@ -2164,16 +2164,16 @@ cap.2023 <- data.real %>%
 
 data.growth.inst <- data.scenarios %>% 
   filter(year == 2030) %>% 
-  mutate(growth.rate = (value.gw/cap.2023)**(1/7) - 1) %>% 
-  select(organisation, report, scen.name, region, value.gw, year, growth.rate) %>% 
+  mutate(growth.rate = (value.mw/cap.2023)**(1/7) - 1) %>% 
+  select(organisation, report, scen.name, region, value.mw, year, growth.rate) %>% 
   group_by(organisation, report, scen.name, region, growth.rate) %>% 
   complete(year = seq(2023, 2030, 0.25)) %>% 
-  mutate(value.gw = cap.2023 * (1 + growth.rate)**(year - 2023))
+  mutate(value.mw = cap.2023 * (1 + growth.rate)**(year - 2023))
 
 data.growth.inst.minmax <- data.growth.inst %>% 
   group_by(year) %>% 
-  summarise(min = min(value.gw),
-            max = max(value.gw))
+  summarise(min = min(value.mw),
+            max = max(value.mw))
 
 # Historical growth rate
 growth.hist <- data.real %>% 
@@ -2201,15 +2201,15 @@ p.inst.left <- ggplot() +
               mapping = aes(x = year, ymin = min, ymax = max),
               fill = "grey95") +
   geom_line(data = data.growth.inst,
-            mapping = aes(x = year, y = value.gw, color = organisation, group = scen.name),
+            mapping = aes(x = year, y = value.mw, color = organisation, group = scen.name),
             linetype = "dotted",
             linewidth = 0.25) +
   # Institutional scenarios
   geom_line(data = data.plot.scenarios,
-            mapping = aes(x = year, y = value.gw, color = organisation, group = scen.name),
+            mapping = aes(x = year, y = value.mw, color = organisation, group = scen.name),
             linewidth = lwd) +
   geom_point(data = data.plot.scenarios,
-            mapping = aes(x = year, y = value.gw, color = organisation, group = scen.name),
+            mapping = aes(x = year, y = value.mw, color = organisation, group = scen.name),
             size = size.point) +
   # Annotation (2020-2023)
   geom_label_repel(
@@ -2271,15 +2271,15 @@ p.inst.right <- ggplot() +
   new_scale_color() +
   # Required growth for 2030
   geom_line(data = data.growth.inst,
-            mapping = aes(x = year, y = value.gw, color = organisation, group = scen.name),
+            mapping = aes(x = year, y = value.mw, color = organisation, group = scen.name),
             linetype = "dotted",
             linewidth = 0.25) +
   # Scenarios
   geom_line(data = data.plot.scenarios,
-            mapping = aes(x = year, y = value.gw, color = organisation, group = scen.name),
+            mapping = aes(x = year, y = value.mw, color = organisation, group = scen.name),
             linewidth = lwd) +
   geom_point(data = data.plot.scenarios,
-            mapping = aes(x = year, y = value.gw, color = organisation, group = scen.name),
+            mapping = aes(x = year, y = value.mw, color = organisation, group = scen.name),
             size = size.point) +
   scale_color_npg(name = "Scenario source") +
   scale_x_continuous(name = "Year",
@@ -2289,7 +2289,7 @@ p.inst.right <- ggplot() +
                      limits = c(0, 7600)) +
   geom_text_repel(
     data = data.label,
-    mapping = aes(x = 2050.3, y = value.gw, label = scen.name, color = organisation),
+    mapping = aes(x = 2050.3, y = value.mw, label = scen.name, color = organisation),
     size = 5 /.pt,
     nudge_x = 4,
     hjust = 0,
@@ -2617,7 +2617,7 @@ greymeoh.2030.max <- data.iea.enduse %>%
   sum()
 
 data.label <- tribble(
-   ~ value.gw, ~ label,
+   ~ value.mw, ~ label,
    mean(c(diesel.2030.min, diesel.2030.max)), "Fossil competitor: Diesel",
    mean(c(kerosene.2030.min, kerosene.2030.max)), "Fossil competitor: Kerosene",
    mean(c(greymeoh.2030.min, greymeoh.2030.max)), "Fossil competitor: Grey methanol"
@@ -2655,7 +2655,7 @@ p.right <- ggplot() +
   # Add text labels for other end uses
   geom_text_repel(
     data = data.label,
-    mapping = aes(x = 2030.5, y = value.gw, label = label),
+    mapping = aes(x = 2030.5, y = value.mw, label = label),
     hjust = 0,
     size = 5 /.pt,
     nudge_x = 0.55,
@@ -3290,9 +3290,9 @@ p <- plot_grid(
 )
 
 ggsave("figures/EXT_DATA_FIGURE05_cost_gap_by_enduse.png",
-       width = 180, height = 200, units = "mm", bg = "white", dpi = 600)
+       width = 180, height = 180, units = "mm", bg = "white", dpi = 600)
 ggsave("figures/EXT_DATA_FIGURE05_cost_gap_by_enduse.svg",
-       width = 180, height = 200, units = "mm", bg = "white")
+       width = 180, height = 180, units = "mm", bg = "white")
 
 ```
 

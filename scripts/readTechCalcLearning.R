@@ -53,7 +53,7 @@ readTechCalcLearning <- function(file.costs,
   data.scenarios.median <- data.scenarios %>%
     filter(year %in% c(2040, 2050)) %>%
     group_by(year) %>%
-    summarise(cumcap = median(value.gw))
+    summarise(cumcap = median(value.mw))
   
   # Bind project data and median capacity from 1.5°C scenarios
   data.cumcap <- bind_rows(data.iea.cumcap, data.scenarios.median) %>% 
